@@ -44,3 +44,8 @@ imgui.ini
 # testing
 .coverage*
 htmlcov/
+
+
+# wandb
+**/.wandb/
+/scripts/environments/noise/offline_trajectories

@@ -1,0 +1,122 @@
+2024-09-03 14:17:00,090 INFO    StreamThr :564949 [internal.py:wandb_internal():85] W&B internal server running at pid: 564949, started at: 2024-09-03 14:17:00.089368
+2024-09-03 14:17:00,093 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status
+2024-09-03 14:17:00,097 INFO    WriterThread:564949 [datastore.py:open_for_write():87] open: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/run-1meywv4m.wandb
+2024-09-03 14:17:00,097 DEBUG   SenderThread:564949 [sender.py:send():391] send: header
+2024-09-03 14:17:00,115 DEBUG   SenderThread:564949 [sender.py:send():391] send: run
+2024-09-03 14:17:00,481 INFO    SenderThread:564949 [dir_watcher.py:__init__():211] watching files in: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files
+2024-09-03 14:17:00,482 INFO    SenderThread:564949 [sender.py:_start_run_threads():1200] run started: 1meywv4m with start time 1725365820.089566
+2024-09-03 14:17:00,503 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: run_start
+2024-09-03 14:17:00,533 DEBUG   HandlerThread:564949 [system_info.py:__init__():26] System info init
+2024-09-03 14:17:00,533 DEBUG   HandlerThread:564949 [system_info.py:__init__():41] System info init done
+2024-09-03 14:17:00,534 INFO    HandlerThread:564949 [system_monitor.py:start():194] Starting system monitor
+2024-09-03 14:17:00,534 INFO    SystemMonitor:564949 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-09-03 14:17:00,534 INFO    HandlerThread:564949 [system_monitor.py:probe():214] Collecting system info
+2024-09-03 14:17:00,535 INFO    SystemMonitor:564949 [interfaces.py:start():188] Started cpu monitoring
+2024-09-03 14:17:00,536 INFO    SystemMonitor:564949 [interfaces.py:start():188] Started disk monitoring
+2024-09-03 14:17:00,537 INFO    SystemMonitor:564949 [interfaces.py:start():188] Started gpu monitoring
+2024-09-03 14:17:00,539 INFO    SystemMonitor:564949 [interfaces.py:start():188] Started memory monitoring
+2024-09-03 14:17:00,539 INFO    SystemMonitor:564949 [interfaces.py:start():188] Started network monitoring
+2024-09-03 14:17:00,582 DEBUG   HandlerThread:564949 [system_info.py:probe():152] Probing system
+2024-09-03 14:17:00,592 DEBUG   HandlerThread:564949 [system_info.py:_probe_git():137] Probing git
+2024-09-03 14:17:00,610 DEBUG   HandlerThread:564949 [system_info.py:_probe_git():145] Probing git done
+2024-09-03 14:17:00,610 DEBUG   HandlerThread:564949 [system_info.py:probe():200] Probing system done
+2024-09-03 14:17:00,610 DEBUG   HandlerThread:564949 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-119-generic-x86_64-with-glibc2.31', 'python': '3.9.19', 'heartbeatAt': '2024-09-03T12:17:00.582823', 'startedAt': '2024-09-03T12:17:00.070375', 'docker': None, 'cuda': None, 'args': ('--env_id=PushCube-v1', '--num_envs=2', '--utd=0.5', '--buffer_size=15_000', '--total_timesteps=500_000', '--eval_freq=20_000', '--batch_size=256', '--track'), 'state': 'running', 'program': '/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/sac.py', 'codePathLocal': 'sac.py', 'codePath': 'scripts/baselines/sac/sac.py', 'git': {'remote': 'https://github.com/AdrianoPaccia/ManiSkillMultimodal.git', 'commit': '334fadfd417abcbf1f39c997a1d6715e0167b54f'}, 'email': 'adriano@pacciarelli.com', 'root': '/home/adriano/Desktop/ManiSkillMultimodal', 'host': 'Gimli', 'username': 'adriano', 'executable': '/home/adriano/miniconda3/envs/MSM/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3440.8150625, 'min': 800.0, 'max': 5150.0}, 'cpu_freq_per_core': [{'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 2096.87, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}], 'disk': {'/': {'total': 466.98533630371094, 'used': 436.69836807250977}}, 'gpu': 'NVIDIA GeForce RTX 3080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080 Ti', 'memory_total': 12884901888}], 'memory': {'total': 31.08444595336914}}
+2024-09-03 14:17:00,610 INFO    HandlerThread:564949 [system_monitor.py:probe():224] Finished collecting system info
+2024-09-03 14:17:00,610 INFO    HandlerThread:564949 [system_monitor.py:probe():227] Publishing system info
+2024-09-03 14:17:00,610 DEBUG   HandlerThread:564949 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-09-03 14:17:01,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/conda-environment.yaml
+2024-09-03 14:17:01,830 DEBUG   HandlerThread:564949 [system_info.py:_save_conda():224] Saving conda packages done
+2024-09-03 14:17:01,830 DEBUG   HandlerThread:564949 [system_info.py:_save_code():44] Saving code
+2024-09-03 14:17:01,840 DEBUG   HandlerThread:564949 [system_info.py:_save_code():67] Saving code done
+2024-09-03 14:17:01,840 DEBUG   HandlerThread:564949 [system_info.py:_save_patches():84] Saving git patches
+2024-09-03 14:17:01,892 DEBUG   HandlerThread:564949 [system_info.py:_save_patches():126] Saving git patches done
+2024-09-03 14:17:01,893 INFO    HandlerThread:564949 [system_monitor.py:probe():229] Finished publishing system info
+2024-09-03 14:17:01,900 DEBUG   SenderThread:564949 [sender.py:send():391] send: files
+2024-09-03 14:17:01,900 INFO    SenderThread:564949 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-09-03 14:17:01,900 INFO    SenderThread:564949 [sender.py:_save_file():1466] saving file code/scripts/baselines/sac/sac.py with policy now
+2024-09-03 14:17:01,900 INFO    SenderThread:564949 [sender.py:_save_file():1466] saving file diff.patch with policy now
+2024-09-03 14:17:01,960 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: python_packages
+2024-09-03 14:17:01,961 DEBUG   SenderThread:564949 [sender.py:send_request():418] send_request: python_packages
+2024-09-03 14:17:01,961 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-03 14:17:01,961 DEBUG   SenderThread:564949 [sender.py:send_request():418] send_request: stop_status
+2024-09-03 14:17:01,963 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-03 14:17:01,963 INFO    HandlerThread:564949 [handler.py:handle_tbrecord():785] handling tbrecord: tbrecord {
+  log_dir: "runs/PushCube-v1__sac__1__1725365819"
+  save: true
+}
+control {
+  relay_id: "11c55cfcdcf049ec900f60ed1145509b"
+}
+_info {
+  stream_id: "1meywv4m"
+}
+
+2024-09-03 14:17:01,963 DEBUG   HandlerThread:564949 [config_util.py:dict_from_config_file():70] no default config file found in config-defaults.yaml
+2024-09-03 14:17:02,180 DEBUG   SenderThread:564949 [sender.py:send():391] send: telemetry
+2024-09-03 14:17:02,181 DEBUG   SenderThread:564949 [sender.py:send():391] send: tbrecord
+2024-09-03 14:17:02,181 DEBUG   SenderThread:564949 [sender.py:send():391] send: files
+2024-09-03 14:17:02,181 INFO    SenderThread:564949 [sender.py:_save_file():1466] saving file events.out.tfevents.1725365821.Gimli.564897.0 with policy live
+2024-09-03 14:17:02,418 INFO    wandb-upload_0:564949 [upload_job.py:push():130] Uploaded file /tmp/tmp8y_vrx7xwandb/sx13h4x6-wandb-metadata.json
+2024-09-03 14:17:02,419 INFO    wandb-upload_1:564949 [upload_job.py:push():130] Uploaded file /tmp/tmp8y_vrx7xwandb/p1t1z0ig-code/scripts/baselines/sac/sac.py
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/conda-environment.yaml
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/code/scripts/baselines/sac/sac.py
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/events.out.tfevents.1725365821.Gimli.564897.0
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/requirements.txt
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/diff.patch
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/wandb-metadata.json
+2024-09-03 14:17:02,482 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/code/scripts/baselines
+2024-09-03 14:17:02,483 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/code
+2024-09-03 14:17:02,483 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/code/scripts
+2024-09-03 14:17:02,483 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/code/scripts/baselines/sac
+2024-09-03 14:17:02,553 INFO    wandb-upload_3:564949 [upload_job.py:push():130] Uploaded file /tmp/tmp8y_vrx7xwandb/twa1pgv1-events.out.tfevents.1725365821.Gimli.564897.0
+2024-09-03 14:17:02,956 INFO    wandb-upload_2:564949 [upload_job.py:push():130] Uploaded file /tmp/tmp8y_vrx7xwandb/lou1e2ym-diff.patch
+2024-09-03 14:17:03,483 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:05,483 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:05,843 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:07,484 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/events.out.tfevents.1725365821.Gimli.564897.0
+2024-09-03 14:17:09,485 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:11,299 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:11,486 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:11,967 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-03 14:17:13,486 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:15,487 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:16,730 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:16,961 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-03 14:17:16,961 DEBUG   SenderThread:564949 [sender.py:send_request():418] send_request: stop_status
+2024-09-03 14:17:17,488 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:19,489 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:21,490 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:21,972 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-03 14:17:21,973 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:23,490 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:25,491 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:26,978 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:27,492 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:29,492 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:31,493 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:31,961 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-03 14:17:31,961 DEBUG   SenderThread:564949 [sender.py:send_request():418] send_request: stop_status
+2024-09-03 14:17:31,974 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-03 14:17:32,210 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:32,493 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/config.yaml
+2024-09-03 14:17:33,494 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:35,494 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:37,495 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:37,621 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:39,496 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:41,974 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-03 14:17:42,497 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/events.out.tfevents.1725365821.Gimli.564897.0
+2024-09-03 14:17:42,723 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:43,038 DEBUG   SenderThread:564949 [sender.py:send():391] send: history
+2024-09-03 14:17:43,038 DEBUG   SenderThread:564949 [sender.py:send_request():418] send_request: summary_record
+2024-09-03 14:17:43,039 INFO    SenderThread:564949 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-03 14:17:43,497 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:43,497 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/wandb-summary.json
+2024-09-03 14:17:46,961 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-03 14:17:46,961 DEBUG   SenderThread:564949 [sender.py:send_request():418] send_request: stop_status
+2024-09-03 14:17:47,780 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:49,499 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:51,974 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-03 14:17:52,849 DEBUG   HandlerThread:564949 [handler.py:handle_request():158] handle_request: status_report
+2024-09-03 14:17:53,501 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log
+2024-09-03 14:17:55,502 INFO    Thread-12 :564949 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac/wandb/run-20240903_141700-1meywv4m/files/output.log

@@ -1,0 +1,26 @@
+images:
+
+  available_noises: ['nonoise','random_obs', 'gaussian_noise', 'background_noise', 'confounders_noise']
+
+  gaussian_noise:
+    mu: 0
+    std: 50
+
+  confounders_noise:
+    max_size: 200
+    min_size: 100
+    max_num_patches: 3
+
+  floor_color: (112.0,116.5)
+
+  img_path: 'bg_images'
+
+
+configurations:
+
+  available_noises: ['nonoise','random_obs', 'gaussian_noise' ]
+
+  gaussian_noise:
+    mu: 0.
+    std: 0.1
+

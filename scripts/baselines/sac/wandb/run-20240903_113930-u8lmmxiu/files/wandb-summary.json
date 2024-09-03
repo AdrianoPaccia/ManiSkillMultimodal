@@ -1,0 +1,1 @@
+{"_wandb": {"runtime": 6}, "global_step": 0, "_timestamp": 1725356377.8563583, "charts/eval_success_rate": 0.0, "charts/eval_episodic_return": 5.604311943054199, "charts/eval_episodic_length": 50.0, "_runtime": 7.265219211578369, "_step": 0}
