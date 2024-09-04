@@ -112,24 +112,26 @@ def train(**kwargs):
 
             if args.save_model and successes.mean() > best_success_rate:
                 #save checkpoint
-                model_path = f"runs/{run_name}/checkpoints/ckpt_{global_step}.pt"
-                os.makedirs(f"runs/{run_name}/checkpoints", exist_ok=True)
+                folder = f"runs/{'_'.join(sorted(args.modes))}/{run_name}"
+                ckpt_path = f"{folder}/checkpoint"
+                os.makedirs(folder, exist_ok=True)
                 torch.save({
                     'actor': actor.state_dict(),
                     'qf1': qf1_target.state_dict(),
                     'qf2': qf2_target.state_dict(),
                     'log_alpha': log_alpha,
-                }, model_path)
+                }, f"{ckpt_path}/ckpt_{global_step}.pt")
 
                 if successes.mean() > best_success_rate:
                     best_success_rate = successes.mean()
-                    model_path = f"runs/{run_name}/best_model.pt"
+                    model_path = f"{folder}/best_model.pt"
                     torch.save({
                         'actor': actor.state_dict(),
                         'qf1': qf1_target.state_dict(),
                         'qf2': qf2_target.state_dict(),
                         'log_alpha': log_alpha,
                     }, model_path)
+
                     print(f"model saved to {model_path} with a success rate of {successes.mean()}")
                 else:
                     print(f"model NOT saved due to the success rate of {successes.mean()} lower than {best_success_rate}")
@@ -267,11 +269,14 @@ def train(**kwargs):
             writer.add_scalar("losses/qf2_loss", qf2_loss.item(), global_step)
             writer.add_scalar("losses/qf_loss", qf_loss.item() / 2.0, global_step)
             writer.add_scalar("losses/actor_loss", actor_loss.item(), global_step)
-            writer.add_scalar("losses/representation_loss", representation_loss.item(), global_step)
-            writer.add_scalar("losses/multimodal_loss", MM_loss.item(), global_step)
-            writer.add_scalar("losses/transfer_loss", TF_loss.item(), global_step)
-            writer.add_scalar("losses/contrastive_positive_loss", TC_loss.item(), global_step)
-            writer.add_scalar("losses/contrastive_negative_loss", NTC_loss.item(), global_step)
+            try:
+                writer.add_scalar("losses/representation_loss", representation_loss.item(), global_step)
+                writer.add_scalar("losses/multimodal_loss", MM_loss.item(), global_step)
+                writer.add_scalar("losses/transfer_loss", TF_loss.item(), global_step)
+                writer.add_scalar("losses/contrastive_positive_loss", TC_loss.item(), global_step)
+                writer.add_scalar("losses/contrastive_negative_loss", NTC_loss.item(), global_step)
+            except:
+                pass
 
             writer.add_scalar("losses/alpha", alpha, global_step)
             writer.add_scalar("charts/update_time", update_time, global_step)
