@@ -218,20 +218,28 @@ def train(**kwargs):
                 actor_loss = ((alpha * log_pi) - min_qf_pi).mean()
 
                 # update the encoders
-                (z_img_0, z_snd_0), z_0, (z_img_1, z_snd_1), z_1, z_act_1 = actor.get_representations(data)
 
-                MM_loss = (torch.mean((get_distance(z_img_0, z_snd_0))) + torch.mean((get_distance(z_img_1, z_snd_1))))
-                TF_loss = torch.mean(get_distance(z_act_1, z_1))
-                TC_loss = torch.mean((get_distance(z_0, z_1) - 1.0) ** 2)
-                rnd_idx = np.arange(z_0.shape[0])
-                np.random.shuffle(rnd_idx)
-                NTC_loss = - torch.mean(torch.log(get_distance(z_0, z_1[rnd_idx]) + 1e-6))
-                representation_loss = args.TC_coeff * TC_loss + args.NTC_coeff * NTC_loss + args.TF_coeff * TF_loss + args.MM_coeff * MM_loss
+                if len(args.modes)>1:
+                    z_obs_0, z_0, z_obs_1, z_1, z_act_1 = actor.get_representations(data)
 
-                loss = actor_loss + representation_loss
+                    MM_loss = 0.0
+                    for i in range(len(args.modes)):
+                        for j in range(len(args.modes)):
+                            MM_loss += torch.mean(get_distance(z_obs_0[i], z_obs_0[j])) + torch.mean(get_distance(z_obs_1[i], z_obs_1[j]))
+
+                    TF_loss = torch.mean(get_distance(z_act_1, z_1))
+                    TC_loss = torch.mean((get_distance(z_0, z_1) - 1.0) ** 2)
+                    rnd_idx = np.arange(z_0.shape[0])
+                    np.random.shuffle(rnd_idx)
+                    NTC_loss = - torch.mean(torch.log(get_distance(z_0, z_1[rnd_idx]) + 1e-6))
+                    representation_loss = args.TC_coeff * TC_loss + args.NTC_coeff * NTC_loss + args.TF_coeff * TF_loss + args.MM_coeff * MM_loss
+
+                    actor_loss += representation_loss
+                else:
+                    MM_loss, TF_loss, TC_loss, NTC_loss = [None]*4
 
                 actor_optimizer.zero_grad()
-                loss.backward()
+                actor_loss.backward()
                 actor_optimizer.step()
 
                 if args.autotune:
@@ -355,6 +363,8 @@ if __name__ == "__main__":
         capture_video=args.capture_video,
         **envargs
     )
+
+    args.modes = args.modes.split("+")
 
     assert isinstance(envs.single_action_space, gym.spaces.Box), "only continuous action space is supported"
 

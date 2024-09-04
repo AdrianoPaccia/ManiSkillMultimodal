@@ -221,21 +221,21 @@ class ActorMultimodal(nn.Module):
         return super().to(device)
 
     def aggregate_z(self, z_list, z_a):
-        '''d1 = get_distance(z_1, z_a).unsqueeze(1)
-        d2 = get_distance(z_2, z_a).unsqueeze(1)
-        c1 = d2 / (d1 + d2)
-        c2 = d1 / (d1 + d2)
-        z_0 = c1 * z_1 + c2 * z_2
-        return z_0, [d1, d2]'''
-        return z_a, None
-        #distances = [get_distance(z_i, z_a).unsqueeze(1) for z_i in z_list]
+        if len(z_list)==1:
+            return z_list[0], None
+        d = torch.stack([get_distance(zi, z_a) for zi in z_list], axis=1).unsqueeze(-1)
+        z_ = torch.stack(z_list, axis=1)
+        d_ = 1/d
+        coeff = d_/torch.sum(d_, axis=1).unsqueeze(-1)
+        z = torch.sum(coeff*z_, axis=1)
+        return z, d_
 
     def get_representations(self, data):
-        z_img_0, z_snd_0 = self.get_encodings(data.obs)
-        z_img_1, z_snd_1 = self.get_encodings(data.next_obs)
-        z_0, z_1 = (z_img_0 + z_snd_0) / 2, (z_img_1 + z_snd_1) / 2
+        z_obs_0 = self.get_encodings(data.obs)
+        z_obs_1 = self.get_encodings(data.next_obs)
+        z_0, z_1 =  torch.stack(z_obs_0, dim=0).mean(dim=0),  torch.stack(z_obs_1, dim=0).mean(dim=0)
         z_act_1 = self.tf_funtion(torch.cat([z_0, data.actions.to(z_0.device)], dim=1))
-        return (z_img_0, z_snd_0), z_0, (z_img_1, z_snd_1), z_1, z_act_1
+        return z_obs_0, z_0, z_obs_1, z_1, z_act_1
 
     def load_model(self, file):
         self.load_state_dict(torch.load(file))
