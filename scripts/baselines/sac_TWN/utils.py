@@ -27,6 +27,8 @@ class Args:
     """whether to capture videos of the agent performances (check out `videos` folder)"""
     save_model: bool = True
     """whether to save the model checkpoints"""
+    modes: tuple = ('rgb', 'depth')
+    """to change the modes used"""
 
     # Env specific arguments
     env_id: str = "PushCube-v1"

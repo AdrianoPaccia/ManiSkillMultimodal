@@ -356,8 +356,6 @@ if __name__ == "__main__":
         **envargs
     )
 
-    setattr(args, 'modes', ('rgb', 'depth'))
-
     assert isinstance(envs.single_action_space, gym.spaces.Box), "only continuous action space is supported"
 
 
