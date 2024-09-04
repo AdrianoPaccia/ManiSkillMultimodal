@@ -111,7 +111,7 @@ class BaseEnv(gym.Env):
     SUPPORTED_ROBOTS: List[Union[str, Tuple[str]]] = None
     """Override this to enforce which robots or tuples of robots together are supported in the task. During env creation,
     setting robot_uids auto loads all desired robots into the scene, but not all tasks are designed to support some robot setups"""
-    SUPPORTED_OBS_MODES = ("state", "state_dict", "none", "sensor_data", "rgb", "depth", "segmentation", "rgbd", "rgb+depth", "rgb+depth+segmentation", "rgb+segmentation", "depth+segmentation", "pointcloud")
+    SUPPORTED_OBS_MODES = ("state", "state_dict", "none", "sensor_data", "rgb", "depth", "segmentation", "rgbd", "rgb+depth", "rgb+depth+segmentation", "rgb+segmentation", "depth+segmentation", "pointcloud", "all")
     SUPPORTED_REWARD_MODES = ("normalized_dense", "dense", "sparse", "none")
     SUPPORTED_RENDER_MODES = ("human", "rgb_array", "sensors", "all")
     """The supported render modes. Human opens up a GUI viewer. rgb_array returns an rgb array showing the current environment state.
@@ -543,6 +543,7 @@ class BaseEnv(gym.Env):
         """Get the observation with sensor data"""
         return dict(
             agent=self._get_obs_agent(),
+            #state_dict=self._get_obs_state_dict(info),
             extra=self._get_obs_extra(info),
             sensor_param=self.get_sensor_params(),
             sensor_data=self._get_obs_sensor_data(apply_texture_transforms),
