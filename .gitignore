@@ -49,3 +49,7 @@ htmlcov/
 # wandb
 **/.wandb/
 /scripts/environments/noise/offline_trajectories
+
+
+**/.runs
+**/.test_runs
