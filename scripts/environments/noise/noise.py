@@ -16,8 +16,8 @@ class ImageNoise:
         with open(os.path.join(os.path.dirname(__file__), f'config/{game}.yaml'), 'r') as f:
             self.config = yaml.safe_load(f)['images']
 
-        self.random_images = np.load(os.path.join(os.path.dirname(__file__),f'offline_trajectories/{self.game}.npz'),
-                       allow_pickle=True)['images']
+        # TODO: collect offline trajectories
+        self.random_x = None
 
         if not set(noise_types).issubset(set(self.config['available_noises'])):
             raise ValueError("Noise types not supported")
@@ -94,8 +94,8 @@ class ImageNoise:
         return x_
 
     def get_random_observation(self):
-        i_rand = random.randint(0, self.random_images.shape[0] - 1)
-        return self.random_images[i_rand]
+        i_rand = random.randint(0, self.random_x.shape[0] - 1)
+        return self.random_x[i_rand]
 
 
     def apply_background_noise(self, xs):
@@ -142,6 +142,9 @@ class DepthNoise:
         with open(os.path.join(os.path.dirname(__file__), f'config/{game}.yaml'), 'r') as f:
             self.config = yaml.safe_load(f)['depth']
 
+        #TODO: collect offline trajectories
+        self.random_x = None
+
         if not set(noise_types).issubset(set(self.config['available_noises'])):
             raise ValueError("Noise types not supported")
 
@@ -214,8 +217,8 @@ class DepthNoise:
         return x_
 
     def get_random_observation(self):
-        i_rand = random.randint(0, self.random_images.shape[0] - 1)
-        return self.random_images[i_rand]
+        i_rand = random.randint(0, self.random_x.shape[0] - 1)
+        return self.random_x[i_rand]
 
 
 
@@ -227,6 +230,9 @@ class SegmentNoise:
         with open(os.path.join(os.path.dirname(__file__), f'config/{game}.yaml'), 'r') as f:
             self.config = yaml.safe_load(f)['segmentation']
 
+        #TODO: collect offline trajectories
+        self.random_x = None
+
         if not set(noise_types).issubset(set(self.config['available_noises'])):
             raise ValueError("Noise types not supported")
 
@@ -299,8 +305,8 @@ class SegmentNoise:
         return x_
 
     def get_random_observation(self):
-        i_rand = random.randint(0, self.random_images.shape[0] - 1)
-        return self.random_images[i_rand]
+        i_rand = random.randint(0, self.random_x.shape[0] - 1)
+        return self.random_x[i_rand]
 
 
 
@@ -310,8 +316,9 @@ class ConfNoise:
         self.game = game
         with open(os.path.join(os.path.dirname(__file__), f'config/{game}.yaml'), 'r') as f:
             self.config = yaml.safe_load(f)['configurations']
-        self.random_x = np.load(os.path.join(os.path.dirname(__file__),f'offline_trajectories/{self.game}.npz'),
-                                     allow_pickle=True)['configurations']
+
+        #TODO: collect offline trajectories
+        self.random_x = None
 
         if not set(noise_types).issubset(set(self.config['available_noises'])):
             raise ValueError("Noise types not supported")
