@@ -321,6 +321,7 @@ if __name__ == "__main__":
         print("Running evaluation")
 
     # TRY NOT TO MODIFY: seeding
+    print('... seeding setup', end='\r')
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
@@ -329,6 +330,7 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
     ## ENVIRONMENTS SETUP
+    print('... environments setup', end='\r')
     envargs = {
         'run_name':run_name,
         'game':'manipulation',
@@ -363,6 +365,8 @@ if __name__ == "__main__":
         **envargs
     )
 
+    print('... directories setup', end='\r')
+
     args.modes = args.modes.split("+")
     save_folder = f"runs/{run_name}"
     ckpt_folder = f"{save_folder}/checkpoints"
@@ -370,6 +374,7 @@ if __name__ == "__main__":
 
     assert isinstance(envs.single_action_space, gym.spaces.Box), "only continuous action space is supported"
 
+    print('... actor-critic setup', end='\r')
 
     max_action = float(envs.single_action_space.high[0])
 
@@ -403,7 +408,9 @@ if __name__ == "__main__":
     else:
         alpha = args.alpha
 
+
     ## REPLAY BUFFER setup
+    print('... replay buffer setup', end='\r')
     envs.single_observation_space_mm.dtype = np.float32
     rb = ReplayBuffer(
         obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
@@ -419,5 +426,6 @@ if __name__ == "__main__":
     }
 
     ## TRAINING
+    print('... starting loop', end='\r')
     (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
     envs.close()
