@@ -60,7 +60,6 @@ class EnvSpec:
                     print(
                         f"Could not find asset {asset_id} at {data_source.output_dir / data_source.target_path}"
                     )
-        print('HERE')
 
         if len(assets_to_download) > 0:
             if len(assets_to_download) <= 5:
@@ -76,6 +75,8 @@ class EnvSpec:
             else:
                 print("Exiting as assets are not found or downloaded")
                 exit()
+        print('HERE')
+
         return self.cls(**_kwargs)
 
     @property
