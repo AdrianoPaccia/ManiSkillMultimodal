@@ -321,7 +321,7 @@ if __name__ == "__main__":
         print("Running evaluation")
 
     # TRY NOT TO MODIFY: seeding
-    print('... seeding setup', end='\r')
+    print('... seeding setup')#, end='\r')
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)

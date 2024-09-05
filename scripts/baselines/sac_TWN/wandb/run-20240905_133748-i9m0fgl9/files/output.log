@@ -97,3 +97,28 @@ model NOT saved due to the success rate of 0.0 lower than 0.0
 
 
 
+
+Global Step: 4416
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 422, in <module>
+    )
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 205, in train
+    qf_loss.backward()
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 422, in <module>
+    )
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 205, in train
+    qf_loss.backward()
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
