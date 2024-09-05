@@ -347,7 +347,7 @@ if __name__ == "__main__":
         obs_mode="rgb+depth+segmentation",
         control_mode="pd_joint_delta_pos",
         render_mode = "rgb_array",
-        sim_backend=device,
+        sim_backend="cuda" if torch.cuda.is_available() and args.cuda else "cpu",
         capture_video=args.capture_video,
         **envargs
     )
@@ -358,7 +358,7 @@ if __name__ == "__main__":
         obs_mode="rgb+depth+segmentation",#"state",
         control_mode="pd_joint_delta_pos",
         render_mode = "rgb_array",
-        sim_backend=device,
+        sim_backend="cuda" if torch.cuda.is_available() and args.cuda else "cpu",
         capture_video=args.capture_video,
         **envargs
     )
