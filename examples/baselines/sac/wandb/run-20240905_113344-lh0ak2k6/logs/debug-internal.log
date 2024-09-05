@@ -2299,3 +2299,27 @@ NoneType: None
 2024-09-05 14:07:46,190 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
 NoneType: None
 2024-09-05 14:07:48,033 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:07:53,035 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:07:58,037 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:03,038 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:08,040 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:13,042 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:16,035 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
+2024-09-05 14:08:16,181 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
+NoneType: None
+2024-09-05 14:08:19,038 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:24,040 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:29,042 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:34,042 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:39,044 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:44,045 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:46,040 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
+2024-09-05 14:08:46,206 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
+NoneType: None
+2024-09-05 14:08:50,043 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:55,045 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:09:00,046 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:09:05,047 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:09:10,049 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:09:15,050 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:09:16,040 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats

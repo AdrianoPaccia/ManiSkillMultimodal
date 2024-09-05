@@ -30,6 +30,7 @@ def build_training_env(
     """
     env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=device, render_backend=device)
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
+    print('HERE')
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
     envs = ManiSkillVectorEnv(envs, num_envs, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)

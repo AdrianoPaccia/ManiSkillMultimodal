@@ -788,3 +788,11 @@ _info {
 2024-09-05 14:07:43,763 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
 2024-09-05 14:07:48,758 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
 2024-09-05 14:07:49,759 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:07:54,760 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:07:59,761 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:04,762 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:09,764 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:14,765 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:18,759 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 14:08:20,760 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 14:08:25,762 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
