@@ -298,7 +298,7 @@ if __name__ == "__main__":
 
     writer = None
     if not args.evaluate:
-        print("Running training")
+        print("Running training\n")
         if args.track:
             import wandb
 
@@ -318,10 +318,10 @@ if __name__ == "__main__":
             "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
         )
     else:
-        print("Running evaluation")
+        print("Running evaluation\n")
 
     # TRY NOT TO MODIFY: seeding
-    print('... seeding setup')#, end='\r')
+    print('... seeding setup', end='\r')
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
