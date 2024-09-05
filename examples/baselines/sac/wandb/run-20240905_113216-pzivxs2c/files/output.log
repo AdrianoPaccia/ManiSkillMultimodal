@@ -1,0 +1,3 @@
+
+Backend tkagg is interactive backend. Turning interactive mode on.
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.shape to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.shape` for environment variables or `env.get_wrapper_attr('shape')` that will search the reminding wrappers.

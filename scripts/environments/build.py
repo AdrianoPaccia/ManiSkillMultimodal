@@ -15,8 +15,7 @@ def build_training_env(
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
         sim_backend:str="gpu",
-        capture_video:bool=False,
-        **kwargs #[run_name, checkpoint_dir, num_steps, save_video_freq][partial_reset:bool]
+        **kwargs
     ):
     """
     Args:
@@ -27,19 +26,14 @@ def build_training_env(
         render_mode: ["human", "rgb_array", "None"]
         sim_backend: ["cpu", "gpu"]
         capture_video:bool
-        **kwarg: [run_name, num_steps, save_video_freq, partial_reset:bool, img_shape]
+        **kwarg: [run_name, partial_reset:bool]
     Returns: training environment
     """
     env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=sim_backend)
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
-    if capture_video:
-        save_video_trigger = lambda x: (x // kwargs['num_steps']) % kwargs['save_video_freq'] == 0
-        envs = RecordEpisode(envs, output_dir=f"runs/{kwargs['run_name']}/train_videos", save_trajectory=False,
-                             save_video_trigger=save_video_trigger, max_steps_per_video=kwargs['num_steps'], video_fps=30)
     envs = ManiSkillVectorEnv(envs, num_envs, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
-
     game = kwargs['game']
     with open(f'{os.path.dirname(os.path.realpath(__file__))}/configuration.yaml', "r") as file:
         kwargs = {**kwargs, **yaml.safe_load(file)[str(game)]}
@@ -75,17 +69,12 @@ def build_eval_env(
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
-    n_steps = kwargs['num_steps']
     if capture_video:
-        run_name = kwargs['run_name']
-        video_dir = f"runs/{run_name}/videos"
-        output_dir = f"{kwargs['checkpoint_dir']}/test_videos"
         print(f"Saving eval videos to {kwargs['checkpoint_dir']}")
-        envs = RecordEpisode(envs, output_dir=os.path.join(output_dir,'test_video'), save_trajectory=True, trajectory_name="trajectory",
-                                  max_steps_per_video=n_steps, video_fps=30)
+        envs = RecordEpisode(envs, output_dir=f"runs/{kwargs['run_name']}/train_videos", save_trajectory=True, trajectory_name="trajectory",
+                                  max_steps_per_video=kwargs['eval_steps'], video_fps=30)
 
-    envs = ManiSkillVectorEnv(envs, n_steps, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
-
+    envs = ManiSkillVectorEnv(envs, num_envs, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
 
     game = kwargs['game']
     with open(f'{os.path.dirname(os.path.realpath(__file__))}/configuration.yaml', "r") as file:

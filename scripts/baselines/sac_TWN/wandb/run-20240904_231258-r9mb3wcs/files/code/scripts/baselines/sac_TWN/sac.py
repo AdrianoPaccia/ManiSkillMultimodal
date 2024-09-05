@@ -338,12 +338,13 @@ if __name__ == "__main__":
         'run_name':run_name,
         'game':'manipulation',
         'checkpoint_dir': os.path.join(os.getcwd(), 'test_runs'),
+        'num_steps': 300, #args.num_steps,
+        'save_video_freq':args.save_train_video_freq,
         'partial_reset': args.partial_reset,
         'noise_frequency': 0.0,
         'image_noise_types': ['nonoise'],
         'conf_noise_types': ['nonoise'],
-        'frames': 2,
-        'eval_steps': args.num_eval_steps,
+        'frames': 2
     }
 
     eval_envs = build_eval_env(
