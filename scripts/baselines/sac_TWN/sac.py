@@ -358,7 +358,7 @@ if __name__ == "__main__":
         obs_mode="rgb+depth+segmentation",#"state",
         control_mode="pd_joint_delta_pos",
         render_mode = "rgb_array",
-        device="cuda" if torch.cuda.is_available() "cpu",
+        device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs
     )
