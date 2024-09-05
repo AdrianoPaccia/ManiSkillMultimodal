@@ -351,7 +351,7 @@ if __name__ == "__main__":
         num_envs=args.num_envs,
         obs_mode="rgb+depth+segmentation",
         control_mode="pd_joint_delta_pos",
-        render_mode = "rgb_array",
+        render_mode = None, #"rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs
@@ -364,7 +364,7 @@ if __name__ == "__main__":
         num_envs=args.num_envs,
         obs_mode="rgb+depth+segmentation",#"state",
         control_mode="pd_joint_delta_pos",
-        render_mode = "rgb_array",
+        render_mode = None, #"rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs
