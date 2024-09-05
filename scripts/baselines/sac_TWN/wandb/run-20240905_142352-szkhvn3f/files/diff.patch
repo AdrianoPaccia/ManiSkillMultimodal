@@ -1,0 +1,1286 @@
+diff --git a/examples/baselines/sac/wandb/debug-cli.adriano.log b/examples/baselines/sac/wandb/debug-cli.adriano.log
+index ddd8050..ac6a3b9 100644
+--- a/examples/baselines/sac/wandb/debug-cli.adriano.log
++++ b/examples/baselines/sac/wandb/debug-cli.adriano.log
+@@ -9387,3 +9387,876 @@
+ 2024-09-05 14:09:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
+ 2024-09-05 14:09:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
+ 2024-09-05 14:09:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:09:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:10:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:11:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:12:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:13:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:14:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:15:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:16:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:17:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:18:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:19:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:20:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:21:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:54 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:55 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:56 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:57 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:58 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:22:59 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:00 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:01 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:02 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:03 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:04 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:05 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:06 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:07 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:08 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:09 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:10 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:11 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:12 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:13 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:14 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:15 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:16 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:17 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:18 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:19 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:20 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:21 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:22 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:23 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:24 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:25 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:26 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:27 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:28 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:29 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:30 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:31 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:32 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:33 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:34 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:35 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:36 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:37 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:38 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:39 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:40 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:41 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:42 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:43 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:44 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:45 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:46 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:47 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:48 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:49 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:50 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:51 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:52 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
++2024-09-05 14:23:53 INFO No path found after runs/PushCube-v1__sac__1__1725528822/events.out.tfevents.1725528826.Gimli.97413.0
+diff --git a/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/logs/debug-internal.log b/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/logs/debug-internal.log
+index 45a746c..5d6d04e 100644
+--- a/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/logs/debug-internal.log
++++ b/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/logs/debug-internal.log
+@@ -2323,3 +2323,253 @@ NoneType: None
+ 2024-09-05 14:09:10,049 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+ 2024-09-05 14:09:15,050 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+ 2024-09-05 14:09:16,040 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:09:21,043 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:26,044 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:31,045 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:36,047 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:41,049 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:46,051 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:46,052 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:09:46,186 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:09:51,055 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:09:56,056 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:01,058 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:06,060 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:11,061 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:16,060 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:10:16,067 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:16,216 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:10:21,064 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:26,065 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:31,067 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:36,068 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:41,070 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:46,052 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:10:47,054 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:52,056 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:10:57,058 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:02,059 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:07,061 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:12,063 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:16,067 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:11:16,211 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:11:17,074 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:22,075 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:27,077 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:32,078 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:37,079 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:42,081 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:46,060 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:11:46,202 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:11:48,063 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:53,064 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:11:58,065 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:03,067 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:08,069 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:13,070 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:16,064 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:12:16,209 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:12:19,067 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:24,068 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:29,070 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:34,071 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:39,073 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:44,074 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:46,066 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:12:46,211 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:12:50,068 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:12:55,070 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:00,071 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:05,073 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:10,075 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:15,076 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:16,071 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:13:17,255 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:13:21,074 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:26,076 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:31,078 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:36,080 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:41,081 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:46,075 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:13:46,231 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:13:47,077 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:52,079 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:13:57,081 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:02,082 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:07,084 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:12,086 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:16,078 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:14:16,228 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:14:18,081 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:23,083 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:28,084 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:33,086 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:38,088 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:43,089 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:46,082 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:14:46,247 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:14:49,084 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:54,086 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:14:59,088 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:04,090 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:09,091 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:14,093 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:16,085 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:15:16,235 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:15:20,088 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:25,090 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:30,092 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:35,093 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:40,095 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:45,097 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:46,089 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:15:46,238 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:15:51,093 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:15:56,094 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:01,096 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:06,098 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:11,099 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:16,093 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:16:16,239 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:16:17,095 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:22,096 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:27,098 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:32,100 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:37,102 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:42,104 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:46,097 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:16:46,239 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:16:48,099 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:53,101 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:16:58,103 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:03,104 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:08,106 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:13,108 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:16,100 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:17:16,260 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:17:19,103 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:24,105 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:29,107 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:34,109 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:39,111 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:44,112 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:46,104 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:17:46,262 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:17:50,107 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:17:55,109 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:00,111 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:05,112 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:10,114 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:15,116 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:16,107 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:18:16,255 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:18:21,109 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:26,111 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:31,112 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:36,114 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:41,116 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:46,111 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:18:46,268 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:18:47,113 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:52,115 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:18:57,117 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:02,118 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:07,120 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:12,122 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:16,111 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:19:18,112 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:23,114 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:28,116 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:33,117 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:38,119 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:43,120 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:46,121 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:19:46,252 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:19:48,122 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:53,124 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:19:58,125 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:03,127 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:08,129 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:13,131 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:16,117 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:20:16,275 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:20:19,120 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:24,122 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:29,124 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:34,125 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:39,127 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:44,129 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:46,120 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:20:46,272 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:20:50,123 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:20:55,125 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:00,126 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:05,128 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:10,130 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:15,132 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:16,124 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:21:16,265 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:21:21,126 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:26,128 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:31,129 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:36,130 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:41,132 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:46,128 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:21:46,139 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:46,282 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:21:51,141 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:21:56,142 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:01,144 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:06,145 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:11,146 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:16,131 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:22:17,133 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:22,135 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:27,136 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:32,137 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:37,138 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:42,139 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:46,141 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:22:46,276 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:22:47,142 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:52,144 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:22:57,145 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:02,147 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:07,149 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:12,151 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:16,148 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:23:16,286 ERROR   FileStreamThread:97458 [file_stream.py:_handle_response():510] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/adriano_wb/cleanRL/lh0ak2k6/file_stream
++NoneType: None
++2024-09-05 14:23:18,151 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:23,153 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:28,154 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:33,156 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:38,157 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:43,159 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:46,141 DEBUG   SenderThread:97458 [sender.py:send():391] send: stats
++2024-09-05 14:23:49,144 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
++2024-09-05 14:23:54,145 DEBUG   HandlerThread:97458 [handler.py:handle_request():158] handle_request: status_report
+diff --git a/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/run-lh0ak2k6.wandb b/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/run-lh0ak2k6.wandb
+index aa354ce..f1f380e 100644
+Binary files a/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/run-lh0ak2k6.wandb and b/examples/baselines/sac/wandb/run-20240905_113344-lh0ak2k6/run-lh0ak2k6.wandb differ
+diff --git a/scripts/baselines/sac_TWN/sac.py b/scripts/baselines/sac_TWN/sac.py
+index 91cc3d2..1a5620f 100644
+--- a/scripts/baselines/sac_TWN/sac.py
++++ b/scripts/baselines/sac_TWN/sac.py
+@@ -321,7 +321,7 @@ if __name__ == "__main__":
+         print("Running evaluation\n")
+ 
+     # TRY NOT TO MODIFY: seeding
+-    print(f"... seeding setup")#, end='\r')
++    print(f"... seeding setup", end='\r')
+ 
+     random.seed(args.seed)
+     np.random.seed(args.seed)
+@@ -331,7 +331,7 @@ if __name__ == "__main__":
+     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
+ 
+     ## ENVIRONMENTS SETUP
+-    print('... environments setup')#, end='\r')
++    print('... environments setup', end='\r')
+     envargs = {
+         'run_name':run_name,
+         'game':'manipulation',
+@@ -344,33 +344,33 @@ if __name__ == "__main__":
+         'eval_steps': args.num_eval_steps,
+     }
+ 
+-    print('... building training environment')#, end='\r')
++    print('... building training environment', end='\r')
+ 
+     eval_envs = build_eval_env(
+         id=args.env_id,
+         num_envs=args.num_envs,
+         obs_mode="rgb+depth+segmentation",
+         control_mode="pd_joint_delta_pos",
+-        render_mode = None, #"rgb_array",
++        render_mode = "rgb_array",
+         device="cuda" if torch.cuda.is_available() else "cpu",
+         capture_video=args.capture_video,
+         **envargs
+     )
+ 
+-    print('... building eval environment')#, end='\r')
++    print('... building eval environment', end='\r')
+ 
+     envs = build_training_env(
+         id=args.env_id,
+         num_envs=args.num_envs,
+         obs_mode="rgb+depth+segmentation",#"state",
+         control_mode="pd_joint_delta_pos",
+-        render_mode = None, #"rgb_array",
++        render_mode = "rgb_array",
+         device="cuda" if torch.cuda.is_available() else "cpu",
+         capture_video=args.capture_video,
+         **envargs
+     )
+ 
+-    print('... directories setup')#, end='\r')
++    print('... directories setup', end='\r')
+ 
+     args.modes = args.modes.split("+")
+     save_folder = f"runs/{run_name}"
+@@ -379,7 +379,7 @@ if __name__ == "__main__":
+ 
+     assert isinstance(envs.single_action_space, gym.spaces.Box), "only continuous action space is supported"
+ 
+-    print('... actor-critic setup')#, end='\r')
++    print('... actor-critic setup', end='\r')
+ 
+     max_action = float(envs.single_action_space.high[0])
+ 
+@@ -415,7 +415,7 @@ if __name__ == "__main__":
+ 
+ 
+     ## REPLAY BUFFER setup
+-    print('... replay buffer setup')#, end='\r')
++    print('... replay buffer setup', end='\r')
+     envs.single_observation_space_mm.dtype = np.float32
+     rb = ReplayBuffer(
+         obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
+@@ -431,6 +431,6 @@ if __name__ == "__main__":
+     }
+ 
+     ## TRAINING
+-    print('... starting loop')#, end='\r')
++    print('... starting loop', end='\r')
+     (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
+     envs.close()
+diff --git a/scripts/baselines/sac_TWN/wandb/debug-cli.adriano.log b/scripts/baselines/sac_TWN/wandb/debug-cli.adriano.log
+index bf2ec0c..b261d8c 100644
+--- a/scripts/baselines/sac_TWN/wandb/debug-cli.adriano.log
++++ b/scripts/baselines/sac_TWN/wandb/debug-cli.adriano.log
+@@ -1833,3 +1833,13 @@
+ 2024-09-05 14:08:25 INFO No path found after runs/depth/PushCube-v1__sac__1__1725536267/events.out.tfevents.1725536270.Gimli.113115.0
+ 2024-09-05 14:08:26 INFO No path found after runs/depth/PushCube-v1__sac__1__1725536267/events.out.tfevents.1725536270.Gimli.113115.0
+ 2024-09-05 14:08:27 INFO No path found after runs/depth/PushCube-v1__sac__1__1725536267/events.out.tfevents.1725536270.Gimli.113115.0
++2024-09-05 14:22:37 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:38 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:39 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:39 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:39 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:40 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:41 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:42 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:43 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
++2024-09-05 14:22:44 INFO No path found after runs/depth/PushCube-v1__sac__1__1725538954/events.out.tfevents.1725538957.Gimli.118909.0
+diff --git a/scripts/baselines/sac_TWN/wandb/debug-internal.log b/scripts/baselines/sac_TWN/wandb/debug-internal.log
+index b038969..834b68e 120000
+--- a/scripts/baselines/sac_TWN/wandb/debug-internal.log
++++ b/scripts/baselines/sac_TWN/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240905_133748-i9m0fgl9/logs/debug-internal.log
+\ No newline at end of file
++run-20240905_142352-szkhvn3f/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/scripts/baselines/sac_TWN/wandb/debug.log b/scripts/baselines/sac_TWN/wandb/debug.log
+index 270fa3c..8f38f8f 120000
+--- a/scripts/baselines/sac_TWN/wandb/debug.log
++++ b/scripts/baselines/sac_TWN/wandb/debug.log
+@@ -1 +1 @@
+-run-20240905_133748-i9m0fgl9/logs/debug.log
+\ No newline at end of file
++run-20240905_142352-szkhvn3f/logs/debug.log
+\ No newline at end of file
+diff --git a/scripts/baselines/sac_TWN/wandb/latest-run b/scripts/baselines/sac_TWN/wandb/latest-run
+index c725731..d97f4f8 120000
+--- a/scripts/baselines/sac_TWN/wandb/latest-run
++++ b/scripts/baselines/sac_TWN/wandb/latest-run
+@@ -1 +1 @@
+-run-20240905_133748-i9m0fgl9
+\ No newline at end of file
++run-20240905_142352-szkhvn3f
+\ No newline at end of file
+diff --git a/scripts/environments/build.py b/scripts/environments/build.py
+index e572831..9b67b93 100644
+--- a/scripts/environments/build.py
++++ b/scripts/environments/build.py
+@@ -30,7 +30,6 @@ def build_training_env(
+     """
+     env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=device, render_backend=device)
+     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
+-    print('HERE')
+     if isinstance(envs.action_space, gym.spaces.Dict):
+         envs = FlattenActionSpaceWrapper(envs)
+     envs = ManiSkillVectorEnv(envs, num_envs, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)

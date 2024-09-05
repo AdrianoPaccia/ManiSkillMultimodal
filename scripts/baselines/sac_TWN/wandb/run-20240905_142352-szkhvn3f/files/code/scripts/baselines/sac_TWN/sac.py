@@ -154,9 +154,6 @@ def train(**kwargs):
                 next_done = torch.zeros_like(terminations).to(torch.float32)
             else:
                 next_done = (terminations | truncations).to(torch.float32)
-
-
-            print(f'\n\n{"final_info" in infos}\n\n')
             if "final_info" in infos:
                 final_info = infos["final_info"]
                 done_mask = infos["_final_info"]

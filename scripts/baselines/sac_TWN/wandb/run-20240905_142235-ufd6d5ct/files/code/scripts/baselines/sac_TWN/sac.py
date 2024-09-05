@@ -154,9 +154,6 @@ def train(**kwargs):
                 next_done = torch.zeros_like(terminations).to(torch.float32)
             else:
                 next_done = (terminations | truncations).to(torch.float32)
-
-
-            print(f'\n\n{"final_info" in infos}\n\n')
             if "final_info" in infos:
                 final_info = infos["final_info"]
                 done_mask = infos["_final_info"]
@@ -354,7 +351,7 @@ if __name__ == "__main__":
         num_envs=args.num_envs,
         obs_mode="rgb+depth+segmentation",
         control_mode="pd_joint_delta_pos",
-        render_mode = "rgb_array",
+        render_mode = None, #"rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs
@@ -367,7 +364,7 @@ if __name__ == "__main__":
         num_envs=args.num_envs,
         obs_mode="rgb+depth+segmentation",#"state",
         control_mode="pd_joint_delta_pos",
-        render_mode = "rgb_array",
+        render_mode = None, #"rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs

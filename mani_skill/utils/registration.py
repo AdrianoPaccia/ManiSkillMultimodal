@@ -37,7 +37,7 @@ class EnvSpec:
     def make(self, **kwargs):
         _kwargs = self.default_kwargs.copy()
         _kwargs.update(kwargs)
-
+        print('HERE')
         # check if all assets necessary are downloaded
         assets_to_download = []
         for asset_id in self.asset_download_ids or []:
