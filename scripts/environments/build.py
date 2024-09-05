@@ -1,6 +1,5 @@
 import gymnasium as gym
 from mani_skill.utils.wrappers.flatten import FlattenActionSpaceWrapper
-from mani_skill.utils.wrappers.record import RecordEpisode
 from mani_skill.vector.wrappers.gymnasium import ManiSkillVectorEnv
 import os
 from scripts.environments.wrappers import EnvMultimodalWrapper
@@ -70,6 +69,7 @@ def build_eval_env(
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
     if capture_video:
+        from mani_skill.utils.wrappers.record import RecordEpisode
         print(f"Saving eval videos to {kwargs['checkpoint_dir']}")
         envs = RecordEpisode(envs, output_dir=f"runs/{kwargs['run_name']}/train_videos", save_trajectory=True, trajectory_name="trajectory",
                                   max_steps_per_video=kwargs['eval_steps'], video_fps=30)
