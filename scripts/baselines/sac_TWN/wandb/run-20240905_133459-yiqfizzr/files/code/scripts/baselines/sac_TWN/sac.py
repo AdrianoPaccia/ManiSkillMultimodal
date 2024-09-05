@@ -305,7 +305,6 @@ if __name__ == "__main__":
             wandb.init(
                 project=args.wandb_project_name,
                 entity=args.wandb_entity,
-                group=args.wandb_group,
                 sync_tensorboard=True,
                 config=vars(args),
                 name=run_name,
@@ -347,7 +346,7 @@ if __name__ == "__main__":
         obs_mode="rgb+depth+segmentation",
         control_mode="pd_joint_delta_pos",
         render_mode = "rgb_array",
-        sim_backend=device,
+        sim_backend="gpu",
         capture_video=args.capture_video,
         **envargs
     )
@@ -358,14 +357,14 @@ if __name__ == "__main__":
         obs_mode="rgb+depth+segmentation",#"state",
         control_mode="pd_joint_delta_pos",
         render_mode = "rgb_array",
-        sim_backend=device,
+        sim_backend="gpu",
         capture_video=args.capture_video,
         **envargs
     )
 
     args.modes = args.modes.split("+")
     save_folder = f"runs/{run_name}"
-    ckpt_folder = f"{save_folder}/checkpoints"
+    ckpt_folder = f"{save_folder}/checkpoint"
     os.makedirs(ckpt_folder, exist_ok=True)
 
     assert isinstance(envs.single_action_space, gym.spaces.Box), "only continuous action space is supported"

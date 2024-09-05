@@ -1,0 +1,226 @@
+2024-09-05 13:37:48,288 INFO    StreamThr :113168 [internal.py:wandb_internal():85] W&B internal server running at pid: 113168, started at: 2024-09-05 13:37:48.287613
+2024-09-05 13:37:48,292 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status
+2024-09-05 13:37:48,293 INFO    WriterThread:113168 [datastore.py:open_for_write():87] open: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/run-i9m0fgl9.wandb
+2024-09-05 13:37:48,293 DEBUG   SenderThread:113168 [sender.py:send():391] send: header
+2024-09-05 13:37:48,308 DEBUG   SenderThread:113168 [sender.py:send():391] send: run
+2024-09-05 13:37:48,650 INFO    SenderThread:113168 [dir_watcher.py:__init__():211] watching files in: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files
+2024-09-05 13:37:48,650 INFO    SenderThread:113168 [sender.py:_start_run_threads():1200] run started: i9m0fgl9 with start time 1725536268.287912
+2024-09-05 13:37:48,657 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: run_start
+2024-09-05 13:37:48,686 DEBUG   HandlerThread:113168 [system_info.py:__init__():26] System info init
+2024-09-05 13:37:48,686 DEBUG   HandlerThread:113168 [system_info.py:__init__():41] System info init done
+2024-09-05 13:37:48,686 INFO    HandlerThread:113168 [system_monitor.py:start():194] Starting system monitor
+2024-09-05 13:37:48,686 INFO    SystemMonitor:113168 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-09-05 13:37:48,687 INFO    HandlerThread:113168 [system_monitor.py:probe():214] Collecting system info
+2024-09-05 13:37:48,687 INFO    SystemMonitor:113168 [interfaces.py:start():188] Started cpu monitoring
+2024-09-05 13:37:48,688 INFO    SystemMonitor:113168 [interfaces.py:start():188] Started disk monitoring
+2024-09-05 13:37:48,688 INFO    SystemMonitor:113168 [interfaces.py:start():188] Started gpu monitoring
+2024-09-05 13:37:48,689 INFO    SystemMonitor:113168 [interfaces.py:start():188] Started memory monitoring
+2024-09-05 13:37:48,689 INFO    SystemMonitor:113168 [interfaces.py:start():188] Started network monitoring
+2024-09-05 13:37:48,737 DEBUG   HandlerThread:113168 [system_info.py:probe():152] Probing system
+2024-09-05 13:37:48,746 DEBUG   HandlerThread:113168 [system_info.py:_probe_git():137] Probing git
+2024-09-05 13:37:48,761 DEBUG   HandlerThread:113168 [system_info.py:_probe_git():145] Probing git done
+2024-09-05 13:37:48,761 DEBUG   HandlerThread:113168 [system_info.py:probe():200] Probing system done
+2024-09-05 13:37:48,761 DEBUG   HandlerThread:113168 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-119-generic-x86_64-with-glibc2.31', 'python': '3.9.19', 'heartbeatAt': '2024-09-05T11:37:48.737253', 'startedAt': '2024-09-05T11:37:48.279216', 'docker': None, 'cuda': None, 'args': ('--env_id=PushCube-v1', '--num_envs=2', '--utd=0.5', '--buffer_size=10_000', '--total_timesteps=500_000', '--eval_freq=20_000', '--batch_size=256', '--track', '--modes=depth', '--no-cuda'), 'state': 'running', 'program': '/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py', 'codePathLocal': 'sac.py', 'codePath': 'scripts/baselines/sac_TWN/sac.py', 'git': {'remote': 'https://github.com/AdrianoPaccia/ManiSkillMultimodal.git', 'commit': 'ff1d923c200d4018fe8c31cc47a48f415ff055d6'}, 'email': 'adriano@pacciarelli.com', 'root': '/home/adriano/Desktop/ManiSkillMultimodal', 'host': 'Gimli', 'username': 'adriano', 'executable': '/home/adriano/miniconda3/envs/MSM/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3417.4705, 'min': 800.0, 'max': 5150.0}, 'cpu_freq_per_core': [{'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 1097.615, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}], 'disk': {'/': {'total': 466.98533630371094, 'used': 438.89817810058594}}, 'gpu': 'NVIDIA GeForce RTX 3080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080 Ti', 'memory_total': 12884901888}], 'memory': {'total': 31.083820343017578}}
+2024-09-05 13:37:48,761 INFO    HandlerThread:113168 [system_monitor.py:probe():224] Finished collecting system info
+2024-09-05 13:37:48,762 INFO    HandlerThread:113168 [system_monitor.py:probe():227] Publishing system info
+2024-09-05 13:37:48,762 DEBUG   HandlerThread:113168 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-09-05 13:37:49,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/conda-environment.yaml
+2024-09-05 13:37:49,981 DEBUG   HandlerThread:113168 [system_info.py:_save_conda():224] Saving conda packages done
+2024-09-05 13:37:49,981 DEBUG   HandlerThread:113168 [system_info.py:_save_code():44] Saving code
+2024-09-05 13:37:49,988 DEBUG   HandlerThread:113168 [system_info.py:_save_code():67] Saving code done
+2024-09-05 13:37:49,988 DEBUG   HandlerThread:113168 [system_info.py:_save_patches():84] Saving git patches
+2024-09-05 13:37:50,094 DEBUG   HandlerThread:113168 [system_info.py:_save_patches():126] Saving git patches done
+2024-09-05 13:37:50,095 INFO    HandlerThread:113168 [system_monitor.py:probe():229] Finished publishing system info
+2024-09-05 13:37:50,105 DEBUG   SenderThread:113168 [sender.py:send():391] send: files
+2024-09-05 13:37:50,105 INFO    SenderThread:113168 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-09-05 13:37:50,105 INFO    SenderThread:113168 [sender.py:_save_file():1466] saving file code/scripts/baselines/sac_TWN/sac.py with policy now
+2024-09-05 13:37:50,106 INFO    SenderThread:113168 [sender.py:_save_file():1466] saving file diff.patch with policy now
+2024-09-05 13:37:50,170 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: python_packages
+2024-09-05 13:37:50,171 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: python_packages
+2024-09-05 13:37:50,171 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:37:50,171 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:37:50,172 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:37:50,173 INFO    HandlerThread:113168 [handler.py:handle_tbrecord():785] handling tbrecord: tbrecord {
+  log_dir: "runs/depth/PushCube-v1__sac__1__1725536267"
+  save: true
+}
+control {
+  relay_id: "e7d9c0bcd68b4e3bba0376fae23d9113"
+}
+_info {
+  stream_id: "i9m0fgl9"
+}
+
+2024-09-05 13:37:50,173 DEBUG   HandlerThread:113168 [config_util.py:dict_from_config_file():70] no default config file found in config-defaults.yaml
+2024-09-05 13:37:50,429 DEBUG   SenderThread:113168 [sender.py:send():391] send: telemetry
+2024-09-05 13:37:50,429 DEBUG   SenderThread:113168 [sender.py:send():391] send: tbrecord
+2024-09-05 13:37:50,429 DEBUG   SenderThread:113168 [sender.py:send():391] send: files
+2024-09-05 13:37:50,429 INFO    SenderThread:113168 [sender.py:_save_file():1466] saving file events.out.tfevents.1725536270.Gimli.113115.0 with policy live
+2024-09-05 13:37:50,635 INFO    wandb-upload_0:113168 [upload_job.py:push():130] Uploaded file /tmp/tmpq3xsg51wwandb/f1bjrxtq-wandb-metadata.json
+2024-09-05 13:37:50,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/conda-environment.yaml
+2024-09-05 13:37:50,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/events.out.tfevents.1725536270.Gimli.113115.0
+2024-09-05 13:37:50,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/wandb-metadata.json
+2024-09-05 13:37:50,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/requirements.txt
+2024-09-05 13:37:50,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/diff.patch
+2024-09-05 13:37:50,651 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/code/scripts/baselines/sac_TWN/sac.py
+2024-09-05 13:37:50,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/code
+2024-09-05 13:37:50,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/code/scripts/baselines/sac_TWN
+2024-09-05 13:37:50,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/code/scripts
+2024-09-05 13:37:50,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/code/scripts/baselines
+2024-09-05 13:37:50,687 INFO    wandb-upload_1:113168 [upload_job.py:push():130] Uploaded file /tmp/tmpq3xsg51wwandb/d6m9q0mh-code/scripts/baselines/sac_TWN/sac.py
+2024-09-05 13:37:50,805 INFO    wandb-upload_3:113168 [upload_job.py:push():130] Uploaded file /tmp/tmpq3xsg51wwandb/4gaip4l9-events.out.tfevents.1725536270.Gimli.113115.0
+2024-09-05 13:37:51,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:37:51,679 INFO    wandb-upload_2:113168 [upload_job.py:push():130] Uploaded file /tmp/tmpq3xsg51wwandb/odcn8tmn-diff.patch
+2024-09-05 13:37:53,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:37:53,872 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:37:54,652 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/events.out.tfevents.1725536270.Gimli.113115.0
+2024-09-05 13:37:55,653 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:37:57,654 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:37:59,294 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:37:59,654 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:00,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:38:01,655 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:03,656 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:04,693 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:05,173 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:38:05,174 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:38:05,657 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:07,658 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:09,658 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:09,978 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:10,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:38:11,659 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:13,660 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:15,197 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:15,661 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:17,662 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:19,662 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:20,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:38:20,178 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:38:20,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:38:20,419 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:20,663 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/config.yaml
+2024-09-05 13:38:21,663 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:23,664 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:38:26,196 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:30,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:38:31,197 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:35,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:38:35,178 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:38:36,424 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:40,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:38:42,197 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:48,197 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:48,690 DEBUG   SystemMonitor:113168 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-09-05 13:38:48,691 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:38:50,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:38:50,178 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:38:50,218 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:38:53,382 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:38:59,197 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:00,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:39:04,198 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:05,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:39:05,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:39:09,432 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:10,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:39:15,197 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:18,693 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:39:20,178 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:39:20,178 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:39:20,220 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:39:20,428 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:26,198 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:30,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:39:32,198 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:35,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:39:35,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:39:37,435 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:40,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:39:43,198 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:48,199 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:48,694 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:39:50,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:39:50,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:39:50,223 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:39:53,329 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:39:59,199 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:00,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:40:05,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:40:05,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:40:05,402 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:10,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:40:11,199 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:17,199 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:18,695 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:40:20,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:40:20,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:40:20,222 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:40:22,352 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:28,201 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:30,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:40:34,199 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:35,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:40:35,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:40:39,378 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:40,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:40:45,200 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:48,696 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:40:50,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:40:50,181 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:40:50,222 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:40:50,413 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:40:56,201 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:00,181 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:41:02,201 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:05,179 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:41:05,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:41:06,536 DEBUG   SenderThread:113168 [sender.py:send():391] send: history
+2024-09-05 13:41:06,536 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: summary_record
+2024-09-05 13:41:06,537 INFO    SenderThread:113168 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-05 13:41:06,780 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/events.out.tfevents.1725536270.Gimli.113115.0
+2024-09-05 13:41:06,780 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/wandb-summary.json
+2024-09-05 13:41:07,243 INFO    wandb-upload_0:113168 [upload_job.py:push():130] Uploaded file /tmp/tmpq3xsg51wwandb/nebhb1te-events.out.tfevents.1725536270.Gimli.113115.0
+2024-09-05 13:41:07,538 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:07,781 INFO    Thread-12 :113168 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/wandb/run-20240905_133748-i9m0fgl9/files/output.log
+2024-09-05 13:41:10,181 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:41:13,201 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:18,201 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:18,697 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:41:20,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:41:20,181 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:41:20,223 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:41:23,581 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:29,202 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:30,181 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:41:35,181 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:41:35,182 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:41:35,997 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:40,182 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:41:41,202 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:47,202 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:48,698 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:41:50,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:41:50,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:41:50,223 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:41:52,405 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:41:58,203 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:00,182 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:42:04,202 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:05,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:42:05,180 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:42:09,422 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:10,181 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:42:15,204 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:18,699 DEBUG   SenderThread:113168 [sender.py:send():391] send: stats
+2024-09-05 13:42:20,181 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:42:20,182 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:42:20,222 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:42:20,363 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:26,202 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:30,182 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-05 13:42:32,202 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:35,180 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-05 13:42:35,181 DEBUG   SenderThread:113168 [sender.py:send_request():418] send_request: stop_status
+2024-09-05 13:42:37,403 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: status_report
+2024-09-05 13:42:40,182 DEBUG   HandlerThread:113168 [handler.py:handle_request():158] handle_request: internal_messages
