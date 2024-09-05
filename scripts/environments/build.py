@@ -14,7 +14,7 @@ def build_training_env(
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
-        sim_backend:str="gpu",
+        device:str="gpu",
         **kwargs
     ):
     """
@@ -24,12 +24,12 @@ def build_training_env(
         obs_mode: what tipe of observations
         control_mode: what tipe of actions
         render_mode: ["human", "rgb_array", "None"]
-        sim_backend: ["cpu", "gpu"]
+        device: ["cpu", "gpu"]
         capture_video:bool
         **kwarg: [run_name, partial_reset:bool]
     Returns: training environment
     """
-    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=sim_backend)
+    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=device, render_backend=device)
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
@@ -47,7 +47,7 @@ def build_eval_env(
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
-        sim_backend:str="gpu",
+        device:str="gpu",
         capture_video:bool=True,
         **kwargs
     ):
@@ -58,14 +58,14 @@ def build_eval_env(
         obs_mode: what tipe of observations
         control_mode: what tipe of actions
         render_mode: ["human", "rgb_array", "None"]
-        sim_backend: ["cpu", "gpu"]
+        device: ["cpu", "gpu"]
         capture_video:bool
         **kwargs: [run_name, checkpoint_dir, num_steps, partial_reset:bool]
 
     Returns: testing environment
 
     """
-    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=sim_backend)
+    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=device, render_backend=device)
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
