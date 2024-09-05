@@ -321,7 +321,8 @@ if __name__ == "__main__":
         print("Running evaluation\n")
 
     # TRY NOT TO MODIFY: seeding
-    print('... seeding setup', end='\r')
+    print(f"... seeding setup", end='\r')
+
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
@@ -330,7 +331,7 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
     ## ENVIRONMENTS SETUP
-    print('... environments setup', end='\r')
+    print('... environments setup')#, end='\r')
     envargs = {
         'run_name':run_name,
         'game':'manipulation',
