@@ -321,7 +321,7 @@ if __name__ == "__main__":
         print("Running evaluation\n")
 
     # TRY NOT TO MODIFY: seeding
-    print(f"... seeding setup", end='\r')
+    print(f"... seeding setup")#, end='\r')
 
     random.seed(args.seed)
     np.random.seed(args.seed)
@@ -344,6 +344,8 @@ if __name__ == "__main__":
         'eval_steps': args.num_eval_steps,
     }
 
+    print('... building training environment')#, end='\r')
+
     eval_envs = build_eval_env(
         id=args.env_id,
         num_envs=args.num_envs,
@@ -354,6 +356,8 @@ if __name__ == "__main__":
         capture_video=args.capture_video,
         **envargs
     )
+
+    print('... building eval environment')#, end='\r')
 
     envs = build_training_env(
         id=args.env_id,
@@ -366,7 +370,7 @@ if __name__ == "__main__":
         **envargs
     )
 
-    print('... directories setup', end='\r')
+    print('... directories setup')#, end='\r')
 
     args.modes = args.modes.split("+")
     save_folder = f"runs/{run_name}"
@@ -375,7 +379,7 @@ if __name__ == "__main__":
 
     assert isinstance(envs.single_action_space, gym.spaces.Box), "only continuous action space is supported"
 
-    print('... actor-critic setup', end='\r')
+    print('... actor-critic setup')#, end='\r')
 
     max_action = float(envs.single_action_space.high[0])
 
@@ -411,7 +415,7 @@ if __name__ == "__main__":
 
 
     ## REPLAY BUFFER setup
-    print('... replay buffer setup', end='\r')
+    print('... replay buffer setup')#, end='\r')
     envs.single_observation_space_mm.dtype = np.float32
     rb = ReplayBuffer(
         obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
@@ -427,6 +431,6 @@ if __name__ == "__main__":
     }
 
     ## TRAINING
-    print('... starting loop', end='\r')
+    print('... starting loop')#, end='\r')
     (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
     envs.close()
