@@ -20,8 +20,11 @@ from utils import ReplayBufferMultimodal as ReplayBuffer
 from scripts.environments.build import build_training_env, build_eval_env
 
 from process import image_preprocess, process_obs_dict
-import matplotlib
-matplotlib.use('TkAgg')
+try:
+    import matplotlib
+    matplotlib.use('TkAgg')
+except:
+    pass
 import matplotlib.pyplot as plt
 
 
