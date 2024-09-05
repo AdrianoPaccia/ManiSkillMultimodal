@@ -82,3 +82,65 @@ eval_episodic_return=5.297534942626953
 
 
 
+
+
+
+
+
+
+
+
+
+Global Step: 3968
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 424, in <module>
+    (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 225, in train
+    z_obs_0, z_0, z_obs_1, z_1, z_act_1 = actor.get_representations(data)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 235, in get_representations
+    z_obs_1 = self.get_encodings(data.next_obs)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 187, in get_encodings
+    return [encoder(o) for encoder,o in zip(self.encoders, x)]
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 187, in <listcomp>
+    return [encoder(o) for encoder,o in zip(self.encoders, x)]
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 109, in forward
+    h = layer(h)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 104, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/functional.py", line 1500, in relu
+    result = torch.relu(input)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 482.00 MiB. GPU 0 has a total capacity of 11.74 GiB of which 453.38 MiB is free. Process 97413 has 1.42 GiB memory in use. Including non-PyTorch memory, this process has 9.28 GiB memory in use. Of the allocated memory 6.23 GiB is allocated by PyTorch, and 386.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 424, in <module>
+    (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py", line 225, in train
+    z_obs_0, z_0, z_obs_1, z_1, z_act_1 = actor.get_representations(data)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 235, in get_representations
+    z_obs_1 = self.get_encodings(data.next_obs)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 187, in get_encodings
+    return [encoder(o) for encoder,o in zip(self.encoders, x)]
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 187, in <listcomp>
+    return [encoder(o) for encoder,o in zip(self.encoders, x)]
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/models.py", line 109, in forward
+    h = layer(h)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 104, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/torch/nn/functional.py", line 1500, in relu
+    result = torch.relu(input)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 482.00 MiB. GPU 0 has a total capacity of 11.74 GiB of which 453.38 MiB is free. Process 97413 has 1.42 GiB memory in use. Including non-PyTorch memory, this process has 9.28 GiB memory in use. Of the allocated memory 6.23 GiB is allocated by PyTorch, and 386.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

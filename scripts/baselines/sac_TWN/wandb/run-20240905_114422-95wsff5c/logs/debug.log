@@ -24,3 +24,4 @@ config: {'exp_name': 'sac', 'seed': 1, 'torch_deterministic': True, 'cuda': True
 2024-09-05 11:44:23,948 INFO    MainThread:98823 [wandb_run.py:_redirect():2399] Redirects installed.
 2024-09-05 11:44:23,950 INFO    MainThread:98823 [wandb_init.py:init():894] run started, returning control to user process
 2024-09-05 11:44:23,950 INFO    MainThread:98823 [wandb_run.py:_tensorboard_callback():1554] tensorboard callback: runs/PushCube-v1__sac__1__1725529461, True
+2024-09-05 11:45:12,500 WARNING MsgRouterThr:98823 [router.py:message_loop():77] message_loop has been closed
