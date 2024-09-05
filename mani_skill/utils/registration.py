@@ -37,6 +37,7 @@ class EnvSpec:
     def make(self, **kwargs):
         _kwargs = self.default_kwargs.copy()
         _kwargs.update(kwargs)
+
         # check if all assets necessary are downloaded
         assets_to_download = []
         for asset_id in self.asset_download_ids or []:
@@ -60,7 +61,6 @@ class EnvSpec:
                     print(
                         f"Could not find asset {asset_id} at {data_source.output_dir / data_source.target_path}"
                     )
-
         if len(assets_to_download) > 0:
             if len(assets_to_download) <= 5:
                 asset_download_msg = ", ".join(assets_to_download)
@@ -75,8 +75,6 @@ class EnvSpec:
             else:
                 print("Exiting as assets are not found or downloaded")
                 exit()
-        print('HERE')
-
         return self.cls(**_kwargs)
 
     @property
@@ -241,6 +239,7 @@ def register_env(
                 )
             ],
         )
+        print('registrated')
 
         return cls
 
