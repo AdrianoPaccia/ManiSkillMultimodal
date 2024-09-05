@@ -37,7 +37,6 @@ class EnvSpec:
     def make(self, **kwargs):
         _kwargs = self.default_kwargs.copy()
         _kwargs.update(kwargs)
-        print('HERE')
         # check if all assets necessary are downloaded
         assets_to_download = []
         for asset_id in self.asset_download_ids or []:
@@ -61,6 +60,8 @@ class EnvSpec:
                     print(
                         f"Could not find asset {asset_id} at {data_source.output_dir / data_source.target_path}"
                     )
+        print('HERE')
+
         if len(assets_to_download) > 0:
             if len(assets_to_download) <= 5:
                 asset_download_msg = ", ".join(assets_to_download)
