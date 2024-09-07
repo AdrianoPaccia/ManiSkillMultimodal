@@ -135,6 +135,7 @@ def train(**kwargs):
         rollout_time = time.time()
         old_obs, info = envs.reset_mm(seed=args.seed)
         obs, _, _, _, _ = envs.step_mm(envs.action_space.sample())
+
         obs_stack = process_obs_dict(obs, old_obs, args.modes, device)
 
         for local_step in range(args.steps_per_env):
@@ -146,21 +147,19 @@ def train(**kwargs):
                 actions, _, _ = actor.get_train_action(obs_stack)
                 actions = actions.detach()
 
-            # TRY NOT TO MODIFY: execute the game and log data.
             next_obs, rewards, terminations, truncations, infos = envs.step_mm(actions)
-            real_next_obs_stack = process_obs_dict(next_obs, obs, args.modes, device)
-
+            real_next_obs = copy.deepcopy(next_obs)
             if args.bootstrap_at_done == 'always':
                 next_done = torch.zeros_like(terminations).to(torch.float32)
             else:
                 next_done = (terminations | truncations).to(torch.float32)
 
-
-            print(f'\n\n{"final_info" in infos}\n\n')
             if "final_info" in infos:
                 final_info = infos["final_info"]
                 done_mask = infos["_final_info"]
-                real_next_obs_stack[done_mask] = infos["final_observation"][done_mask]
+                for k in real_next_obs:
+                    real_next_obs[k][done_mask] = infos["final_observation"][k][done_mask]
+
                 episodic_return = final_info['episode']['r'][done_mask].cpu().numpy().mean()
                 if "success" in final_info:
                     writer.add_scalar("charts/success_rate", final_info["success"][done_mask].cpu().numpy().mean(),
@@ -171,6 +170,8 @@ def train(**kwargs):
                 writer.add_scalar("charts/episodic_return", episodic_return, global_step)
                 writer.add_scalar("charts/episodic_length", final_info["elapsed_steps"][done_mask].cpu().numpy().mean(),
                                   global_step)
+
+            real_next_obs_stack = process_obs_dict(next_obs, obs, args.modes, device)
 
             rb.add(obs_stack, real_next_obs_stack, actions, rewards, next_done)
             obs_stack = real_next_obs_stack
@@ -354,7 +355,7 @@ if __name__ == "__main__":
         num_envs=args.num_envs,
         obs_mode="rgb+depth+segmentation",
         control_mode="pd_joint_delta_pos",
-        render_mode = "rgb_array",
+        render_mode =None, # "rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs
@@ -367,7 +368,7 @@ if __name__ == "__main__":
         num_envs=args.num_envs,
         obs_mode="rgb+depth+segmentation",#"state",
         control_mode="pd_joint_delta_pos",
-        render_mode = "rgb_array",
+        render_mode =None, #"rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
         **envargs

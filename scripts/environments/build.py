@@ -68,7 +68,7 @@ def build_eval_env(
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
-    if capture_video:
+    if capture_video and not render_mode is None:
         from mani_skill.utils.wrappers.record import RecordEpisode
         print(f"Saving eval videos to {kwargs['checkpoint_dir']}")
         envs = RecordEpisode(envs, output_dir=f"runs/{kwargs['run_name']}/train_videos", save_trajectory=True, trajectory_name="trajectory",

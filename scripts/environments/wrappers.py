@@ -30,33 +30,34 @@ class EnvMultimodalWrapper:
             [env.single_observation_space.spaces['sensor_data'][self.data_source][mode] for mode in self.obs_modes]
             )
         )
-        '''self.observation_space_mm = spaces.Tuple((
-            spaces.Box(low=0, high=255, shape=(env.num_envs, (2,128,128)), dtype=np.uint8),  # Image space
-            env.observation_space         # Vector space
-        ))
-        self.single_observation_space_mm = spaces.Tuple((
-            spaces.Box(low=0, high=255, shape=(2,128,128), dtype=np.uint8),  # Image space
-            env.single_observation_space         # Vector space
-        ))'''
 
         self.action_space = env.action_space
         self.single_action_space = env.single_action_space
         self.env = env
-
         self.noise_generators = noise_generators
 
 
     def reset_mm(self,seed=0):
         obs, info = self.env.reset(seed=seed)
-        return obs['sensor_data'][self.data_source], info
+        return self.filter_obs(obs), info
 
     def step_mm(self,a):
         obs, reward, terminated, truncated, info = self.env.step(a)
+
+        if 'final_observation' in info:
+            info['final_observation'] = self.filter_obs(info['final_observation'])
+
+        if 'real_next_obs' in info:
+            info['real_next_obs'] = self.filter_obs(info['real_next_obs'])
+
+        return self.filter_obs(obs), reward, terminated, truncated, info
+
+    def render_mm(self):
+        return self.env.render()
+
+    def filter_obs(self, obs):
         obs_ = obs['sensor_data'][self.data_source]
         if random.random() < self.noise_frequency:
             mode_to_noise = random.choice(self.obs_modes)
             obs_[mode_to_noise] = self.noise_generator[mode_to_noise].apply_random_noise(obs_[mode_to_noise])
-        return obs_, reward, terminated, truncated, info
-
-    def render_mm(self):
-        return self.env.render()
+        return obs_

@@ -1,0 +1,140 @@
+{
+    "os": "Linux-5.15.0-119-generic-x86_64-with-glibc2.31",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-09-06T16:34:14.990017",
+    "startedAt": "2024-09-06T16:34:14.423237",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--env_id=PushCube-v1",
+        "--num_envs=2",
+        "--utd=0.5",
+        "--buffer_size=10_000",
+        "--total_timesteps=1_000_000",
+        "--training_freq=1024",
+        "--eval_freq=20_000",
+        "--batch_size=256",
+        "--track",
+        "--modes=depth+rgb+segmentation",
+        "--no-cuda"
+    ],
+    "state": "running",
+    "program": "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_TWN/sac.py",
+    "codePathLocal": "sac.py",
+    "codePath": "scripts/baselines/sac_TWN/sac.py",
+    "git": {
+        "remote": "https://github.com/AdrianoPaccia/ManiSkillMultimodal.git",
+        "commit": "8498c65fc4dee8755c9de11376a15bd89e40c091"
+    },
+    "email": "adriano@pacciarelli.com",
+    "root": "/home/adriano/Desktop/ManiSkillMultimodal",
+    "host": "Gimli",
+    "username": "adriano",
+    "executable": "/home/adriano/miniconda3/envs/MSM/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3414.8861875,
+        "min": 800.0,
+        "max": 5150.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 1624.492,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5300.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 4198.859,
+            "min": 800.0,
+            "max": 5100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 466.98533630371094,
+            "used": 433.5767707824707
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.083820343017578
+    }
+}

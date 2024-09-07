@@ -1,0 +1,162 @@
+wandb_version: 1
+
+exp_name:
+  desc: null
+  value: sac
+seed:
+  desc: null
+  value: 1
+torch_deterministic:
+  desc: null
+  value: true
+cuda:
+  desc: null
+  value: false
+track:
+  desc: null
+  value: true
+wandb_project_name:
+  desc: null
+  value: cleanRL
+wandb_entity:
+  desc: null
+  value: null
+wandb_group:
+  desc: null
+  value: local_run
+evaluate:
+  desc: null
+  value: false
+checkpoint:
+  desc: null
+  value: null
+capture_video:
+  desc: null
+  value: true
+save_model:
+  desc: null
+  value: true
+modes:
+  desc: null
+  value: depth
+env_id:
+  desc: null
+  value: PushCube-v1
+num_envs:
+  desc: null
+  value: 2
+num_eval_envs:
+  desc: null
+  value: 8
+num_eval_steps:
+  desc: null
+  value: 50
+log_freq:
+  desc: null
+  value: 1000
+eval_freq:
+  desc: null
+  value: 20000
+save_train_video_freq:
+  desc: null
+  value: 1
+total_timesteps:
+  desc: null
+  value: 500000
+buffer_size:
+  desc: null
+  value: 10000
+buffer_device:
+  desc: null
+  value: cpu
+gamma:
+  desc: null
+  value: 0.8
+tau:
+  desc: null
+  value: 0.01
+batch_size:
+  desc: null
+  value: 256
+learning_starts:
+  desc: null
+  value: 4000
+policy_lr:
+  desc: null
+  value: 0.0003
+q_lr:
+  desc: null
+  value: 0.0003
+policy_frequency:
+  desc: null
+  value: 1
+target_network_frequency:
+  desc: null
+  value: 1
+alpha:
+  desc: null
+  value: 0.2
+autotune:
+  desc: null
+  value: true
+training_freq:
+  desc: null
+  value: 1024
+utd:
+  desc: null
+  value: 0.5
+partial_reset:
+  desc: null
+  value: false
+bootstrap_at_done:
+  desc: null
+  value: always
+grad_steps_per_iteration:
+  desc: null
+  value: 512
+steps_per_env:
+  desc: null
+  value: 512
+MM_coeff:
+  desc: null
+  value: 1.0
+TF_coeff:
+  desc: null
+  value: 1.0
+TC_coeff:
+  desc: null
+  value: 1.0
+NTC_coeff:
+  desc: null
+  value: 1.0
+_wandb:
+  desc: null
+  value:
+    code_path: code/scripts/baselines/sac_TWN/sac.py
+    python_version: 3.9.19
+    cli_version: 0.17.8
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1725553083
+    t:
+      1:
+      - 1
+      - 41
+      - 49
+      - 55
+      2:
+      - 1
+      - 41
+      - 49
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      - 35
+      4: 3.9.19
+      5: 0.17.8
+      8:
+      - 5
+      13: linux-x86_64

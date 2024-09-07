@@ -239,7 +239,6 @@ def register_env(
                 )
             ],
         )
-        print('registrated')
 
         return cls
 
