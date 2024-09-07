@@ -10,20 +10,20 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from matplotlib.style.core import available
 from torch.utils.tensorboard import SummaryWriter
 import tyro
-from models.SAC_model import ActorMultimodal as Actor
-from models.SAC_model import SoftQNetworkMultimodal as SoftQNetwork
+from models.SAC_model import Actor, SoftQNetwork
 from models.KITTI_model import KITTI_latent_model
 from models.support_model import AuxiliaryStateModel
 import yaml
 from types import SimpleNamespace
 
-from utils import Args, get_distance
+from utils import Args
 from utils import ReplayBufferMultimodal as ReplayBuffer
 from scripts.environments.build import build_training_env, build_eval_env
 
-from process import image_preprocess, process_obs_dict
+from process import process_obs_dict
 try:
     import matplotlib
     matplotlib.use('TkAgg')
@@ -64,7 +64,6 @@ def train(**kwargs):
 
             #get the stacks and the "old state"
             eval_obs, _, _, _, _ = eval_envs.step_mm(eval_envs.action_space.sample())
-
 
             ## create the old latent representation
             z_old = support_model(process_obs_dict(eval_obs, old_eval_obs, (main_mode,), device)[0].unsqueeze(1))
@@ -147,14 +146,12 @@ def train(**kwargs):
         ## ROLLOUT (try not to modify: CRUCIAL step easy to overlook)
         rollout_time = time.time()
         old_obs, info = envs.reset_mm(seed=args.seed)
-        
-
         obs, _, _, _, _ = envs.step_mm(envs.action_space.sample())
+
         state = process_obs_dict(obs, old_obs, (main_mode,), device)[0]
 
-        for o,m in obs.items():
-            o = torch.normal(0.1, 0.1, o.shape)
-
+        old_obs = apply_noise(copy.deepcopy(old_obs), envs)
+        obs = apply_noise(copy.deepcopy(obs), envs)
         obs_stack = process_obs_dict(obs, old_obs, args.modes, device)
 
         z_old = support_model(state.unsqueeze(1))
@@ -196,10 +193,14 @@ def train(**kwargs):
                 writer.add_scalar("charts/episodic_length", final_info["elapsed_steps"][done_mask].cpu().numpy().mean(),
                                   global_step)
 
-            real_next_obs_stack = process_obs_dict(next_obs, obs, args.modes, device)
             next_state = process_obs_dict(next_obs, obs, (main_mode,), device)[0]
+            real_next_obs = apply_noise(copy.deepcopy(real_next_obs), envs)
+            real_next_obs_stack = process_obs_dict(real_next_obs, obs, args.modes, device)
             rb.add(state, obs_stack, next_state, real_next_obs_stack, actions, rewards, next_done)
+
             obs_stack = real_next_obs_stack
+            obs = real_next_obs
+            old_obs = obs
 
         rollout_time = time.time() - rollout_time
 
@@ -294,10 +295,10 @@ def train(**kwargs):
             writer.add_scalar("losses/actor_loss", actor_loss.item(), global_step)
             try:
                 writer.add_scalar("losses/representation_loss", representation_loss.item(), global_step)
-                writer.add_scalar("losses/multimodal_loss", MM_loss.item(), global_step)
-                writer.add_scalar("losses/transfer_loss", TF_loss.item(), global_step)
-                writer.add_scalar("losses/contrastive_positive_loss", TC_loss.item(), global_step)
-                writer.add_scalar("losses/contrastive_negative_loss", NTC_loss.item(), global_step)
+                writer.add_scalar("losses/loss_1_loss", loss_1.item(), global_step)
+                writer.add_scalar("losses/add1_loss", add1_loss.item(), global_step)
+                writer.add_scalar("losses/add2_loss", add2_loss.item(), global_step)
+                writer.add_scalar("losses/p_loss", loss_p.item(), global_step)
             except:
                 pass
 
@@ -309,6 +310,22 @@ def train(**kwargs):
                 writer.add_scalar("losses/alpha_loss", alpha_loss.item(), global_step)
 
     return (actor, qf1_target, qf2_target), log_alpha
+
+
+def apply_noise(obs, envs):
+    if not all(item in envs.obs_modes for item in obs.keys()):
+        raise ValueError(f'The observation modes are not supported ({envs.obs_modes})')
+
+    for m in obs.keys():
+        space = envs.single_observation_space_mm.spaces[(envs.obs_modes.index(m))]
+        mean = 0 if  m in ['rgb', 'segmentation'] else 0
+        std = 10 if  m in ['rgb', 'segmentation'] else 1000
+        obs[m] = torch.clip(
+            obs[m] + torch.normal(mean, std, obs[m].shape).int().to(obs[m].device),
+            min=float(space.low_repr), max=float(space.high_repr)
+        )
+
+    return obs
 
 
 SUPPORTED_OBS_MODES = ("state", "state_dict", "none", "sensor_data", "rgb", "depth", "segmentation", "rgbd", "rgb+depth", "rgb+depth+segmentation", "rgb+segmentation", "depth+segmentation", "pointcloud")

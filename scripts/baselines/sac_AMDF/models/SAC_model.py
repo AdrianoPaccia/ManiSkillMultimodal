@@ -11,7 +11,7 @@ Z_DIM = 256
 frames=2
 
 
-class ActorMultimodal(nn.Module):
+class Actor(nn.Module):
     def __init__(self, input_dim, env):
         super().__init__()
 
@@ -95,7 +95,7 @@ class ActorMultimodal(nn.Module):
 
 
 
-class SoftQNetworkMultimodal(nn.Module):
+class SoftQNetwork(nn.Module):
     def __init__(self, input_dim, output_dim):
         super().__init__()
         self.net = nn.Sequential(
