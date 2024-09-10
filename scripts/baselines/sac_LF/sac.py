@@ -132,7 +132,7 @@ def train(**kwargs):
         old_obs, info = envs.reset_mm(seed=args.seed)
         obs, _, _, _, _ = envs.step_mm(envs.action_space.sample())
 
-        state = process_obs_dict(obs, old_obs, (main_mode,), device)[0]
+        state = envs.get_state()
         old_obs = apply_noise(copy.deepcopy(old_obs), envs)
         obs = apply_noise(copy.deepcopy(obs), envs)
         obs_stack = process_obs_dict(obs, old_obs, args.modes, device)
@@ -170,12 +170,22 @@ def train(**kwargs):
                 writer.add_scalar("charts/episodic_length", final_info["elapsed_steps"][done_mask].cpu().numpy().mean(),
                                   global_step)
 
-            next_state = process_obs_dict(next_obs, obs, (main_mode,), device)[0]
+            next_state = envs.get_state()
             real_next_obs = apply_noise(copy.deepcopy(real_next_obs), envs)
             real_next_obs_stack = process_obs_dict(real_next_obs, obs, args.modes, device)
 
-            rb.add(state, obs_stack, next_state, real_next_obs_stack, actions, rewards, next_done)
+            rb.add(
+                states=state,
+                obs=obs_stack,
+                next_states=next_state,
+                next_obs=real_next_obs_stack,
+                action=actions,
+                reward=rewards,
+                done=next_done
+            )
             obs_stack = real_next_obs_stack
+            state=next_state.clone()
+
 
         rollout_time = time.time() - rollout_time
 
@@ -379,15 +389,13 @@ if __name__ == "__main__":
         modes=args.modes,
         fusion_strategy=args.fusion_strategy
     ).to(device)
-    main_mode=args.modes[0]
-    qf1 = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
-    qf2 = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
-    qf1_target = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
-    qf2_target = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
+    state_dim = envs.single_state_shape
+    act_dim = envs.single_action_space.shape[0]
+    main_mode='state'
+    qf1 = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
+    qf2 = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
+    qf1_target = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
+    qf2_target = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
 
     if args.checkpoint is not None:
         ckpt = torch.load(args.checkpoint)
@@ -413,7 +421,7 @@ if __name__ == "__main__":
     print('... replay buffer setup', end='\r')
     envs.single_observation_space_mm.dtype = np.float32
     rb = ReplayBuffer(
-        state_shape=(2,*envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode].shape[:2]),
+        state_shape=state_dim,
         obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
         act_shape=envs.single_action_space.shape,
         num_envs=args.num_envs,
@@ -421,7 +429,6 @@ if __name__ == "__main__":
         storage_device=torch.device(args.buffer_device),
         sample_device=torch.device(device),
     )
-
     train_args = {
         'alpha':alpha
     }
