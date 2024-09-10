@@ -172,13 +172,16 @@ next_img: torch.Tensor
 ########## MULTIMODAL
 @dataclass
 class ReplayBufferMultimodalSample:
+    states: torch.Tensor
+    next_states: torch.Tensor
     obs: tuple[torch.Tensor]
     next_obs: tuple[torch.Tensor]
+    old_actions: torch.Tensor
     actions: torch.Tensor
     rewards: torch.Tensor
     dones: torch.Tensor
 class ReplayBufferMultimodal:
-    def __init__(self, obs_shape:tuple, act_shape:tuple, num_envs: int, buffer_size: int, storage_device: torch.device, sample_device: torch.device, frames:int = 2):
+    def __init__(self, state_shape:tuple, obs_shape:tuple, act_shape:tuple, num_envs: int, buffer_size: int, storage_device: torch.device, sample_device: torch.device, frames:int = 2):
         self.buffer_size = buffer_size
         self.pos = 0
         self.full = False
@@ -188,21 +191,29 @@ class ReplayBufferMultimodal:
 
         obs_shape = [(buffer_size, num_envs) + (frames, *s) for s in obs_shape]
 
+        self.states = torch.zeros((buffer_size, num_envs) + state_shape).to(storage_device)
+        self.next_states = torch.zeros((buffer_size, num_envs) + state_shape).to(storage_device)
         self.obs = [torch.zeros(s).to(storage_device) for s in obs_shape]
         self.next_obs = [torch.zeros(s).to(storage_device) for s in obs_shape]
+        self.old_actions = torch.zeros((buffer_size, num_envs) + act_shape).to(storage_device)
         self.actions = torch.zeros((buffer_size, num_envs) + act_shape).to(storage_device)
         self.logprobs = torch.zeros((buffer_size, num_envs)).to(storage_device)
         self.rewards = torch.zeros((buffer_size, num_envs)).to(storage_device)
         self.dones = torch.zeros((buffer_size, num_envs)).to(storage_device)
         self.values = torch.zeros((buffer_size, num_envs)).to(storage_device)
 
-    def add(self, obs: tuple[torch.Tensor], next_obs: tuple[torch.Tensor],
-            action: torch.Tensor, reward: torch.Tensor, done: torch.Tensor):
+    def add(self, states, obs: tuple[torch.Tensor], next_states, next_obs: tuple[torch.Tensor],
+            old_action: torch.Tensor, action: torch.Tensor, reward: torch.Tensor, done: torch.Tensor):
+
+        self.states[self.pos] = states.to(self.storage_device)
+        self.next_states[self.pos] = next_states.to(self.storage_device)
+
 
         for i, (o, on) in enumerate(zip(obs,next_obs)):
             self.obs[i][self.pos] = o.to(self.storage_device)
             self.next_obs[i][self.pos] = on.to(self.storage_device)
 
+        self.old_actions[self.pos] = old_action.to(self.storage_device)
         self.actions[self.pos] = action.to(self.storage_device)
         self.rewards[self.pos] = reward.to(self.storage_device)
         self.dones[self.pos] = done.to(self.storage_device)
@@ -219,12 +230,11 @@ class ReplayBufferMultimodal:
             batch_inds = torch.randint(0, self.pos, size=(batch_size, ))
         env_inds = torch.randint(0, self.num_envs, size=(batch_size, ))
         return ReplayBufferMultimodalSample(
+            states=self.states[batch_inds, env_inds].to(self.sample_device),
+            next_states=self.next_states[batch_inds, env_inds].to(self.sample_device),
             obs=tuple([o[batch_inds, env_inds].to(self.sample_device) for o in self.obs]),
             next_obs=tuple([o[batch_inds, env_inds].to(self.sample_device) for o in self.next_obs]),
-            #obs=self.obs[batch_inds, env_inds].to(self.sample_device),
-            #img=self.img[batch_inds, env_inds].to(self.sample_device),
-            #next_obs=self.next_obs[batch_inds, env_inds].to(self.sample_device),
-            #next_img=self.next_img[batch_inds, env_inds].to(self.sample_device),
+            old_actions=self.old_actions[batch_inds, env_inds].to(self.sample_device),
             actions=self.actions[batch_inds, env_inds].to(self.sample_device),
             rewards=self.rewards[batch_inds, env_inds].to(self.sample_device),
             dones=self.dones[batch_inds, env_inds].to(self.sample_device)

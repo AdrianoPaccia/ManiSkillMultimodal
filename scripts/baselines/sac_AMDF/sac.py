@@ -230,7 +230,8 @@ def train(**kwargs):
             obs_stack = real_next_obs_stack
             obs = real_next_obs
             old_obs = obs
-            old_action = copy.deepcopy(actions)
+            state = copy.deepcopy(next_state)
+            old_action = actions.clone()
 
         rollout_time = time.time() - rollout_time
 

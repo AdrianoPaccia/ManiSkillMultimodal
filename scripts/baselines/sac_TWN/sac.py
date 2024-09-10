@@ -12,6 +12,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 import tyro
+from tqdm import tqdm
 from models import ActorMultimodal as Actor
 from models import SoftQNetworkMultimodal as SoftQNetwork
 
@@ -57,8 +58,9 @@ def train(**kwargs):
             actor.eval()
             print("Evaluating")
             old_eval_obs, _ = eval_envs.reset_mm(seed=args.seed)
-            old_action = torch.zeros(eval_envs.action_space.shape)
-            eval_obs, _, _, _, _ = eval_envs.step_mm(eval_envs.action_space.sample())
+            actions = eval_envs.action_space.sample()
+            eval_obs, _, _, _, _ = eval_envs.step_mm(actions)
+            old_actions = torch.from_numpy(actions).float().to(device)
 
             z_old = torch.stack(actor.get_encodings(process_obs_dict(eval_obs, old_eval_obs, args.modes, device)), dim=0).mean(dim=0)
             old_eval_obs = copy.deepcopy(eval_obs)
@@ -72,9 +74,9 @@ def train(**kwargs):
             #EVALUATION
             for _ in range(args.num_eval_steps):
                 with torch.no_grad():
-                    action, z_old = actor.get_eval_action(process_obs_dict(eval_obs, old_eval_obs, args.modes, device), z_old, old_action.to(device))
+                    action, z_old = actor.get_eval_action(process_obs_dict(eval_obs, old_eval_obs, args.modes, device), z_old, old_actions.to(device))
                     next_eval_obs, _, eval_terminations, eval_truncations, eval_infos = eval_envs.step_mm(action)
-                    old_action = action.clone()
+                    old_actions = action.clone()
                     old_eval_obs = copy.deepcopy(eval_obs)
                     eval_obs = copy.deepcopy(next_eval_obs)
 
@@ -134,9 +136,12 @@ def train(**kwargs):
         ## ROLLOUT (try not to modify: CRUCIAL step easy to overlook)
         rollout_time = time.time()
         old_obs, info = envs.reset_mm(seed=args.seed)
-        obs, _, _, _, _ = envs.step_mm(envs.action_space.sample())
+        actions = eval_envs.action_space.sample()
+        obs, _, _, _, _ = envs.step_mm(actions)
+        old_actions = torch.from_numpy(actions).float().to(device)
 
         obs_stack = process_obs_dict(obs, old_obs, args.modes, device)
+        state = envs.get_state()
 
         for local_step in range(args.steps_per_env):
             global_step += 1 * args.num_envs
@@ -171,10 +176,21 @@ def train(**kwargs):
                 writer.add_scalar("charts/episodic_length", final_info["elapsed_steps"][done_mask].cpu().numpy().mean(),
                                   global_step)
 
+            next_state = envs.get_state()
             real_next_obs_stack = process_obs_dict(next_obs, obs, args.modes, device)
 
-            rb.add(obs_stack, real_next_obs_stack, actions, rewards, next_done)
+            rb.add(
+                states=state,
+                obs=obs_stack,
+                next_states=next_state,
+                next_obs=real_next_obs_stack,
+                old_action=old_actions,
+                action=actions,
+                reward=rewards,
+                done=next_done
+            )
             obs_stack = real_next_obs_stack
+            old_actions = actions.clone()
 
         rollout_time = time.time() - rollout_time
 
@@ -182,8 +198,7 @@ def train(**kwargs):
         if global_step < args.learning_starts:
             continue
 
-        #print(f'Updating at step {global_step}')
-
+        pbar = tqdm(total=args.grad_steps_per_iteration, desc='Updating')
         update_time = time.time()
         learning_has_started = True
         for local_update in range(args.grad_steps_per_iteration):
@@ -193,14 +208,14 @@ def train(**kwargs):
             # update the value networks
             with torch.no_grad():
                 next_state_actions, next_state_log_pi, _ = actor.get_train_action(data.next_obs)
-                qf1_next_target = qf1_target(data.next_obs[0], next_state_actions)
-                qf2_next_target = qf2_target(data.next_obs[0], next_state_actions)
+                qf1_next_target = qf1_target(data.next_states, next_state_actions)
+                qf2_next_target = qf2_target(data.next_states, next_state_actions)
                 min_qf_next_target = torch.min(qf1_next_target, qf2_next_target) - alpha * next_state_log_pi
                 next_q_value = data.rewards.flatten() + (1 - data.dones.flatten()) * args.gamma * (min_qf_next_target).view(-1)
                 # data.dones is "stop_bootstrap", which is computed earlier according to args.bootstrap_at_done
 
-            qf1_a_values = qf1(data.obs[0], data.actions).view(-1)
-            qf2_a_values = qf2(data.obs[0], data.actions).view(-1)
+            qf1_a_values = qf1(data.states, data.actions).view(-1)
+            qf2_a_values = qf2(data.states, data.actions).view(-1)
             qf1_loss = F.mse_loss(qf1_a_values, next_q_value)
             qf2_loss = F.mse_loss(qf2_a_values, next_q_value)
             qf_loss = qf1_loss + qf2_loss
@@ -212,13 +227,12 @@ def train(**kwargs):
             # update the policy network
             if global_update % args.policy_frequency == 0:  # TD 3 Delayed update support
                 pi, log_pi, _ = actor.get_train_action(data.obs)
-                qf1_pi = qf1(data.obs[0], pi)
-                qf2_pi = qf2(data.obs[0], pi)
+                qf1_pi = qf1(data.states, pi)
+                qf2_pi = qf2(data.states, pi)
                 min_qf_pi = torch.min(qf1_pi, qf2_pi)
                 actor_loss = ((alpha * log_pi) - min_qf_pi).mean()
 
                 # update the encoders
-
                 if len(args.modes)>1:
                     z_obs_0, z_0, z_obs_1, z_1, z_act_1 = actor.get_representations(data)
 
@@ -257,6 +271,9 @@ def train(**kwargs):
                     target_param.data.copy_(args.tau * param.data + (1 - args.tau) * target_param.data)
                 for param, target_param in zip(qf2.parameters(), qf2_target.parameters()):
                     target_param.data.copy_(args.tau * param.data + (1 - args.tau) * target_param.data)
+
+            pbar.update()
+        pbar.close()
         update_time = time.time() - update_time
 
         ## LOGGING (Log training-related data)
@@ -392,15 +409,13 @@ if __name__ == "__main__":
     max_action = float(envs.single_action_space.high[0])
 
     actor = Actor(envs).to(device)
-    main_mode=args.modes[0]
-    qf1 = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
-    qf2 = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
-    qf1_target = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
-    qf2_target = SoftQNetwork(input_dim=envs.single_observation_space.spaces['sensor_data'][envs.data_source][main_mode],
-                       output_dim = envs.single_action_space.shape[0], mode=main_mode).to(device)
+    state_dim = envs.single_state_shape
+    act_dim = envs.single_action_space.shape[0]
+    main_mode='state'
+    qf1 = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
+    qf2 = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
+    qf1_target = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
+    qf2_target = SoftQNetwork(input_dim=state_dim[0],  output_dim = act_dim, mode=main_mode).to(device)
 
     if args.checkpoint is not None:
         ckpt = torch.load(args.checkpoint)
@@ -426,6 +441,7 @@ if __name__ == "__main__":
     print('... replay buffer setup', end='\r')
     envs.single_observation_space_mm.dtype = np.float32
     rb = ReplayBuffer(
+        state_shape=state_dim,
         obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
         act_shape=envs.single_action_space.shape,
         num_envs=args.num_envs,
