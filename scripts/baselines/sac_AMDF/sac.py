@@ -464,7 +464,7 @@ if __name__ == "__main__":
 
     max_action = float(envs.single_action_space.high[0])
 
-    with open('scripts/baselines/sac_AMDF/config/model.yaml', 'r') as file:
+    with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'config/model.yaml'), 'r') as file:
         data = yaml.safe_load(file)
     conf = SimpleNamespace(**data)
     dim_state = envs.single_state_shape
