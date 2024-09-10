@@ -33,7 +33,7 @@ def parse_visual_obs_mode_to_struct(obs_mode: str) -> CameraObsTextures:
         return CameraObsTextures(
             rgb=True, depth=True, segmentation=False, position=False
         )
-    elif obs_mode == "rgb+depth+segmentation":
+    elif obs_mode == "rgb+depth+segmentation" or obs_mode == "sensor_data":
         return CameraObsTextures(
             rgb=True, depth=True, segmentation=True, position=False
         )
@@ -48,6 +48,10 @@ def parse_visual_obs_mode_to_struct(obs_mode: str) -> CameraObsTextures:
     elif obs_mode == "pointcloud":
         return CameraObsTextures(
             rgb=True, depth=False, segmentation=True, position=True
+        )
+    elif obs_mode == "all":
+        return CameraObsTextures(
+            rgb=True, depth=True, segmentation=True, position=False
         )
     else:
         return None

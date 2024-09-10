@@ -1,0 +1,39 @@
+2024-09-10 10:34:42,361 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-09-10 10:34:42,361 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Configure stats pid to 28357
+2024-09-10 10:34:42,361 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Loading settings from /home/adriano/.config/wandb/settings
+2024-09-10 10:34:42,361 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Loading settings from /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/settings
+2024-09-10 10:34:42,361 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2024-09-10 10:34:42,362 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-10 10:34:42,362 WARNING MainThread:28357 [wandb_setup.py:_flush():77] Could not find program at -m environments_multimodal.build
+2024-09-10 10:34:42,362 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m environments_multimodal.build'}
+2024-09-10 10:34:42,362 INFO    MainThread:28357 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-10 10:34:42,362 INFO    MainThread:28357 [wandb_init.py:_log_setup():524] Logging user logs to /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240910_103442-zzmhntfq/logs/debug.log
+2024-09-10 10:34:42,362 INFO    MainThread:28357 [wandb_init.py:_log_setup():525] Logging internal logs to /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240910_103442-zzmhntfq/logs/debug-internal.log
+2024-09-10 10:34:42,363 INFO    MainThread:28357 [wandb_init.py:init():607] calling init triggers
+2024-09-10 10:34:42,363 INFO    MainThread:28357 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {'exp_name': 'sac', 'seed': 1, 'torch_deterministic': True, 'cuda': False, 'track': True, 'wandb_project_name': 'cleanRL', 'wandb_entity': None, 'wandb_group': 'sac_AMDF', 'evaluate': False, 'checkpoint': None, 'capture_video': True, 'save_model': True, 'modes': 'rgb+depth+segmentation', 'main_mode': 'rgb', 'env_id': 'ReachCube-v1', 'num_envs': 2, 'num_eval_envs': 8, 'num_eval_steps': 50, 'log_freq': 1000, 'eval_freq': 20000, 'save_train_video_freq': 1, 'train_noise_types': 'nonoise', 'eval_noise_types': 'nonoise', 'train_noise_freq': 0.0, 'eval_noise_freq': 0.0, 'total_timesteps': 500000, 'buffer_size': 10000, 'buffer_device': 'cpu', 'num_ensemble': 4, 'gamma': 0.8, 'tau': 0.01, 'batch_size': 8, 'learning_starts': 5000, 'policy_lr': 0.0003, 'q_lr': 0.0003, 'policy_frequency': 1, 'target_network_frequency': 1, 'alpha': 0.2, 'autotune': True, 'training_freq': 5000, 'utd': 0.5, 'partial_reset': False, 'bootstrap_at_done': 'always', 'grad_steps_per_iteration': 2500, 'steps_per_env': 2500, 'MM_coeff': 1.0, 'TF_coeff': 1.0, 'TC_coeff': 1.0, 'NTC_coeff': 1.0}
+2024-09-10 10:34:42,363 INFO    MainThread:28357 [wandb_init.py:init():657] starting backend
+2024-09-10 10:34:42,363 INFO    MainThread:28357 [wandb_init.py:init():661] setting up manager
+2024-09-10 10:34:42,366 INFO    MainThread:28357 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-09-10 10:34:42,367 INFO    MainThread:28357 [wandb_init.py:init():669] backend started and connected
+2024-09-10 10:34:42,374 INFO    MainThread:28357 [wandb_init.py:init():767] updated telemetry
+2024-09-10 10:34:42,389 INFO    MainThread:28357 [wandb_init.py:init():800] communicating run to backend with 90.0 second timeout
+2024-09-10 10:34:42,845 WARNING MainThread:28357 [wandb_init.py:init():1232] interrupted
+Traceback (most recent call last):
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1228, in init
+    return wi.init()
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 847, in init
+    run._set_run_obj(run_result.run)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1591, in _set_run_obj
+    self._config._update(c_dict, allow_val_change=True, ignore_locked=True)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/sdk/wandb_config.py", line 180, in _update
+    sanitized = self._sanitize_dict(
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/sdk/wandb_config.py", line 267, in _sanitize_dict
+    k, v = self._sanitize(k, v, allow_val_change)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/sdk/wandb_config.py", line 285, in _sanitize
+    val = json_friendly_val(val)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/util.py", line 667, in json_friendly_val
+    val, _ = json_friendly(val)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/wandb/util.py", line 622, in json_friendly
+    elif np and isinstance(obj, np.generic):
+KeyboardInterrupt

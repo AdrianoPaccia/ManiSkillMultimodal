@@ -273,6 +273,7 @@ class BaseEnv(gym.Env):
             obs_mode = self.SUPPORTED_OBS_MODES[0]
         if obs_mode not in self.SUPPORTED_OBS_MODES:
             raise NotImplementedError("Unsupported obs mode: {}".format(obs_mode))
+
         self._obs_mode = obs_mode
         self._visual_obs_mode_struct = parse_visual_obs_mode_to_struct(self._obs_mode)
 
@@ -302,7 +303,7 @@ class BaseEnv(gym.Env):
         self._elapsed_steps = (
             torch.zeros(self.num_envs, device=self.device, dtype=torch.int32)
         )
-        obs, _ = self.reset(seed=2022, options=dict(reconfigure=True))
+        obs, info = self.reset(seed=2022, options=dict(reconfigure=True))
         self._init_raw_obs = common.to_cpu_tensor(obs)
         """the raw observation returned by the env.reset (a cpu torch tensor/dict of tensors). Useful for future observation wrappers to use to auto generate observation spaces"""
         self._init_raw_state = common.to_cpu_tensor(self.get_state_dict())
@@ -483,7 +484,7 @@ class BaseEnv(gym.Env):
         elif self._obs_mode == "sensor_data":
             # return raw texture data dependent on choice of shader
             obs = self._get_obs_with_sensor_data(info, apply_texture_transforms=False)
-        elif self._obs_mode in ["rgb", "depth", "segmentation", "rgbd", "rgb+depth", "rgb+depth+segmentation", "depth+segmentation", "rgb+segmentation"]:
+        elif self._obs_mode in ["all","rgb", "depth", "segmentation", "rgbd", "rgb+depth", "rgb+depth+segmentation", "depth+segmentation", "rgb+segmentation"]:
             obs = self._get_obs_with_sensor_data(info)
         else:
             raise NotImplementedError(self._obs_mode)
@@ -543,7 +544,6 @@ class BaseEnv(gym.Env):
         """Get the observation with sensor data"""
         return dict(
             agent=self._get_obs_agent(),
-            #state_dict=self._get_obs_state_dict(info),
             extra=self._get_obs_extra(info),
             sensor_param=self.get_sensor_params(),
             sensor_data=self._get_obs_sensor_data(apply_texture_transforms),

@@ -14,7 +14,7 @@ class AuxiliaryStateModel(nn.Module):
     output ->  [batch_size, ensemble, timestep, dim_x]
     """
 
-    def __init__(self, input_dim, output_dim=Z_DIM, mode='rgb', num_ensemble=8):
+    def __init__(self, input_dim, output_dim=Z_DIM, mode='state', num_ensemble=8):
         super(AuxiliaryStateModel, self).__init__()
         self.output_dim = output_dim
         self.input_dim = input_dim

@@ -1,0 +1,20 @@
+
+... building training environment
+Traceback (most recent call last):
+  File "/snap/pycharm-community/408/plugins/python-ce/helpers/pydev/pydevd.py", line 1557, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/snap/pycharm-community/408/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/sac.py", line 424, in <module>
+    eval_envs = build_eval_env(
+  File "/home/adriano/Desktop/ManiSkillMultimodal/environments_multimodal/build.py", line 78, in build_eval_env
+    envs = gym.make(id, num_envs=num_envs, **env_kwargs)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 741, in make
+    env_spec = _find_spec(id)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 527, in _find_spec
+    _check_version_exists(ns, name, version)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 393, in _check_version_exists
+    _check_name_exists(ns, name)
+  File "/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/envs/registration.py", line 370, in _check_name_exists
+    raise error.NameNotFound(
+gymnasium.error.NameNotFound: Environment `ReachCube` doesn't exist. Did you mean: `Reacher`?

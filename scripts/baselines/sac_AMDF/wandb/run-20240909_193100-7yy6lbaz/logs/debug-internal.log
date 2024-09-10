@@ -1,0 +1,84 @@
+2024-09-09 19:31:00,120 INFO    StreamThr :3317 [internal.py:wandb_internal():85] W&B internal server running at pid: 3317, started at: 2024-09-09 19:31:00.120228
+2024-09-09 19:31:00,121 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: status
+2024-09-09 19:31:00,124 INFO    WriterThread:3317 [datastore.py:open_for_write():87] open: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/run-7yy6lbaz.wandb
+2024-09-09 19:31:00,124 DEBUG   SenderThread:3317 [sender.py:send():391] send: header
+2024-09-09 19:31:00,134 DEBUG   SenderThread:3317 [sender.py:send():391] send: run
+2024-09-09 19:31:02,465 INFO    SenderThread:3317 [dir_watcher.py:__init__():211] watching files in: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files
+2024-09-09 19:31:02,465 INFO    SenderThread:3317 [sender.py:_start_run_threads():1200] run started: 7yy6lbaz with start time 1725903060.120637
+2024-09-09 19:31:02,473 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: run_start
+2024-09-09 19:31:02,506 DEBUG   HandlerThread:3317 [system_info.py:__init__():26] System info init
+2024-09-09 19:31:02,506 DEBUG   HandlerThread:3317 [system_info.py:__init__():41] System info init done
+2024-09-09 19:31:02,506 INFO    HandlerThread:3317 [system_monitor.py:start():194] Starting system monitor
+2024-09-09 19:31:02,507 INFO    SystemMonitor:3317 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-09-09 19:31:02,507 INFO    HandlerThread:3317 [system_monitor.py:probe():214] Collecting system info
+2024-09-09 19:31:02,507 INFO    SystemMonitor:3317 [interfaces.py:start():188] Started cpu monitoring
+2024-09-09 19:31:02,508 INFO    SystemMonitor:3317 [interfaces.py:start():188] Started disk monitoring
+2024-09-09 19:31:02,509 INFO    SystemMonitor:3317 [interfaces.py:start():188] Started gpu monitoring
+2024-09-09 19:31:02,511 INFO    SystemMonitor:3317 [interfaces.py:start():188] Started memory monitoring
+2024-09-09 19:31:02,512 INFO    SystemMonitor:3317 [interfaces.py:start():188] Started network monitoring
+2024-09-09 19:31:02,534 DEBUG   HandlerThread:3317 [system_info.py:probe():152] Probing system
+2024-09-09 19:31:02,537 DEBUG   HandlerThread:3317 [system_info.py:_probe_git():137] Probing git
+2024-09-09 19:31:02,552 DEBUG   HandlerThread:3317 [system_info.py:_probe_git():145] Probing git done
+2024-09-09 19:31:02,552 DEBUG   HandlerThread:3317 [system_info.py:probe():200] Probing system done
+2024-09-09 19:31:02,552 DEBUG   HandlerThread:3317 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-119-generic-x86_64-with-glibc2.31', 'python': '3.9.19', 'heartbeatAt': '2024-09-09T17:31:02.534358', 'startedAt': '2024-09-09T17:31:00.116669', 'docker': None, 'cuda': None, 'args': ('--env_id=PushCube-v1', '--num_envs=2', '--utd=0.5', '--buffer_size=20_000', '--total_timesteps=500_000', '--eval_freq=20_000', '--batch_size=8', '--learning_starts=5_000', '--modes=rgb+depth+segmentation', '--training_freq=5_000', '--track', '--cuda'), 'state': 'running', 'program': '/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/sac.py', 'codePathLocal': 'sac.py', 'codePath': 'scripts/baselines/sac_AMDF/sac.py', 'git': {'remote': 'https://github.com/AdrianoPaccia/ManiSkillMultimodal.git', 'commit': '833d99ab7ede9955075d00d3ee7ea83c5a4b704c'}, 'email': 'adriano@pacciarelli.com', 'root': '/home/adriano/Desktop/ManiSkillMultimodal', 'host': 'Gimli', 'username': 'adriano', 'executable': '/home/adriano/miniconda3/envs/MSM/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3385.1109375, 'min': 800.0, 'max': 5150.0}, 'cpu_freq_per_core': [{'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5300.0}, {'current': 1661.775, 'min': 800.0, 'max': 5300.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}, {'current': 3500.0, 'min': 800.0, 'max': 5100.0}], 'disk': {'/': {'total': 466.98533630371094, 'used': 436.19400787353516}}, 'gpu': 'NVIDIA GeForce RTX 3080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080 Ti', 'memory_total': 12884901888}], 'memory': {'total': 31.083820343017578}}
+2024-09-09 19:31:02,552 INFO    HandlerThread:3317 [system_monitor.py:probe():224] Finished collecting system info
+2024-09-09 19:31:02,552 INFO    HandlerThread:3317 [system_monitor.py:probe():227] Publishing system info
+2024-09-09 19:31:02,552 DEBUG   HandlerThread:3317 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-09-09 19:31:03,465 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/conda-environment.yaml
+2024-09-09 19:31:03,823 DEBUG   HandlerThread:3317 [system_info.py:_save_conda():224] Saving conda packages done
+2024-09-09 19:31:03,823 DEBUG   HandlerThread:3317 [system_info.py:_save_code():44] Saving code
+2024-09-09 19:31:03,832 DEBUG   HandlerThread:3317 [system_info.py:_save_code():67] Saving code done
+2024-09-09 19:31:03,832 DEBUG   HandlerThread:3317 [system_info.py:_save_patches():84] Saving git patches
+2024-09-09 19:31:04,026 DEBUG   HandlerThread:3317 [system_info.py:_save_patches():126] Saving git patches done
+2024-09-09 19:31:04,027 INFO    HandlerThread:3317 [system_monitor.py:probe():229] Finished publishing system info
+2024-09-09 19:31:04,030 DEBUG   SenderThread:3317 [sender.py:send():391] send: files
+2024-09-09 19:31:04,030 INFO    SenderThread:3317 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-09-09 19:31:04,030 INFO    SenderThread:3317 [sender.py:_save_file():1466] saving file code/scripts/baselines/sac_AMDF/sac.py with policy now
+2024-09-09 19:31:04,031 INFO    SenderThread:3317 [sender.py:_save_file():1466] saving file diff.patch with policy now
+2024-09-09 19:31:04,094 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: python_packages
+2024-09-09 19:31:04,095 DEBUG   SenderThread:3317 [sender.py:send_request():418] send_request: python_packages
+2024-09-09 19:31:04,095 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-09 19:31:04,095 DEBUG   SenderThread:3317 [sender.py:send_request():418] send_request: stop_status
+2024-09-09 19:31:04,096 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-09 19:31:04,097 INFO    HandlerThread:3317 [handler.py:handle_tbrecord():785] handling tbrecord: tbrecord {
+  log_dir: "runs/depth_rgb_segmentation/PushCube-v1__sac__1__1725903057"
+  save: true
+}
+control {
+  relay_id: "d4b2aeb2a5ee4a46b50130571ab0792a"
+}
+_info {
+  stream_id: "7yy6lbaz"
+}
+
+2024-09-09 19:31:04,097 DEBUG   HandlerThread:3317 [config_util.py:dict_from_config_file():70] no default config file found in config-defaults.yaml
+2024-09-09 19:31:04,245 DEBUG   SenderThread:3317 [sender.py:send():391] send: telemetry
+2024-09-09 19:31:04,245 DEBUG   SenderThread:3317 [sender.py:send():391] send: tbrecord
+2024-09-09 19:31:04,245 DEBUG   SenderThread:3317 [sender.py:send():391] send: files
+2024-09-09 19:31:04,245 INFO    SenderThread:3317 [sender.py:_save_file():1466] saving file events.out.tfevents.1725903064.Gimli.3141.0 with policy live
+2024-09-09 19:31:04,465 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/conda-environment.yaml
+2024-09-09 19:31:04,465 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/diff.patch
+2024-09-09 19:31:04,465 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/output.log
+2024-09-09 19:31:04,465 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/wandb-metadata.json
+2024-09-09 19:31:04,465 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/requirements.txt
+2024-09-09 19:31:04,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/events.out.tfevents.1725903064.Gimli.3141.0
+2024-09-09 19:31:04,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/code/scripts/baselines/sac_AMDF/sac.py
+2024-09-09 19:31:04,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/code/scripts/baselines
+2024-09-09 19:31:04,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/code/scripts/baselines/sac_AMDF
+2024-09-09 19:31:04,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/code
+2024-09-09 19:31:04,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_created():271] file/dir created: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/code/scripts
+2024-09-09 19:31:04,568 INFO    wandb-upload_0:3317 [upload_job.py:push():130] Uploaded file /tmp/tmpzfgrsrovwandb/cahidti5-wandb-metadata.json
+2024-09-09 19:31:04,672 INFO    wandb-upload_3:3317 [upload_job.py:push():130] Uploaded file /tmp/tmpzfgrsrovwandb/zsa7ynqc-events.out.tfevents.1725903064.Gimli.3141.0
+2024-09-09 19:31:04,834 INFO    wandb-upload_1:3317 [upload_job.py:push():130] Uploaded file /tmp/tmpzfgrsrovwandb/fyby1iiy-code/scripts/baselines/sac_AMDF/sac.py
+2024-09-09 19:31:05,246 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: status_report
+2024-09-09 19:31:06,135 INFO    wandb-upload_2:3317 [upload_job.py:push():130] Uploaded file /tmp/tmpzfgrsrovwandb/pav3lqyg-diff.patch
+2024-09-09 19:31:06,466 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/output.log
+2024-09-09 19:31:08,478 INFO    Thread-12 :3317 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240909_193100-7yy6lbaz/files/output.log
+2024-09-09 19:31:10,516 INFO    cpu       :3317 [interfaces.py:monitor():138] Process cpu has exited.
+2024-09-09 19:31:10,517 DEBUG   SystemMonitor:3317 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-09-09 19:31:10,517 DEBUG   SystemMonitor:3317 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-09-09 19:31:10,517 DEBUG   SystemMonitor:3317 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-09-09 19:31:10,518 INFO    memory    :3317 [interfaces.py:monitor():138] Process proc.memory.rssMB has exited.
+2024-09-09 19:31:10,520 DEBUG   SenderThread:3317 [sender.py:send():391] send: stats
+2024-09-09 19:31:10,523 DEBUG   HandlerThread:3317 [handler.py:handle_request():158] handle_request: status_report
+2024-09-09 19:31:11,475 INFO    MainThread:3317 [internal.py:handle_exit():75] Internal process exited

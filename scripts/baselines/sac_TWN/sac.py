@@ -17,7 +17,7 @@ from models import SoftQNetworkMultimodal as SoftQNetwork
 
 from utils import Args, get_distance
 from utils import ReplayBufferMultimodal as ReplayBuffer
-from scripts.environments.build import build_training_env, build_eval_env
+from environments_multimodal.build import build_training_env, build_eval_env
 
 from process import image_preprocess, process_obs_dict
 try:
@@ -336,20 +336,17 @@ if __name__ == "__main__":
 
     ## ENVIRONMENTS SETUP
     print('... environments setup', end='\r')
-    envargs = {
-        'run_name':run_name,
-        'game':'manipulation',
-        'checkpoint_dir': os.path.join(os.getcwd(), 'test_runs'),
-        'partial_reset': args.partial_reset,
-        'noise_frequency': 0.0,
-        'image_noise_types': ['nonoise'],
-        'conf_noise_types': ['nonoise'],
-        'frames': 2,
-        'eval_steps': args.num_eval_steps,
-    }
 
     print('... building training environment', end='\r')
-
+    eval_env_args = {
+        'run_name': run_name,
+        'game': 'manipulation',
+        'checkpoint_dir': os.path.join(os.getcwd(), 'test_runs'),
+        'partial_reset': args.partial_reset,
+        'noise_frequency': args.eval_noise_freq,
+        'noise_types': args.eval_noise_types.split('+'),
+        'eval_steps': args.num_eval_steps,
+    }
     eval_envs = build_eval_env(
         id=args.env_id,
         num_envs=args.num_envs,
@@ -358,25 +355,32 @@ if __name__ == "__main__":
         render_mode="rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
-        **envargs
+        **eval_env_args
     )
 
     print('... building eval environment', end='\r')
 
+    train_env_args = {
+        'run_name': run_name,
+        'game': 'manipulation',
+        'partial_reset': args.partial_reset,
+        'noise_frequency': args.train_noise_freq,
+        'noise_types': args.train_noise_types.split('+'),
+    }
+
     envs = build_training_env(
         id=args.env_id,
         num_envs=args.num_envs,
-        obs_mode="rgb+depth+segmentation",#"state",
+        obs_mode="rgb+depth+segmentation",  # "state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
         device="cuda" if torch.cuda.is_available() else "cpu",
         capture_video=args.capture_video,
-        **envargs
+        **train_env_args
     )
-
     print('... directories setup', end='\r')
 
-    args.modes = args.modes.split("+")
+    args.modes = sorted(args.modes.split("+"))
     save_folder = f"runs/{run_name}"
     ckpt_folder = f"{save_folder}/checkpoints"
     os.makedirs(ckpt_folder, exist_ok=True)

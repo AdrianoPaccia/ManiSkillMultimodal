@@ -1,1 +1,0 @@
-{"global_step": 3970, "_timestamp": 1725555473.638467, "charts/eval_success_rate": 0.0, "charts/eval_episodic_return": 5.354910373687744, "charts/eval_episodic_length": 50.0, "_runtime": 34.37816119194031, "_step": 39, "charts/success_rate": 0.0, "charts/episodic_return": 3.2404396533966064, "charts/episodic_length": 50.0}

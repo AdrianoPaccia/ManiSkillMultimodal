@@ -19,7 +19,7 @@ class Args:
     """the wandb's project name"""
     wandb_entity: str = None
     """the entity (team) of wandb's project"""
-    wandb_group: str = 'local_run'
+    wandb_group: str = 'sac_TWN'
     """the entity (team) of wandb's project"""
     evaluate: bool = False
     """if toggled, only runs evaluation with the given model checkpoint and saves the evaluation trajectories"""
@@ -47,6 +47,10 @@ class Args:
     """evaluation frequency in terms of environment steps"""
     save_train_video_freq: Optional[int] = 1
     """frequency to save training videos in terms of environment steps"""
+    train_noise_types: str = 'nonoise'
+    eval_noise_types: str = 'nonoise'
+    train_noise_freq: float = 0.0
+    eval_noise_freq: float = 0.0
 
     # Algorithm specific arguments
     total_timesteps: int = 1_000_000

@@ -19,7 +19,7 @@ class Args:
     """the wandb's project name"""
     wandb_entity: str = None
     """the entity (team) of wandb's project"""
-    wandb_group: str = 'local_run'
+    wandb_group: str = 'sac_AMDF'
     """the entity (team) of wandb's project"""
     evaluate: bool = False
     """if toggled, only runs evaluation with the given model checkpoint and saves the evaluation trajectories"""
@@ -31,6 +31,8 @@ class Args:
     """whether to save the model checkpoints"""
     modes: str = 'rgb+depth'
     """to change the modes used"""
+    main_mode: str = 'rgb'
+    """to impose the ground truth mode"""
 
     # Env specific arguments
     env_id: str = "PushCube-v1"
@@ -47,6 +49,10 @@ class Args:
     """evaluation frequency in terms of environment steps"""
     save_train_video_freq: Optional[int] = 1
     """frequency to save training videos in terms of environment steps"""
+    train_noise_types: str = 'nonoise'
+    eval_noise_types: str = 'nonoise'
+    train_noise_freq: float = 0.0
+    eval_noise_freq: float = 0.0
 
     # Algorithm specific arguments
     total_timesteps: int = 1_000_000
@@ -55,6 +61,8 @@ class Args:
     """the replay memory buffer size"""
     buffer_device: str = "cpu"
     """where the replay buffer is stored. Can be 'cpu' or 'cuda' for GPU"""
+    num_ensemble: int = 4
+    """num ensembles for the model"""
     gamma: float = 0.8
     """the discount factor gamma"""
     tau: float = 0.01
@@ -172,6 +180,7 @@ class ReplayBufferMultimodalSample:
     next_states: torch.Tensor
     obs: tuple[torch.Tensor]
     next_obs: tuple[torch.Tensor]
+    old_actions: torch.Tensor
     actions: torch.Tensor
     rewards: torch.Tensor
     dones: torch.Tensor
@@ -190,6 +199,7 @@ class ReplayBufferMultimodal:
         self.next_states = torch.zeros((buffer_size, num_envs) + state_shape).to(storage_device)
         self.obs = [torch.zeros(s).to(storage_device) for s in obs_shape]
         self.next_obs = [torch.zeros(s).to(storage_device) for s in obs_shape]
+        self.old_actions = torch.zeros((buffer_size, num_envs) + act_shape).to(storage_device)
         self.actions = torch.zeros((buffer_size, num_envs) + act_shape).to(storage_device)
         self.logprobs = torch.zeros((buffer_size, num_envs)).to(storage_device)
         self.rewards = torch.zeros((buffer_size, num_envs)).to(storage_device)
@@ -197,7 +207,7 @@ class ReplayBufferMultimodal:
         self.values = torch.zeros((buffer_size, num_envs)).to(storage_device)
 
     def add(self, states, obs: tuple[torch.Tensor], next_states, next_obs: tuple[torch.Tensor],
-            action: torch.Tensor, reward: torch.Tensor, done: torch.Tensor):
+            old_action: torch.Tensor, action: torch.Tensor, reward: torch.Tensor, done: torch.Tensor):
 
         self.states[self.pos] = states.to(self.storage_device)
         self.next_states[self.pos] = next_states.to(self.storage_device)
@@ -207,6 +217,7 @@ class ReplayBufferMultimodal:
             self.obs[i][self.pos] = o.to(self.storage_device)
             self.next_obs[i][self.pos] = on.to(self.storage_device)
 
+        self.old_actions[self.pos] = old_action.to(self.storage_device)
         self.actions[self.pos] = action.to(self.storage_device)
         self.rewards[self.pos] = reward.to(self.storage_device)
         self.dones[self.pos] = done.to(self.storage_device)
@@ -227,6 +238,7 @@ class ReplayBufferMultimodal:
             next_states=self.next_states[batch_inds, env_inds].to(self.sample_device),
             obs=tuple([o[batch_inds, env_inds].to(self.sample_device) for o in self.obs]),
             next_obs=tuple([o[batch_inds, env_inds].to(self.sample_device) for o in self.next_obs]),
+            old_actions=self.old_actions[batch_inds, env_inds].to(self.sample_device),
             actions=self.actions[batch_inds, env_inds].to(self.sample_device),
             rewards=self.rewards[batch_inds, env_inds].to(self.sample_device),
             dones=self.dones[batch_inds, env_inds].to(self.sample_device)

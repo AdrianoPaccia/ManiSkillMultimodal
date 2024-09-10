@@ -52,11 +52,7 @@ class Actor(nn.Module):
         log_std = torch.tanh(log_std)
         log_std = LOG_STD_MIN + 0.5 * (LOG_STD_MAX - LOG_STD_MIN) * (log_std + 1)
         std = log_std.exp()
-        try:
-            normal = torch.distributions.Normal(mean, std)
-        except:
-            dio = 0
-
+        normal = torch.distributions.Normal(mean, std)
         x_t = normal.rsample()  # for reparameterization trick (mean + std * N(0,1))
         y_t = torch.tanh(x_t)
         action = y_t * self.action_scale + self.action_bias

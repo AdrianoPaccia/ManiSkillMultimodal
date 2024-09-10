@@ -48,7 +48,7 @@ htmlcov/
 
 # wandb
 **/.wandb/
-/scripts/environments/noise/offline_trajectories
+/environments_multimodal/noise/offline_trajectories
 
 
 **/.runs

@@ -1,0 +1,2811 @@
+Saving eval videos to /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/test_runs
+action_space: Box(-1.0, 1.0, (2, 8), float32)
+auto_reset: True
+base_env: <PushCubeEnv<PushCube-v1>>
+call: <bound method ManiSkillVectorEnv.call of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_async: <bound method VectorEnv.call_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_wait: <bound method VectorEnv.call_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+close: <bound method ManiSkillVectorEnv.close of ManiSkillVectorEnv(PushCube-v1, 2)>
+close_extras: <bound method VectorEnv.close_extras of ManiSkillVectorEnv(PushCube-v1, 2)>
+closed: False
+device: cuda
+get_attr: <bound method ManiSkillVectorEnv.get_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+get_wrapper_attr: <bound method Env.get_wrapper_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+ignore_terminations: True
+is_vector_env: True
+metadata: {'render_modes': []}
+np_random: Generator(PCG64)
+num_envs: 2
+observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (2, 9), float32), 'qvel': Box(-inf, inf, (2, 9), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (2, 7), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (2, 3, 4), float32), 'cam2world_gl': Box(-inf, inf, (2, 4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (2, 3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('depth': Box(-32768, 32767, (2, 128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (2, 128, 128, 1), int16), 'rgb': Box(0, 255, (2, 128, 128, 3), uint8))))
+render: <bound method ManiSkillVectorEnv.render of ManiSkillVectorEnv(PushCube-v1, 2)>
+render_mode: None
+reset: <bound method ManiSkillVectorEnv.reset of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_async: <bound method VectorEnv.reset_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_wait: <bound method VectorEnv.reset_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+returns: tensor([0., 0.], device='cuda:0')
+reward_range: (-inf, inf)
+set_attr: <bound method VectorEnv.set_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+single_action_space: Box(-1.0, 1.0, (8,), float32)
+single_observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (9,), float32), 'qvel': Box(-inf, inf, (9,), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (7,), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (3, 4), float32), 'cam2world_gl': Box(-inf, inf, (4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('depth': Box(-32768, 32767, (128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (128, 128, 1), int16), 'rgb': Box(0, 255, (128, 128, 3), uint8))))
+spec: EnvSpec(id='PushCube-v1', entry_point=functools.partial(<function make at 0x7ff8ef8a65e0>, env_id='PushCube-v1'), reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, autoreset=False, disable_env_checker=True, apply_api_compatibility=False, kwargs={'num_envs': 2, 'obs_mode': 'rgb+depth+segmentation', 'control_mode': 'pd_joint_delta_pos', 'render_mode': 'rgb_array', 'sim_backend': 'cuda', 'render_backend': 'cuda'}, namespace=None, name='PushCube', version=1, additional_wrappers=(WrapperSpec(name='TimeLimitWrapper', entry_point='mani_skill.utils.registration:TimeLimitWrapper', kwargs=None), WrapperSpec(name='RecordEpisode', entry_point='mani_skill.utils.wrappers.record:RecordEpisode', kwargs=None)), vector_entry_point=functools.partial(<function make_vec at 0x7ff8ef8a6820>, env_id='PushCube-v1'))
+step: <bound method ManiSkillVectorEnv.step of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_async: <bound method VectorEnv.step_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_wait: <bound method VectorEnv.step_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+unwrapped: <PushCubeEnv<PushCube-v1>>
+viewer: None
+action_space: Box(-1.0, 1.0, (2, 8), float32)
+auto_reset: True
+base_env: <PushCubeEnv<PushCube-v1>>
+call: <bound method ManiSkillVectorEnv.call of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_async: <bound method VectorEnv.call_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_wait: <bound method VectorEnv.call_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+close: <bound method ManiSkillVectorEnv.close of ManiSkillVectorEnv(PushCube-v1, 2)>
+close_extras: <bound method VectorEnv.close_extras of ManiSkillVectorEnv(PushCube-v1, 2)>
+closed: False
+device: cuda
+get_attr: <bound method ManiSkillVectorEnv.get_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+get_wrapper_attr: <bound method Env.get_wrapper_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+ignore_terminations: True
+is_vector_env: True
+metadata: {'render_modes': []}
+np_random: Generator(PCG64)
+num_envs: 2
+observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (2, 9), float32), 'qvel': Box(-inf, inf, (2, 9), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (2, 7), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (2, 3, 4), float32), 'cam2world_gl': Box(-inf, inf, (2, 4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (2, 3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('depth': Box(-32768, 32767, (2, 128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (2, 128, 128, 1), int16), 'rgb': Box(0, 255, (2, 128, 128, 3), uint8))))
+render: <bound method ManiSkillVectorEnv.render of ManiSkillVectorEnv(PushCube-v1, 2)>
+render_mode: None
+reset: <bound method ManiSkillVectorEnv.reset of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_async: <bound method VectorEnv.reset_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_wait: <bound method VectorEnv.reset_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+returns: tensor([0., 0.], device='cuda:0')
+reward_range: (-inf, inf)
+set_attr: <bound method VectorEnv.set_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+single_action_space: Box(-1.0, 1.0, (8,), float32)
+single_observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (9,), float32), 'qvel': Box(-inf, inf, (9,), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (7,), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (3, 4), float32), 'cam2world_gl': Box(-inf, inf, (4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('depth': Box(-32768, 32767, (128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (128, 128, 1), int16), 'rgb': Box(0, 255, (128, 128, 3), uint8))))
+spec: EnvSpec(id='PushCube-v1', entry_point=functools.partial(<function make at 0x7ff8ef8a65e0>, env_id='PushCube-v1'), reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, autoreset=False, disable_env_checker=True, apply_api_compatibility=False, kwargs={'num_envs': 2, 'obs_mode': 'rgb+depth+segmentation', 'control_mode': 'pd_joint_delta_pos', 'render_mode': 'rgb_array', 'sim_backend': 'cuda', 'render_backend': 'cuda'}, namespace=None, name='PushCube', version=1, additional_wrappers=(WrapperSpec(name='TimeLimitWrapper', entry_point='mani_skill.utils.registration:TimeLimitWrapper', kwargs=None),), vector_entry_point=functools.partial(<function make_vec at 0x7ff8ef8a6820>, env_id='PushCube-v1'))
+step: <bound method ManiSkillVectorEnv.step of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_async: <bound method VectorEnv.step_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_wait: <bound method VectorEnv.step_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+unwrapped: <PushCubeEnv<PushCube-v1>>
+viewer: None
+... replay buffer setup
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.
+  logger.warn(
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.single_observation_space to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.single_observation_space` for environment variables or `env.get_wrapper_attr('single_observation_space')` that will search the reminding wrappers.
+  logger.warn(
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.single_action_space to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.single_action_space` for environment variables or `env.get_wrapper_attr('single_action_space')` that will search the reminding wrappers.
+0lobal Step: 0oop setup
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=4.990426063537598
+model NOT saved due to the success rate of 0.0 lower than 0.0
+1024al Step: 1024
+2048al Step: 2048
+3072al Step: 3072
+4096al Step: 4096
+Updating:   0%|          | 1/512 [00:00<02:47,  3.04it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5120al Step: 5120
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6144al Step: 6144
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7168al Step: 7168
+Updating:   2%|▏         | 10/512 [00:00<00:41, 11.96it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.68it/s]
+Updating:   2%|▏         | 8/512 [00:00<00:42, 12.00it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.68it/s]
+Updating:   2%|▏         | 10/512 [00:00<00:42, 11.83it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.73it/s]
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.11it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.72it/s]
+Updating:   2%|▏         | 12/512 [00:00<00:41, 12.06it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.77it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.65it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.68it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15360l Step: 15360
+
+Updatingtep: 15360
+Updatingtep: 15360
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16384l Step: 16384
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.69it/s]
+Updatingtep: 16384
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17408l Step: 17408
+
+Updatingtep: 17408
+Updatingtep: 17408
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18432l Step: 18432
+Updatingtep: 18432
+Updatingtep: 18432
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19456l Step: 19456
+
+Updatingtep: 19456
+Updatingtep: 19456
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20480l Step: 20480
+20480l Step: 20480
+
+ - eval_episodic_return=4.30308198928833des
+ - eval_success_rate=0.0
+ - eval_episodic_return=4.30308198928833des
+model NOT saved due to the success rate of 0.0 lower than 0.0
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.69it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.68it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.74it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.66it/s]
+Updating:   2%|▏         | 12/512 [00:01<00:41, 11.94it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.74it/s]
+Updating:   2%|▏         | 8/512 [00:00<00:41, 12.08it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26624l Step: 26624
+Updating:   1%|▏         | 7/512 [00:00<00:59,  8.43it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27648l Step: 27648
+Updating:   1%|          | 4/512 [00:00<00:42, 11.96it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28672l Step: 28672
+Updating:   2%|▏         | 8/512 [00:00<00:42, 11.98it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29696l Step: 29696
+Updating:   1%|          | 6/512 [00:00<00:41, 12.08it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+30720l Step: 30720
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.08it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+31744l Step: 31744
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.09it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+32768l Step: 32768
+Updating:   2%|▏         | 12/512 [00:01<00:41, 11.98it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+33792l Step: 33792
+Updating:   2%|▏         | 10/512 [00:00<00:41, 11.99it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+34816l Step: 34816
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.17it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+35840l Step: 35840
+Updating:   0%|          | 2/512 [00:00<00:42, 12.05it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+36864l Step: 36864
+Updating:   1%|          | 6/512 [00:00<00:42, 11.84it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+37888l Step: 37888
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+38912l Step: 38912
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+39936l Step: 39936
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+40960l Step: 40960
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=4.750027179718018
+model NOT saved due to the success rate of 0.0 lower than 0.0
+Updating:   0%|          | 2/512 [00:00<00:42, 12.08it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+41984l Step: 41984
+Updating:   0%|          | 2/512 [00:00<00:42, 12.07it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+43008l Step: 43008
+Updating:   2%|▏         | 8/512 [00:00<00:41, 12.14it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+44032l Step: 44032
+Updating:   2%|▏         | 12/512 [00:00<00:41, 12.18it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+45056l Step: 45056
+Updating:   3%|▎         | 14/512 [00:01<00:41, 12.01it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.74it/s]
+Updating:   3%|▎         | 14/512 [00:01<00:40, 12.15it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.77it/s]
+Updating:   4%|▎         | 18/512 [00:01<00:40, 12.07it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+48128l Step: 48128
+Updating:   0%|          | 2/512 [00:00<00:41, 12.19it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+49152l Step: 49152
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+50176l Step: 50176
+Updating:   1%|          | 6/512 [00:00<00:42, 12.02it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+51200l Step: 51200
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+52224l Step: 52224
+Updating:   1%|          | 6/512 [00:00<00:41, 12.17it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+53248l Step: 53248
+Updating:   1%|          | 6/512 [00:00<00:50,  9.97it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+54272l Step: 54272
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.22it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+55296l Step: 55296
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.09it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+56320l Step: 56320
+Updating:   3%|▎         | 16/512 [00:01<00:41, 12.06it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.73it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+58368l Step: 58368
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+59392l Step: 59392
+Updating:   1%|          | 6/512 [00:00<00:41, 12.21it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+60416l Step: 60416
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=3.747012138366699
+model NOT saved due to the success rate of 0.0 lower than 0.0
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.10it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61440l Step: 61440
+Updating:   2%|▏         | 12/512 [00:01<00:54,  9.21it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+62464l Step: 62464
+Updating:   3%|▎         | 14/512 [00:01<00:40, 12.15it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+63488l Step: 63488
+Updating:   3%|▎         | 16/512 [00:01<00:42, 11.71it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.67it/s]
+Updating:   0%|          | 2/512 [00:00<00:42, 11.96it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+65536l Step: 65536
+Updating:   2%|▏         | 8/512 [00:00<00:50,  9.98it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+66560l Step: 66560
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+67584l Step: 67584
+Updating:   2%|▏         | 9/512 [00:00<00:47, 10.64it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+68608l Step: 68608
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+69632l Step: 69632
+Updating:   1%|          | 6/512 [00:00<00:41, 12.07it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+70656l Step: 70656
+Updating:   2%|▏         | 8/512 [00:00<00:43, 11.62it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:44<00:00, 11.39it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+72704l Step: 72704
+Updating:   3%|▎         | 16/512 [00:01<00:42, 11.75it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+73728l Step: 73728
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+74752l Step: 74752
+Updating:   1%|          | 6/512 [00:00<00:43, 11.74it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+75776l Step: 75776
+Updating:   3%|▎         | 14/512 [00:01<00:42, 11.81it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:45<00:00, 11.20it/s]
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:46<00:00, 11.07it/s]
+Updating:   2%|▏         | 10/512 [00:00<00:41, 12.05it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:46<00:00, 10.91it/s]
+Updating:   2%|▏         | 8/512 [00:00<00:42, 11.79it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+79872l Step: 79872
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+80896l Step: 80896
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=1.0699642896652222
+model NOT saved due to the success rate of 0.0 lower than 0.0
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+81920l Step: 81920
+Updating:   2%|▏         | 10/512 [00:00<00:43, 11.67it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+82944l Step: 82944
+Updating:   3%|▎         | 14/512 [00:01<00:42, 11.61it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:45<00:00, 11.28it/s]
+Updating:   2%|▏         | 12/512 [00:01<00:41, 11.94it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+84992l Step: 84992
+Updating:   0%|          | 2/512 [00:00<00:44, 11.41it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:46<00:00, 11.05it/s]
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+87040l Step: 87040
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+88064l Step: 88064
+Updating:   0%|          | 2/512 [00:00<00:42, 11.88it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+89088l Step: 89088
+Updating:   2%|▏         | 10/512 [00:00<00:46, 10.81it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+90112l Step: 90112
+Updating:   3%|▎         | 16/512 [00:01<00:50,  9.76it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+91136l Step: 91136
+Updating:   4%|▎         | 18/512 [00:01<00:41, 11.83it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+92160l Step: 92160
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+93184l Step: 93184
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+94208l Step: 94208
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+95232l Step: 95232
+Updating:   2%|▏         | 12/512 [00:01<00:43, 11.52it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+96256l Step: 96256
+Updating
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.70it/s]
+Updating:   3%|▎         | 14/512 [00:01<00:41, 11.96it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98304l Step: 98304
+Updating:   1%|▏         | 7/512 [00:00<01:08,  7.42it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+99328l Step: 99328
+Updating:   4%|▍         | 20/512 [00:01<00:41, 11.78it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100352 Step: 100352
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=1.4650288820266724
+model NOT saved due to the success rate of 0.0 lower than 0.0
+Updating:   2%|▏         | 10/512 [00:00<00:50,  9.94it/s]
+Updating:   7%|▋         | 34/512 [00:03<00:41, 11.54it/s]
+Updating:  11%|█         | 55/512 [00:05<00:42, 10.71it/s]
+Updating:  15%|█▍        | 75/512 [00:07<00:49,  8.75it/s]
+Updating:  19%|█▉        | 97/512 [00:09<00:37, 11.02it/s]
+Updating:  23%|██▎       | 116/512 [00:11<00:39, 10.06it/s]
+Updating:  27%|██▋       | 138/512 [00:13<00:32, 11.40it/s]
+Updating:  31%|███       | 158/512 [00:15<00:41,  8.57it/s]
+Updating:  35%|███▌      | 180/512 [00:17<00:28, 11.62it/s]
+Updating:  39%|███▉      | 202/512 [00:19<00:32,  9.51it/s]
+Updating:  43%|████▎     | 222/512 [00:21<00:26, 10.95it/s]
+Updating:  47%|████▋     | 243/512 [00:23<00:24, 10.93it/s]
+Updating:  52%|█████▏    | 265/512 [00:25<00:23, 10.61it/s]
+Updating:  56%|█████▌    | 287/512 [00:27<00:20, 11.12it/s]
+Updating:  60%|█████▉    | 306/512 [00:29<00:18, 11.04it/s]
+Updating:  64%|██████▍   | 330/512 [00:31<00:16, 11.23it/s]
+Updating:  69%|██████▉   | 352/512 [00:33<00:14, 11.26it/s]
+Updating:  73%|███████▎  | 374/512 [00:35<00:12, 10.98it/s]
+Updating:  77%|███████▋  | 394/512 [00:37<00:11, 10.32it/s]
+Updating:  81%|████████▏ | 416/512 [00:39<00:08, 11.22it/s]
+Updating:  86%|████████▌ | 438/512 [00:41<00:06, 10.76it/s]
+Updating:  90%|████████▉ | 460/512 [00:43<00:04, 11.23it/s]
+Updating:  94%|█████████▍| 480/512 [00:45<00:02, 11.17it/s]
+Updating:  98%|█████████▊| 502/512 [00:47<00:00, 11.19it/s]
+Updating: 100%|██████████| 512/512 [00:48<00:00, 10.66it/s]
+
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]10.66it/s]
+Updating:   4%|▍         | 22/512 [00:01<00:42, 11.40it/s]]
+Updating:   4%|▍         | 22/512 [00:01<00:42, 11.40it/s]]
+Updating:   8%|▊         | 42/512 [00:04<00:43, 10.93it/s]]
+Updating:  12%|█▎        | 64/512 [00:06<00:41, 10.75it/s]]
+Updating:  16%|█▌        | 83/512 [00:08<00:40, 10.66it/s]]
+Updating:  21%|██        | 105/512 [00:09<00:34, 11.70it/s]
+Updating:  25%|██▍       | 127/512 [00:11<00:36, 10.60it/s]
+Updating:  29%|██▉       | 149/512 [00:13<00:34, 10.51it/s]
+Updating:  34%|███▍      | 173/512 [00:16<00:29, 11.31it/s]
+Updating:  38%|███▊      | 193/512 [00:17<00:31, 10.12it/s]
+Updating:  41%|████      | 211/512 [00:19<00:28, 10.59it/s]
+Updating:  46%|████▌     | 235/512 [00:22<00:24, 11.54it/s]
+Updating:  50%|█████     | 257/512 [00:23<00:21, 11.77it/s]
+Updating:  54%|█████▍    | 279/512 [00:25<00:20, 11.17it/s]
+Updating:  59%|█████▉    | 301/512 [00:27<00:18, 11.27it/s]
+Updating:  63%|██████▎   | 323/512 [00:29<00:17, 11.10it/s]
+Updating:  67%|██████▋   | 342/512 [00:31<00:17,  9.65it/s]
+Updating:  71%|███████   | 364/512 [00:34<00:13, 10.74it/s]
+Updating:  75%|███████▌  | 386/512 [00:36<00:11, 11.05it/s]
+Updating:  80%|███████▉  | 408/512 [00:38<00:09, 10.94it/s]
+Updating:  84%|████████▍ | 430/512 [00:40<00:07, 11.13it/s]
+Updating:  88%|████████▊ | 452/512 [00:42<00:05, 10.44it/s]
+Updating:  92%|█████████▏| 472/512 [00:44<00:03, 10.50it/s]
+Updating:  96%|█████████▌| 492/512 [00:46<00:01, 10.22it/s]
+Updating: 100%|██████████| 512/512 [00:47<00:00, 10.69it/s]
+
+Updating:   2%|▏         | 8/512 [00:00<00:47, 10.58it/s]s]
+Updating:   2%|▏         | 8/512 [00:00<00:47, 10.58it/s]s]
+Updating:   6%|▌         | 30/512 [00:02<00:44, 10.72it/s]]
+Updating:  10%|▉         | 49/512 [00:04<00:44, 10.34it/s]]
+Updating:  14%|█▍        | 71/512 [00:06<00:41, 10.65it/s]]
+Updating:  18%|█▊        | 93/512 [00:08<00:39, 10.67it/s]]
+Updating:  22%|██▏       | 115/512 [00:10<00:37, 10.70it/s]
+Updating:  27%|██▋       | 137/512 [00:12<00:33, 11.29it/s]
+Updating:  31%|███       | 157/512 [00:14<00:32, 11.05it/s]
+Updating:  35%|███▍      | 179/512 [00:16<00:31, 10.47it/s]
+Updating:  39%|███▉      | 201/512 [00:18<00:28, 10.78it/s]
+Updating:  43%|████▎     | 221/512 [00:20<00:27, 10.45it/s]
+Updating:  47%|████▋     | 243/512 [00:22<00:26, 10.24it/s]
+Updating:  52%|█████▏    | 265/512 [00:24<00:22, 11.03it/s]
+Updating:  56%|█████▌    | 287/512 [00:26<00:21, 10.69it/s]
+Updating:  60%|█████▉    | 307/512 [00:28<00:19, 10.57it/s]
+Updating:  64%|██████▍   | 327/512 [00:30<00:18, 10.06it/s]
+Updating:  68%|██████▊   | 349/512 [00:32<00:15, 10.80it/s]
+Updating:  73%|███████▎  | 373/512 [00:34<00:12, 11.35it/s]
+Updating:  77%|███████▋  | 395/512 [00:36<00:10, 11.04it/s]
+Updating:  80%|████████  | 410/512 [00:38<00:11,  8.98it/s]
+Updating:  85%|████████▍ | 434/512 [00:40<00:07, 11.01it/s]
+Updating:  89%|████████▊ | 454/512 [00:42<00:06,  8.99it/s]
+Updating:  93%|█████████▎| 474/512 [00:44<00:03, 10.70it/s]
+Updating:  96%|█████████▋| 493/512 [00:46<00:02,  7.93it/s]
+Updating: 100%|██████████| 512/512 [00:48<00:00, 10.52it/s]
+
+Updating:   2%|▏         | 8/512 [00:00<00:46, 10.73it/s]s]
+Updating:   2%|▏         | 8/512 [00:00<00:46, 10.73it/s]s]
+Updating:   6%|▌         | 30/512 [00:02<00:42, 11.46it/s]]
+Updating:  10%|█         | 52/512 [00:04<00:43, 10.64it/s]]
+Updating:  14%|█▎        | 70/512 [00:06<00:50,  8.81it/s]]
+Updating:  17%|█▋        | 89/512 [00:08<00:48,  8.74it/s]]
+Updating:  22%|██▏       | 111/512 [00:10<00:35, 11.37it/s]
+Updating:  26%|██▌       | 133/512 [00:12<00:33, 11.35it/s]
+Updating:  30%|███       | 155/512 [00:14<00:32, 10.99it/s]
+Updating:  35%|███▍      | 179/512 [00:16<00:29, 11.46it/s]
+Updating:  39%|███▉      | 199/512 [00:18<00:29, 10.75it/s]
+Updating:  44%|████▎     | 223/512 [00:20<00:25, 11.34it/s]
+Updating:  48%|████▊     | 245/512 [00:22<00:25, 10.42it/s]
+Updating:  52%|█████▏    | 267/512 [00:24<00:21, 11.28it/s]
+Updating:  56%|█████▋    | 289/512 [00:26<00:19, 11.27it/s]
+Updating:  61%|██████    | 311/512 [00:28<00:17, 11.38it/s]
+Updating:  65%|██████▍   | 332/512 [00:30<00:16, 11.01it/s]
+Updating:  69%|██████▉   | 354/512 [00:32<00:13, 11.32it/s]
+Updating:  74%|███████▍  | 378/512 [00:34<00:11, 11.17it/s]
+Updating:  78%|███████▊  | 398/512 [00:36<00:11, 10.35it/s]
+Updating:  82%|████████▏ | 419/512 [00:38<00:08, 10.48it/s]
+Updating:  85%|████████▍ | 435/512 [00:40<00:09,  8.01it/s]
+Updating:  89%|████████▊ | 454/512 [00:42<00:05, 10.28it/s]
+Updating:  92%|█████████▏| 472/512 [00:44<00:03, 10.06it/s]
+Updating:  96%|█████████▌| 490/512 [00:46<00:02,  9.36it/s]
+Updating:  99%|█████████▉| 507/512 [00:48<00:00, 10.20it/s]
+Updating: 100%|██████████| 512/512 [00:49<00:00, 10.40it/s]
+
+Updating:   0%|          | 0/512 [00:00<?, ?it/s]10.40it/s]
+Updating:   5%|▍         | 24/512 [00:02<00:41, 11.72it/s]]
+Updating:   5%|▍         | 24/512 [00:02<00:41, 11.72it/s]]
+Updating:   9%|▊         | 44/512 [00:03<00:41, 11.27it/s]]
+Updating:  13%|█▎        | 68/512 [00:06<00:37, 11.80it/s]]
+Updating:  18%|█▊        | 92/512 [00:08<00:35, 11.68it/s]]
+Updating:  22%|██▏       | 112/512 [00:09<00:34, 11.53it/s]
+Updating:  26%|██▌       | 133/512 [00:12<00:36, 10.35it/s]
+Updating:  30%|███       | 155/512 [00:13<00:32, 11.14it/s]
+Updating:  35%|███▍      | 179/512 [00:16<00:29, 11.22it/s]
+Updating:  39%|███▉      | 201/512 [00:18<00:26, 11.76it/s]
+Updating:  44%|████▍     | 225/512 [00:20<00:25, 11.35it/s]
+Updating:  48%|████▊     | 246/512 [00:22<00:27,  9.67it/s]
+Updating:  52%|█████▏    | 265/512 [00:24<00:26,  9.29it/s]
+Updating:  55%|█████▌    | 284/512 [00:26<00:20, 10.91it/s]
+Updating:  59%|█████▉    | 303/512 [00:28<00:23,  8.91it/s]
+Updating:  63%|██████▎   | 321/512 [00:30<00:21,  8.99it/s]
+Updating:  66%|██████▌   | 339/512 [00:32<00:18,  9.16it/s]
+Updating:  69%|██████▉   | 354/512 [00:34<00:18,  8.76it/s]
+Updating:  73%|███████▎  | 372/512 [00:36<00:15,  8.99it/s]
+Updating:  76%|███████▌  | 390/512 [00:38<00:14,  8.55it/s]
+Updating:  79%|███████▉  | 407/512 [00:40<00:11,  8.79it/s]
+Updating:  83%|████████▎ | 425/512 [00:42<00:09,  8.96it/s]
+Updating:  86%|████████▋ | 442/512 [00:44<00:08,  8.69it/s]
+Updating:  90%|████████▉ | 460/512 [00:46<00:06,  8.45it/s]
+Updating:  92%|█████████▏| 472/512 [00:47<00:04,  8.67it/s]
+Updating:  96%|█████████▌| 490/512 [00:49<00:02,  8.72it/s]
+Updating:  99%|█████████▉| 507/512 [00:51<00:00,  8.21it/s]
+Updating: 100%|██████████| 512/512 [00:52<00:00,  9.80it/s]
+
+Updating:   4%|▎         | 18/512 [00:01<00:41, 11.85it/s]]
+Updating:   4%|▎         | 18/512 [00:01<00:41, 11.85it/s]]
+Updating:   8%|▊         | 42/512 [00:03<00:39, 11.80it/s]]
+Updating:  12%|█▎        | 64/512 [00:05<00:38, 11.63it/s]]
+Updating:  17%|█▋        | 85/512 [00:07<00:47,  9.04it/s]]
+Updating:  21%|██        | 107/512 [00:09<00:37, 10.94it/s]
+Updating:  25%|██▌       | 128/512 [00:11<00:43,  8.76it/s]
+Updating:  29%|██▊       | 146/512 [00:13<00:40,  9.07it/s]
+Updating:  33%|███▎      | 167/512 [00:15<00:30, 11.41it/s]
+Updating:  37%|███▋      | 187/512 [00:17<00:35,  9.11it/s]
+Updating:  40%|████      | 207/512 [00:19<00:27, 10.98it/s]
+Updating:  45%|████▌     | 231/512 [00:21<00:24, 11.47it/s]
+Updating:  49%|████▉     | 253/512 [00:23<00:22, 11.37it/s]
+Updating:  53%|█████▎    | 273/512 [00:25<00:21, 11.17it/s]
+Updating:  58%|█████▊    | 295/512 [00:27<00:20, 10.83it/s]
+Updating:  62%|██████▏   | 317/512 [00:29<00:17, 10.85it/s]
+Updating:  66%|██████▌   | 337/512 [00:31<00:17,  9.81it/s]
+Updating:  70%|██████▉   | 357/512 [00:33<00:14, 10.42it/s]
+Updating:  74%|███████▍  | 379/512 [00:35<00:12, 10.27it/s]
+Updating:  78%|███████▊  | 401/512 [00:37<00:10, 10.60it/s]
+Updating:  82%|████████▏ | 421/512 [00:39<00:10,  9.03it/s]
+Updating:  87%|████████▋ | 444/512 [00:41<00:05, 11.57it/s]
+Updating:  91%|█████████ | 464/512 [00:43<00:04, 10.81it/s]
+Updating:  95%|█████████▍| 486/512 [00:45<00:02, 11.51it/s]
+Updating:  98%|█████████▊| 501/512 [00:47<00:01,  7.98it/s]
+Updating: 100%|██████████| 512/512 [00:48<00:00, 10.53it/s]
+
+Updating:   3%|▎         | 16/512 [00:01<00:48, 10.26it/s]]
+Updating:   3%|▎         | 16/512 [00:01<00:48, 10.26it/s]]
+Updating:   6%|▌         | 30/512 [00:03<01:03,  7.65it/s]]
+Updating:  10%|█         | 53/512 [00:05<00:39, 11.67it/s]]
+Updating:  15%|█▍        | 75/512 [00:07<00:37, 11.62it/s]]
+Updating:  19%|█▉        | 99/512 [00:09<00:35, 11.77it/s]]
+Updating:  24%|██▎       | 121/512 [00:11<00:35, 10.95it/s]
+Updating:  28%|██▊       | 143/512 [00:13<00:32, 11.29it/s]
+Updating:  33%|███▎      | 167/512 [00:15<00:29, 11.80it/s]
+Updating:  37%|███▋      | 187/512 [00:17<00:28, 11.21it/s]
+Updating:  41%|████      | 208/512 [00:19<00:29, 10.32it/s]
+Updating:  45%|████▌     | 232/512 [00:21<00:24, 11.56it/s]
+Updating:  50%|████▉     | 254/512 [00:23<00:22, 11.61it/s]
+Updating:  54%|█████▍    | 278/512 [00:25<00:19, 11.75it/s]
+Updating:  59%|█████▉    | 302/512 [00:27<00:17, 11.67it/s]
+Updating:  63%|██████▎   | 324/512 [00:29<00:16, 11.63it/s]
+Updating:  68%|██████▊   | 348/512 [00:31<00:14, 11.54it/s]
+Updating:  73%|███████▎  | 372/512 [00:33<00:12, 11.63it/s]
+Updating:  77%|███████▋  | 394/512 [00:35<00:10, 11.76it/s]
+Updating:  82%|████████▏ | 418/512 [00:37<00:07, 11.89it/s]
+Updating:  86%|████████▌ | 440/512 [00:39<00:06, 11.64it/s]
+Updating:  90%|█████████ | 462/512 [00:41<00:04, 11.56it/s]
+Updating:  95%|█████████▍| 484/512 [00:43<00:02, 11.25it/s]
+Updating:  99%|█████████▉| 508/512 [00:45<00:00, 11.08it/s]
+Updating: 100%|██████████| 512/512 [00:46<00:00, 11.12it/s]
+
+Updating:   2%|▏         | 12/512 [00:01<00:46, 10.76it/s]]
+Updating:   2%|▏         | 12/512 [00:01<00:46, 10.76it/s]]
+Updating:   7%|▋         | 36/512 [00:03<00:40, 11.71it/s]]
+Updating:  12%|█▏        | 60/512 [00:05<00:38, 11.72it/s]]
+Updating:  16%|█▌        | 82/512 [00:07<00:36, 11.80it/s]]
+Updating:  21%|██        | 106/512 [00:09<00:34, 11.88it/s]
+Updating:  25%|██▍       | 126/512 [00:10<00:39,  9.79it/s]
+Updating:  28%|██▊       | 144/512 [00:13<00:44,  8.34it/s]
+Updating:  31%|███▏      | 160/512 [00:15<00:41,  8.43it/s]
+Updating:  36%|███▌      | 182/512 [00:17<00:28, 11.71it/s]
+Updating:  40%|███▉      | 204/512 [00:19<00:29, 10.49it/s]
+Updating:  44%|████▍     | 224/512 [00:21<00:29,  9.81it/s]
+Updating:  48%|████▊     | 244/512 [00:23<00:24, 10.97it/s]
+Updating:  52%|█████▏    | 264/512 [00:25<00:23, 10.49it/s]
+Updating:  55%|█████▌    | 284/512 [00:27<00:20, 10.94it/s]
+Updating:  60%|██████    | 308/512 [00:29<00:17, 11.49it/s]
+Updating:  65%|██████▍   | 332/512 [00:31<00:15, 11.95it/s]
+Updating:  70%|██████▉   | 356/512 [00:33<00:13, 11.49it/s]
+Updating:  74%|███████▍  | 378/512 [00:35<00:12, 11.16it/s]
+Updating:  79%|███████▊  | 402/512 [00:37<00:09, 11.44it/s]
+Updating:  83%|████████▎ | 424/512 [00:39<00:07, 11.47it/s]
+Updating:  87%|████████▋ | 446/512 [00:41<00:05, 11.48it/s]
+Updating:  92%|█████████▏| 470/512 [00:43<00:03, 11.43it/s]
+Updating:  96%|█████████▌| 492/512 [00:45<00:01, 11.66it/s]
+Updating: 100%|██████████| 512/512 [00:46<00:00, 10.94it/s]
+
+Updating:   3%|▎         | 14/512 [00:01<00:47, 10.39it/s]]
+Updating:   3%|▎         | 14/512 [00:01<00:47, 10.39it/s]]
+Updating:   7%|▋         | 36/512 [00:03<00:42, 11.17it/s]]
+Updating:  11%|█▏        | 58/512 [00:05<00:41, 10.92it/s]]
+Updating:  16%|█▌        | 82/512 [00:07<00:36, 11.89it/s]]
+Updating:  20%|██        | 104/512 [00:09<00:34, 11.69it/s]
+Updating:  25%|██▍       | 126/512 [00:11<00:36, 10.51it/s]
+Updating:  29%|██▉       | 150/512 [00:13<00:32, 11.31it/s]
+Updating:  34%|███▎      | 172/512 [00:15<00:29, 11.43it/s]
+Updating:  38%|███▊      | 194/512 [00:17<00:27, 11.65it/s]
+Updating:  43%|████▎     | 218/512 [00:19<00:24, 11.77it/s]
+Updating:  47%|████▋     | 240/512 [00:21<00:25, 10.81it/s]
+Updating:  52%|█████▏    | 264/512 [00:23<00:21, 11.33it/s]
+Updating:  56%|█████▌    | 286/512 [00:25<00:19, 11.45it/s]
+Updating:  61%|██████    | 310/512 [00:27<00:17, 11.88it/s]
+Updating:  65%|██████▌   | 334/512 [00:29<00:15, 11.53it/s]
+Updating:  69%|██████▉   | 354/512 [00:31<00:13, 11.33it/s]
+Updating:  74%|███████▍  | 378/512 [00:33<00:11, 11.56it/s]
+Updating:  78%|███████▊  | 398/512 [00:35<00:10, 10.42it/s]
+Updating:  82%|████████▏ | 420/512 [00:37<00:08, 11.08it/s]
+Updating:  87%|████████▋ | 444/512 [00:39<00:05, 11.67it/s]
+Updating:  91%|█████████ | 466/512 [00:41<00:03, 11.81it/s]
+Updating:  95%|█████████▌| 488/512 [00:43<00:02, 10.05it/s]
+Updating:  99%|█████████▉| 507/512 [00:45<00:00,  9.93it/s]
+Updating: 100%|██████████| 512/512 [00:45<00:00, 11.18it/s]
+
+Updating:   2%|▏         | 12/512 [00:01<00:52,  9.54it/s]]
+Updating:   2%|▏         | 12/512 [00:01<00:52,  9.54it/s]]
+Updating:   7%|▋         | 36/512 [00:03<00:41, 11.42it/s]]
+Updating:  11%|█         | 56/512 [00:05<00:42, 10.66it/s]]
+Updating:  16%|█▌        | 80/512 [00:07<00:36, 11.92it/s]]
+Updating:  20%|██        | 104/512 [00:09<00:35, 11.58it/s]
+Updating:  25%|██▌       | 128/512 [00:11<00:32, 11.84it/s]
+Updating:  29%|██▉       | 150/512 [00:13<00:31, 11.64it/s]
+Updating:  34%|███▍      | 174/512 [00:15<00:29, 11.46it/s]
+Updating:  38%|███▊      | 196/512 [00:17<00:28, 11.19it/s]
+Updating:  43%|████▎     | 220/512 [00:19<00:25, 11.56it/s]
+Updating:  47%|████▋     | 242/512 [00:21<00:24, 10.85it/s]
+Updating:  52%|█████▏    | 264/512 [00:23<00:21, 11.74it/s]
+Updating:  56%|█████▋    | 288/512 [00:25<00:19, 11.49it/s]
+Updating:  61%|██████    | 312/512 [00:27<00:17, 11.62it/s]
+Updating:  65%|██████▌   | 334/512 [00:29<00:15, 11.44it/s]
+Updating:  70%|██████▉   | 358/512 [00:31<00:12, 11.86it/s]
+Updating:  75%|███████▍  | 382/512 [00:33<00:10, 11.97it/s]
+Updating:  79%|███████▉  | 406/512 [00:35<00:08, 11.91it/s]
+Updating:  84%|████████▎ | 428/512 [00:37<00:07, 11.98it/s]
+Updating:  88%|████████▊ | 452/512 [00:39<00:05, 11.44it/s]
+Updating:  93%|█████████▎| 476/512 [00:41<00:03, 11.91it/s]
+Updating:  98%|█████████▊| 500/512 [00:43<00:01, 11.95it/s]
+Updating: 100%|██████████| 512/512 [00:44<00:00, 11.54it/s]
+
+Updating:   2%|▏         | 12/512 [00:01<00:42, 11.64it/s]]
+Updating:   2%|▏         | 12/512 [00:01<00:42, 11.64it/s]]
+Updating:   7%|▋         | 34/512 [00:03<00:43, 11.02it/s]]
+Updating:  11%|█         | 56/512 [00:04<00:38, 11.84it/s]]
+Updating:  16%|█▌        | 80/512 [00:07<00:36, 11.69it/s]]
+Updating:  20%|█▉        | 102/512 [00:08<00:35, 11.58it/s]
+Updating:  25%|██▍       | 126/512 [00:10<00:32, 11.93it/s]
+Updating:  29%|██▉       | 150/512 [00:13<00:30, 11.90it/s]
+Updating:  34%|███▍      | 174/512 [00:15<00:28, 11.95it/s]
+Updating:  38%|███▊      | 196/512 [00:16<00:28, 11.15it/s]
+Updating:  43%|████▎     | 220/512 [00:18<00:24, 11.86it/s]
+Updating:  48%|████▊     | 244/512 [00:21<00:23, 11.36it/s]
+Updating:  52%|█████▏    | 266/512 [00:22<00:20, 11.95it/s]
+Updating:  57%|█████▋    | 290/512 [00:24<00:18, 11.83it/s]
+Updating:  61%|██████▏   | 314/512 [00:27<00:16, 11.97it/s]
+Updating:  66%|██████▌   | 338/512 [00:29<00:14, 11.95it/s]
+Updating:  71%|███████   | 362/512 [00:31<00:12, 11.96it/s]
+Updating:  75%|███████▌  | 386/512 [00:33<00:10, 12.01it/s]
+Updating:  80%|████████  | 410/512 [00:35<00:08, 11.93it/s]
+Updating:  85%|████████▍ | 434/512 [00:37<00:06, 12.02it/s]
+Updating:  89%|████████▉ | 458/512 [00:39<00:04, 11.74it/s]
+Updating:  94%|█████████▍| 480/512 [00:40<00:02, 11.77it/s]
+Updating:  98%|█████████▊| 504/512 [00:43<00:00, 11.60it/s]
+Updating: 100%|██████████| 512/512 [00:43<00:00, 11.70it/s]
+
+Updating:   1%|          | 6/512 [00:00<00:43, 11.57it/s]s]
+Updating:   1%|          | 6/512 [00:00<00:43, 11.57it/s]s]
+Updating:   5%|▌         | 28/512 [00:02<00:41, 11.70it/s]]
+Updating:  10%|█         | 52/512 [00:04<00:39, 11.77it/s]]
+Updating:  14%|█▍        | 74/512 [00:06<00:37, 11.61it/s]]
+Updating:  19%|█▉        | 98/512 [00:08<00:36, 11.21it/s]]
+Updating:  23%|██▎       | 120/512 [00:10<00:40,  9.71it/s]
+Updating:  28%|██▊       | 142/512 [00:12<00:31, 11.93it/s]
+Updating:  32%|███▏      | 166/512 [00:14<00:28, 11.97it/s]
+Updating:  37%|███▋      | 190/512 [00:16<00:26, 11.94it/s]
+Updating:  42%|████▏     | 214/512 [00:18<00:25, 11.89it/s]
+Updating:  46%|████▋     | 238/512 [00:20<00:22, 11.94it/s]
+Updating:  51%|█████     | 262/512 [00:22<00:20, 11.92it/s]
+Updating:  56%|█████▌    | 286/512 [00:24<00:19, 11.88it/s]
+Updating:  60%|██████    | 308/512 [00:26<00:19, 10.36it/s]
+Updating:  64%|██████▎   | 326/512 [00:28<00:21,  8.81it/s]
+Updating:  68%|██████▊   | 346/512 [00:30<00:16, 10.16it/s]
+Updating:  71%|███████▏  | 366/512 [00:32<00:12, 11.26it/s]
+Updating:  76%|███████▌  | 388/512 [00:34<00:10, 11.53it/s]
+Updating:  80%|████████  | 412/512 [00:36<00:08, 11.54it/s]
+Updating:  85%|████████▌ | 436/512 [00:38<00:06, 11.70it/s]
+Updating:  89%|████████▉ | 458/512 [00:40<00:04, 11.60it/s]
+Updating:  94%|█████████▍| 482/512 [00:42<00:02, 11.85it/s]
+Updating:  99%|█████████▉| 506/512 [00:44<00:00, 11.96it/s]
+Updating: 100%|██████████| 512/512 [00:45<00:00, 11.37it/s]
+
+Updating:   3%|▎         | 16/512 [00:01<00:41, 11.98it/s]]
+Updating:   3%|▎         | 16/512 [00:01<00:41, 11.98it/s]]
+Updating:   8%|▊         | 40/512 [00:03<00:39, 12.05it/s]]
+Updating:  12%|█▎        | 64/512 [00:05<00:37, 12.00it/s]]
+Updating:  17%|█▋        | 86/512 [00:07<00:43,  9.88it/s]]
+Updating:  21%|██        | 108/512 [00:09<00:42,  9.47it/s]
+Updating:  24%|██▍       | 125/512 [00:11<00:42,  9.18it/s]
+Updating:  29%|██▉       | 149/512 [00:13<00:31, 11.56it/s]
+Updating:  33%|███▎      | 171/512 [00:15<00:34,  9.80it/s]
+Updating:  37%|███▋      | 189/512 [00:17<00:39,  8.21it/s]
+Updating:  41%|████      | 210/512 [00:19<00:33,  9.07it/s]
+Updating:  45%|████▍     | 228/512 [00:21<00:31,  9.10it/s]
+Updating:  49%|████▉     | 250/512 [00:23<00:22, 11.60it/s]

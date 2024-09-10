@@ -3,7 +3,7 @@ import torch
 import torch.nn.functional as F
 from bayesian_torch.layers.flipout_layers.linear_flipout import LinearFlipout
 from einops import rearrange, repeat
-from scripts.baselines.sac_AMDF.models.attention import PositionalEncoder, ResidualAttentionBlock, KalmanAttentionBlock
+from scripts.baselines.sac_AMDF.models.attention import PositionalEncoder, ResidualAttentionBlock, KalmanAttentionBlock, TypeEncoder
 
 
 
@@ -136,6 +136,112 @@ class TransformerProcessModel(nn.Module):
         return output
 
 
+class TransformerProcessModelAction(nn.Module):
+    """
+    process model takes a state or a stack of states (t-n:t-1) and
+    predict the next state t. this process model takes in the state and actions
+    and outputs a predicted state
+
+    input -> [batch_size, num_ensemble, timestep, dim_x]
+    action -> [batch_size, num_ensemble, dim_a]
+
+    output ->  [batch_size, num_ensemble, timestep, dim_x]
+    """
+
+    def __init__(self, num_ensemble, dim_x, dim_a, win_size, dim_model, num_heads):
+        super(TransformerProcessModelAction, self).__init__()
+        self.num_ensemble = num_ensemble
+        self.dim_x = dim_x
+        self.dim_a = dim_a
+        self.win_size = win_size
+
+        self.type_encoder = TypeEncoder(
+            dropout=0.1,
+            win_size=win_size,
+            type=3,
+            d_model=dim_model,
+            batch_first=True,
+            length=win_size + 2,
+        )
+
+        self.positional_encoding_layer = PositionalEncoder(
+            d_model=dim_model, dropout=0.1, max_seq_len=2000, batch_first=True
+        )
+
+        self.attention_layer_1 = ResidualAttentionBlock(
+            d_model=dim_model, n_head=num_heads, attn_mask=None
+        )
+        self.attention_layer_2 = ResidualAttentionBlock(
+            d_model=dim_model, n_head=num_heads, attn_mask=None
+        )
+        self.attention_layer_3 = ResidualAttentionBlock(
+            d_model=dim_model, n_head=num_heads, attn_mask=None
+        )
+
+        # channel for state variables
+        self.bayes1 = LinearFlipout(in_features=self.dim_x, out_features=64)
+        self.bayes2 = LinearFlipout(in_features=64, out_features=128)
+        self.bayes3 = LinearFlipout(in_features=128, out_features=256)
+
+        # channel for action variables
+        self.bayes_a1 = LinearFlipout(in_features=self.dim_a, out_features=32)
+        self.bayes_a2 = LinearFlipout(in_features=32, out_features=128)
+        self.bayes_a3 = LinearFlipout(in_features=128, out_features=256)
+
+        # merge them
+        self.bayes4 = LinearFlipout(in_features=256, out_features=128)
+        self.bayes5 = LinearFlipout(in_features=128, out_features=self.dim_x)
+
+    def forward(self, input, action):
+        batch_size = input.shape[0]
+        input = rearrange(input, "n en k dim -> (n en) k dim")
+        input = rearrange(input, "n k dim -> (n k) dim")
+        action = rearrange(action, "bs en dim -> (bs en) dim")
+
+        # branch for the state variables
+        x, _ = self.bayes1(input)
+        x = F.relu(x)
+        x, _ = self.bayes2(x)
+        x = F.relu(x)
+        x, _ = self.bayes3(x)
+        x = F.relu(x)
+        x = rearrange(x, "(n k) dim -> n k dim", k=self.win_size)
+
+        # branch for the action variables
+        y, _ = self.bayes_a1(action)
+        y = F.relu(y)
+        y, _ = self.bayes_a2(y)
+        y = F.relu(y)
+        y, _ = self.bayes_a3(y)
+        y = F.relu(y)
+        y = rearrange(y, "(n k) dim -> n k dim", k=1)
+        place_holder = torch.zeros_like(y)
+        y = torch.cat((y, place_holder), axis=1)
+
+        # for pos embedding layers
+        x = rearrange(x, "n k dim -> k n dim")
+        x = self.positional_encoding_layer(x)
+        y = rearrange(y, "n k dim -> k n dim")
+        merge = torch.cat((x, y), axis=0)
+        merge = self.type_encoder(merge)
+
+        # attention
+        x, _ = self.attention_layer_1(merge)
+        x, _ = self.attention_layer_2(x)
+        x, _ = self.attention_layer_3(x)
+
+        # post process branch
+        x = rearrange(x, "k n dim -> n k dim", n=batch_size * self.num_ensemble)
+        x = rearrange(x, "n k dim -> (n k) dim", n=batch_size * self.num_ensemble)
+        x, _ = self.bayes4(x)
+        x = F.relu(x)
+        x, _ = self.bayes5(x)
+        x = rearrange(x, "(n k) dim -> n k dim", n=batch_size * self.num_ensemble)
+        output = rearrange(x, "(n en) k dim -> n en k dim", en=self.num_ensemble)
+        return output
+
+
+
 
 
 class LatentAttentionGain(nn.Module):
@@ -188,11 +294,10 @@ class LatentAttentionGain(nn.Module):
         return attn_mask
 
     def forward(self, state, obs_list, mod_list):
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        device = state.device
         batch_size = state.shape[0]
 
         # generate attn_mask from
-
         attn_mask = self.generate_attn_mask(
             self.dim_x, self.dim_z, self.full_mod, mod_list
         )

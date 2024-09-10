@@ -1,0 +1,545 @@
+Saving eval videos to /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/test_runs
+action_space: Box(-1.0, 1.0, (2, 8), float32)
+auto_reset: True
+base_env: <PushCubeEnv<PushCube-v1>>
+call: <bound method ManiSkillVectorEnv.call of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_async: <bound method VectorEnv.call_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_wait: <bound method VectorEnv.call_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+close: <bound method ManiSkillVectorEnv.close of ManiSkillVectorEnv(PushCube-v1, 2)>
+close_extras: <bound method VectorEnv.close_extras of ManiSkillVectorEnv(PushCube-v1, 2)>
+closed: False
+device: cuda
+get_attr: <bound method ManiSkillVectorEnv.get_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+get_wrapper_attr: <bound method Env.get_wrapper_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+ignore_terminations: True
+is_vector_env: True
+metadata: {'render_modes': []}
+np_random: Generator(PCG64)
+num_envs: 2
+observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (2, 9), float32), 'qvel': Box(-inf, inf, (2, 9), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (2, 7), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (2, 3, 4), float32), 'cam2world_gl': Box(-inf, inf, (2, 4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (2, 3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('rgb': Box(0, 255, (2, 128, 128, 3), uint8), 'depth': Box(-32768, 32767, (2, 128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (2, 128, 128, 1), int16))))
+render: <bound method ManiSkillVectorEnv.render of ManiSkillVectorEnv(PushCube-v1, 2)>
+render_mode: None
+reset: <bound method ManiSkillVectorEnv.reset of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_async: <bound method VectorEnv.reset_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_wait: <bound method VectorEnv.reset_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+returns: tensor([0., 0.], device='cuda:0')
+reward_range: (-inf, inf)
+set_attr: <bound method VectorEnv.set_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+single_action_space: Box(-1.0, 1.0, (8,), float32)
+single_observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (9,), float32), 'qvel': Box(-inf, inf, (9,), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (7,), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (3, 4), float32), 'cam2world_gl': Box(-inf, inf, (4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('rgb': Box(0, 255, (128, 128, 3), uint8), 'depth': Box(-32768, 32767, (128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (128, 128, 1), int16))))
+spec: EnvSpec(id='PushCube-v1', entry_point=functools.partial(<function make at 0x7f2a7abee550>, env_id='PushCube-v1'), reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, autoreset=False, disable_env_checker=True, apply_api_compatibility=False, kwargs={'num_envs': 2, 'obs_mode': 'rgb+depth+segmentation', 'control_mode': 'pd_joint_delta_pos', 'render_mode': 'rgb_array', 'sim_backend': 'cuda', 'render_backend': 'cuda'}, namespace=None, name='PushCube', version=1, additional_wrappers=(WrapperSpec(name='TimeLimitWrapper', entry_point='mani_skill.utils.registration:TimeLimitWrapper', kwargs=None), WrapperSpec(name='RecordEpisode', entry_point='mani_skill.utils.wrappers.record:RecordEpisode', kwargs=None)), vector_entry_point=functools.partial(<function make_vec at 0x7f2a7abee790>, env_id='PushCube-v1'))
+step: <bound method ManiSkillVectorEnv.step of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_async: <bound method VectorEnv.step_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_wait: <bound method VectorEnv.step_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+unwrapped: <PushCubeEnv<PushCube-v1>>
+viewer: None
+action_space: Box(-1.0, 1.0, (2, 8), float32)
+auto_reset: True
+base_env: <PushCubeEnv<PushCube-v1>>
+call: <bound method ManiSkillVectorEnv.call of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_async: <bound method VectorEnv.call_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+call_wait: <bound method VectorEnv.call_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+close: <bound method ManiSkillVectorEnv.close of ManiSkillVectorEnv(PushCube-v1, 2)>
+close_extras: <bound method VectorEnv.close_extras of ManiSkillVectorEnv(PushCube-v1, 2)>
+closed: False
+device: cuda
+get_attr: <bound method ManiSkillVectorEnv.get_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+get_wrapper_attr: <bound method Env.get_wrapper_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+ignore_terminations: True
+is_vector_env: True
+metadata: {'render_modes': []}
+np_random: Generator(PCG64)
+num_envs: 2
+observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (2, 9), float32), 'qvel': Box(-inf, inf, (2, 9), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (2, 7), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (2, 3, 4), float32), 'cam2world_gl': Box(-inf, inf, (2, 4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (2, 3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('rgb': Box(0, 255, (2, 128, 128, 3), uint8), 'depth': Box(-32768, 32767, (2, 128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (2, 128, 128, 1), int16))))
+render: <bound method ManiSkillVectorEnv.render of ManiSkillVectorEnv(PushCube-v1, 2)>
+render_mode: None
+reset: <bound method ManiSkillVectorEnv.reset of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_async: <bound method VectorEnv.reset_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+reset_wait: <bound method VectorEnv.reset_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+returns: tensor([0., 0.], device='cuda:0')
+reward_range: (-inf, inf)
+set_attr: <bound method VectorEnv.set_attr of ManiSkillVectorEnv(PushCube-v1, 2)>
+single_action_space: Box(-1.0, 1.0, (8,), float32)
+single_observation_space: Dict('agent': Dict('qpos': Box(-inf, inf, (9,), float32), 'qvel': Box(-inf, inf, (9,), float32)), 'extra': Dict('tcp_pose': Box(-inf, inf, (7,), float32)), 'sensor_param': Dict('base_camera': Dict('extrinsic_cv': Box(-inf, inf, (3, 4), float32), 'cam2world_gl': Box(-inf, inf, (4, 4), float32), 'intrinsic_cv': Box(-inf, inf, (3, 3), float32))), 'sensor_data': Dict('base_camera': Dict('rgb': Box(0, 255, (128, 128, 3), uint8), 'depth': Box(-32768, 32767, (128, 128, 1), int16), 'segmentation': Box(-32768, 32767, (128, 128, 1), int16))))
+spec: EnvSpec(id='PushCube-v1', entry_point=functools.partial(<function make at 0x7f2a7abee550>, env_id='PushCube-v1'), reward_threshold=None, nondeterministic=False, max_episode_steps=None, order_enforce=True, autoreset=False, disable_env_checker=True, apply_api_compatibility=False, kwargs={'num_envs': 2, 'obs_mode': 'rgb+depth+segmentation', 'control_mode': 'pd_joint_delta_pos', 'render_mode': 'rgb_array', 'sim_backend': 'cuda', 'render_backend': 'cuda'}, namespace=None, name='PushCube', version=1, additional_wrappers=(WrapperSpec(name='TimeLimitWrapper', entry_point='mani_skill.utils.registration:TimeLimitWrapper', kwargs=None),), vector_entry_point=functools.partial(<function make_vec at 0x7f2a7abee790>, env_id='PushCube-v1'))
+step: <bound method ManiSkillVectorEnv.step of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_async: <bound method VectorEnv.step_async of ManiSkillVectorEnv(PushCube-v1, 2)>
+step_wait: <bound method VectorEnv.step_wait of ManiSkillVectorEnv(PushCube-v1, 2)>
+unwrapped: <PushCubeEnv<PushCube-v1>>
+viewer: None
+... replay buffer setup
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.
+  logger.warn(
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.single_observation_space to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.single_observation_space` for environment variables or `env.get_wrapper_attr('single_observation_space')` that will search the reminding wrappers.
+  logger.warn(
+/home/adriano/miniconda3/envs/MSM/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.single_action_space to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.single_action_space` for environment variables or `env.get_wrapper_attr('single_action_space')` that will search the reminding wrappers.
+Global Step: 0oop setup
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=5.9908013343811035
+model NOT saved due to the success rate of 0.0 lower than 0.0
+
+
+
+Global Step: 4096
+Updating:   5%|▍         | 5/102 [00:00<00:10,  9.14it/s]
+
+
+
+
+
+Global Step: 5120
+Updating:   4%|▍         | 4/102 [00:00<00:08, 12.25it/s]
+
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 11.86it/s]
+Updating:   6%|▌         | 6/102 [00:00<00:07, 12.64it/s]
+
+
+
+
+
+
+Global Step: 7168
+Updating
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 11.46it/s]
+Updating:   2%|▏         | 2/102 [00:00<00:08, 11.42it/s]
+
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 11.50it/s]
+Updating:  10%|▉         | 10/102 [00:00<00:07, 12.53it/s]
+
+
+
+
+
+Global Step: 10240
+Updating:   2%|▏         | 2/102 [00:00<00:07, 12.62it/s]
+
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.27it/s]
+Updating
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.49it/s]
+Updating:   6%|▌         | 6/102 [00:00<00:07, 12.45it/s]
+
+
+
+
+
+Global Step: 13312
+Updating
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.52it/s]
+Updating:  10%|▉         | 10/102 [00:00<00:07, 12.58it/s]
+
+
+
+
+
+Global Step: 15360
+Updating:   0%|          | 0/102 [00:00<?, ?it/s]
+
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 11.93it/s]
+Updating
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.22it/s]
+Updating:  10%|▉         | 10/102 [00:00<00:07, 12.60it/s]
+
+
+
+
+
+Global Step: 18432
+Updating:   0%|          | 0/102 [00:00<?, ?it/s]
+
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.10it/s]
+Updating:  12%|█▏        | 12/102 [00:00<00:07, 12.35it/s]
+
+
+
+
+Global Step: 20480
+Evaluated 400 steps resulting in 2 episodes
+ - eval_success_rate=0.0
+ - eval_episodic_return=4.528840065002441
+model NOT saved due to the success rate of 0.0 lower than 0.0
+Updating:   8%|▊         | 8/102 [00:00<00:07, 12.50it/s]
+
+
+
+
+
+Global Step: 21504
+Updating
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.47it/s]
+Updating:  12%|█▏        | 12/102 [00:00<00:07, 12.59it/s]
+
+
+
+
+
+Global Step: 23552
+Updating:   6%|▌         | 6/102 [00:00<00:07, 12.52it/s]
+
+
+
+
+
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.10it/s]
+Updating
+
+
+
+Global Step: 25600
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 11.90it/s]
+Updatingtep: 25600
+
+
+
+
+Global Step: 26624
+Global Step: 26624
+Updatingtep: 26624
+
+
+
+
+Global Step: 27648
+
+Updatingtep: 27648
+Updatingtep: 27648
+
+
+
+Global Step: 28672
+
+Updating: 100%|██████████| 102/102 [00:07<00:00, 12.85it/s]
+Updatingtep: 28672
+
+
+
+
+Global Step: 29696
+Global Step: 29696
+Updatingtep: 29696
+
+
+
+
+Global Step: 30720
+Global Step: 30720
+Updatingtep: 30720
+
+
+
+
+Global Step: 31744
+Updatingtep: 31744
+Updatingtep: 31744
+
+
+
+Global Step: 32768
+
+Updatingtep: 32768
+Updatingtep: 32768
+
+
+
+Global Step: 33792
+
+Updatingtep: 33792
+Updatingtep: 33792
+
+
+
+
+Global Step: 34816
+Global Step: 34816
+Updatingtep: 34816
+
+
+
+
+Global Step: 35840
+Updatingtep: 35840
+Updatingtep: 35840
+
+
+
+
+Global Step: 36864
+Global Step: 36864
+Updatingtep: 36864
+
+
+
+
+Global Step: 37888
+Global Step: 37888
+Updatingtep: 37888
+
+
+
+
+Global Step: 38912
+Global Step: 38912
+Updatingtep: 38912
+
+
+
+
+Global Step: 39936
+Updatingtep: 39936
+Updatingtep: 39936
+
+
+
+Evaluatingp: 40960
+
+model NOT saved due to the success rate of 0.0 lower than 0.0
+model NOT saved due to the success rate of 0.0 lower than 0.0
+UpdatingT saved due to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 41984e to the success rate of 0.0 lower than 0.0
+Updatingtep: 41984e to the success rate of 0.0 lower than 0.0
+Updatingtep: 41984e to the success rate of 0.0 lower than 0.0
+
+
+
+Global Step: 43008e to the success rate of 0.0 lower than 0.0
+
+Updatingtep: 43008e to the success rate of 0.0 lower than 0.0
+Updatingtep: 43008e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 44032e to the success rate of 0.0 lower than 0.0
+Global Step: 44032e to the success rate of 0.0 lower than 0.0
+Updatingtep: 44032e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 45056e to the success rate of 0.0 lower than 0.0
+Global Step: 45056e to the success rate of 0.0 lower than 0.0
+Updatingtep: 45056e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 46080e to the success rate of 0.0 lower than 0.0
+Global Step: 46080e to the success rate of 0.0 lower than 0.0
+Updatingtep: 46080e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 47104e to the success rate of 0.0 lower than 0.0
+Global Step: 47104e to the success rate of 0.0 lower than 0.0
+Updatingtep: 47104e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 48128e to the success rate of 0.0 lower than 0.0
+Global Step: 48128e to the success rate of 0.0 lower than 0.0
+Updatingtep: 48128e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 49152e to the success rate of 0.0 lower than 0.0
+Global Step: 49152e to the success rate of 0.0 lower than 0.0
+Updatingtep: 49152e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 50176e to the success rate of 0.0 lower than 0.0
+Global Step: 50176e to the success rate of 0.0 lower than 0.0
+Updatingtep: 50176e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 51200e to the success rate of 0.0 lower than 0.0
+Updatingtep: 51200e to the success rate of 0.0 lower than 0.0
+Updatingtep: 51200e to the success rate of 0.0 lower than 0.0
+
+
+
+Global Step: 52224e to the success rate of 0.0 lower than 0.0
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.52it/s]
+Updatingtep: 52224e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 53248e to the success rate of 0.0 lower than 0.0
+Global Step: 53248e to the success rate of 0.0 lower than 0.0
+Updatingtep: 53248e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 54272e to the success rate of 0.0 lower than 0.0
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 11.36it/s]
+Updatingtep: 54272e to the success rate of 0.0 lower than 0.0
+
+
+
+
+
+Global Step: 55296e to the success rate of 0.0 lower than 0.0
+Global Step: 55296e to the success rate of 0.0 lower than 0.0
+Updatingtep: 55296e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 56320e to the success rate of 0.0 lower than 0.0
+Global Step: 56320e to the success rate of 0.0 lower than 0.0
+Updatingtep: 56320e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 57344e to the success rate of 0.0 lower than 0.0
+Global Step: 57344e to the success rate of 0.0 lower than 0.0
+Updatingtep: 57344e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 58368e to the success rate of 0.0 lower than 0.0
+Global Step: 58368e to the success rate of 0.0 lower than 0.0
+Updatingtep: 58368e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 59392e to the success rate of 0.0 lower than 0.0
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.19it/s]
+Updatingtep: 59392e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Evaluatingp: 60416e to the success rate of 0.0 lower than 0.0
+model NOT saved due to the success rate of 0.0 lower than 0.0
+UpdatingT saved due to the success rate of 0.0 lower than 0.0
+UpdatingT saved due to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 61440e to the success rate of 0.0 lower than 0.0
+Global Step: 61440e to the success rate of 0.0 lower than 0.0
+Updatingtep: 61440e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 62464e to the success rate of 0.0 lower than 0.0
+
+Updatingtep: 62464e to the success rate of 0.0 lower than 0.0
+Updatingtep: 62464e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 63488e to the success rate of 0.0 lower than 0.0
+Global Step: 63488e to the success rate of 0.0 lower than 0.0
+Updatingtep: 63488e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 64512e to the success rate of 0.0 lower than 0.0
+Global Step: 64512e to the success rate of 0.0 lower than 0.0
+Updatingtep: 64512e to the success rate of 0.0 lower than 0.0
+
+
+
+
+Global Step: 65536e to the success rate of 0.0 lower than 0.0
+
+Updating: 100%|██████████| 102/102 [00:08<00:00, 12.31it/s]
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/sac.py", line 503, in <module>
+    (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/sac.py", line 184, in train
+    real_next_obs_stack = process_obs_dict(next_obs, obs, args.modes, device)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/process.py", line 29, in process_obs_dict
+    obs_stack = [
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/process.py", line 31, in <listcomp>
+    process(old_obs[mode], mode),
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/process.py", line 20, in process
+    return gs(torch.permute(obs, (0, 3, 1, 2))) / 255
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/sac.py", line 503, in <module>
+    (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/sac.py", line 184, in train
+    real_next_obs_stack = process_obs_dict(next_obs, obs, args.modes, device)
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/process.py", line 29, in process_obs_dict
+    obs_stack = [
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/process.py", line 31, in <listcomp>
+    process(old_obs[mode], mode),
+  File "/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_CURL/process.py", line 20, in process
+    return gs(torch.permute(obs, (0, 3, 1, 2))) / 255

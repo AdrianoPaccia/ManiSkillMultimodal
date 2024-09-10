@@ -1,0 +1,27 @@
+2024-09-10 10:34:53,867 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Configure stats pid to 28914
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Loading settings from /home/adriano/.config/wandb/settings
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Loading settings from /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/settings
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': 'scripts/baselines/sac_AMDF/sac.py', 'program_abspath': '/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/sac.py', 'program': '/home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/sac.py'}
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_init.py:_log_setup():524] Logging user logs to /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240910_103453-ylb3oibv/logs/debug.log
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_init.py:_log_setup():525] Logging internal logs to /home/adriano/Desktop/ManiSkillMultimodal/scripts/baselines/sac_AMDF/wandb/run-20240910_103453-ylb3oibv/logs/debug-internal.log
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_init.py:init():607] calling init triggers
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {'exp_name': 'sac', 'seed': 1, 'torch_deterministic': True, 'cuda': False, 'track': True, 'wandb_project_name': 'cleanRL', 'wandb_entity': None, 'wandb_group': 'sac_AMDF', 'evaluate': False, 'checkpoint': None, 'capture_video': True, 'save_model': True, 'modes': 'rgb+depth+segmentation', 'main_mode': 'rgb', 'env_id': 'ReachCube-v1', 'num_envs': 2, 'num_eval_envs': 8, 'num_eval_steps': 50, 'log_freq': 1000, 'eval_freq': 20000, 'save_train_video_freq': 1, 'train_noise_types': 'nonoise', 'eval_noise_types': 'nonoise', 'train_noise_freq': 0.0, 'eval_noise_freq': 0.0, 'total_timesteps': 500000, 'buffer_size': 10000, 'buffer_device': 'cpu', 'num_ensemble': 4, 'gamma': 0.8, 'tau': 0.01, 'batch_size': 8, 'learning_starts': 5000, 'policy_lr': 0.0003, 'q_lr': 0.0003, 'policy_frequency': 1, 'target_network_frequency': 1, 'alpha': 0.2, 'autotune': True, 'training_freq': 5000, 'utd': 0.5, 'partial_reset': False, 'bootstrap_at_done': 'always', 'grad_steps_per_iteration': 2500, 'steps_per_env': 2500, 'MM_coeff': 1.0, 'TF_coeff': 1.0, 'TC_coeff': 1.0, 'NTC_coeff': 1.0}
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_init.py:init():657] starting backend
+2024-09-10 10:34:53,868 INFO    MainThread:28914 [wandb_init.py:init():661] setting up manager
+2024-09-10 10:34:53,870 INFO    MainThread:28914 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-09-10 10:34:53,872 INFO    MainThread:28914 [wandb_init.py:init():669] backend started and connected
+2024-09-10 10:34:53,878 INFO    MainThread:28914 [wandb_init.py:init():767] updated telemetry
+2024-09-10 10:34:53,893 INFO    MainThread:28914 [wandb_init.py:init():800] communicating run to backend with 90.0 second timeout
+2024-09-10 10:34:54,351 INFO    MainThread:28914 [wandb_init.py:init():851] starting run threads in backend
+2024-09-10 10:34:56,176 INFO    MainThread:28914 [wandb_run.py:_console_start():2463] atexit reg
+2024-09-10 10:34:56,176 INFO    MainThread:28914 [wandb_run.py:_redirect():2309] redirect: wrap_raw
+2024-09-10 10:34:56,176 INFO    MainThread:28914 [wandb_run.py:_redirect():2374] Wrapping output streams.
+2024-09-10 10:34:56,176 INFO    MainThread:28914 [wandb_run.py:_redirect():2399] Redirects installed.
+2024-09-10 10:34:56,178 INFO    MainThread:28914 [wandb_init.py:init():894] run started, returning control to user process
+2024-09-10 10:34:56,179 INFO    MainThread:28914 [wandb_run.py:_tensorboard_callback():1554] tensorboard callback: runs/depth_rgb_segmentation/ReachCube-v1__sac__1__1725957291, True
+2024-09-10 10:35:32,468 WARNING MsgRouterThr:28914 [router.py:message_loop():77] message_loop has been closed
