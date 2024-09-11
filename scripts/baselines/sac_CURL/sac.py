@@ -131,9 +131,6 @@ def train(**kwargs):
                     best_success_rate = successes.mean()
                     torch.save({
                         'actor': actor.state_dict(),
-                        'qf1': qf1_target.state_dict(),
-                        'qf2': qf2_target.state_dict(),
-                        'log_alpha': log_alpha,
                     }, f"{save_folder}/best_model.pt")
 
                     print(f"model saved to {save_folder}/best_model.pt with a success rate of {successes.mean()}")
@@ -233,7 +230,7 @@ def train(**kwargs):
 
             # update the policy network and the critic
             if global_update % args.policy_frequency == 0:  # TD 3 Delayed update support
-                pi, log_pi, _ = actor.get_train_action(transform(data.next_obs, obs_trans))
+                pi, log_pi, _ = actor.get_train_action(transform(data.obs, obs_trans))
                 qf1_pi = qf1(data.states, pi)
                 qf2_pi = qf2(data.states, pi)
                 min_qf_pi = torch.min(qf1_pi, qf2_pi)
@@ -512,3 +509,23 @@ if __name__ == "__main__":
     print('... starting loop', end='\r')
     (actor, qf1_target, qf2_target), log_alpha = train(**train_args)
     envs.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

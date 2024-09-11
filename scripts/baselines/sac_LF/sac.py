@@ -117,9 +117,6 @@ def train(**kwargs):
                     best_success_rate = successes.mean()
                     torch.save({
                         'actor': actor.state_dict(),
-                        'qf1': qf1_target.state_dict(),
-                        'qf2': qf2_target.state_dict(),
-                        'log_alpha': log_alpha,
                     }, f"{save_folder}/best_model.pt")
 
                     print(f"model saved to {save_folder}/best_model.pt with a success rate of {successes.mean()}")
