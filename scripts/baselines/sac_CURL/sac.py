@@ -349,7 +349,8 @@ def transform(x:tuple, trans:list=[]):
                 pass
     return tuple(x_)
 
-SUPPORTED_OBS_MODES = ("state", "state_dict", "none", "sensor_data", "rgb", "depth", "segmentation", "rgbd", "rgb+depth", "rgb+depth+segmentation", "rgb+segmentation", "depth+segmentation", "pointcloud")
+SUPPORTED_OBS_MODES = ("state", "state_dict", "none", "sensor_data", "rgb", "depth", "segmentation", "rgbd", "rgb+depth",
+                       "rgb+depth+segmentation", "rgb+segmentation", "depth+segmentation", "pointcloud")
 
 if __name__ == "__main__":
 

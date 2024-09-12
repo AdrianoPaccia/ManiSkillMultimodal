@@ -453,6 +453,9 @@ class BaseEnv(gym.Env):
         """The current observation mode. This affects the observation returned by env.get_obs()"""
         return self._obs_mode
 
+    def get_obs_state_dict(self, info):
+        return self._get_obs_state_dict(info)
+
     def get_obs(self, info: Optional[Dict] = None):
         """
         Return the current observation of the environment. User may call this directly to get the current observation
