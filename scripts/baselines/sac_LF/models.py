@@ -193,7 +193,7 @@ class ActorMultimodal(nn.Module):
     def aggregate(self, z_obs):
         n = len(z_obs)
         if n==1:
-            return z_obs[0], None
+            return z_obs[0]
         if self.fusion_strategy == 'concatenation':
             return torch.cat(z_obs, dim=-1)
         elif self.fusion_strategy == 'linear_combination':
