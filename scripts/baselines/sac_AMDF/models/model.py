@@ -52,11 +52,12 @@ class latent_model(nn.Module):
         )'''
 
         #encoders
+        obs_spaces = [env.single_observation_space_mm[env.obs_modes.index(m)] for m in modes]
 
         self.encoders = torch.nn.ModuleList(
             [
                 ImgToLatentModel(input_space=s, mode=m, frames=2, num_ensemble=self.num_ensemble, output_dim=self.dim_z)
-                for s, m in zip(env.single_observation_space_mm, modes)
+                for s, m in zip(obs_spaces, modes)
             ]
         )
 

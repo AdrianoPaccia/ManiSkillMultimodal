@@ -1,0 +1,6 @@
+manipulation:
+  crop_shape:
+    state: [35]
+    rgb: [100, 100]
+    depth: [100, 100]
+    segmentation: [100, 100]

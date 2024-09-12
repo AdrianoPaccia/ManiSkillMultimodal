@@ -65,7 +65,6 @@ class TransitionRegressor(nn.Module):
 
 Z_DIM = 256
 frames=2
-from process import image_preprocess
 
 
 class ActorMultimodal(nn.Module):

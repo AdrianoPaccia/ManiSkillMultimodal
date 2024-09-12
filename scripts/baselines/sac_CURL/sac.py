@@ -21,9 +21,10 @@ from utils import Args
 from utils import ReplayBufferMultimodal as ReplayBuffer
 from environments_multimodal.build import build_training_env, build_eval_env
 from tqdm import tqdm
+import yaml
 
 
-from process import image_preprocess, process_obs_dict
+from scripts.baselines.process import process_obs_dict
 try:
     import matplotlib
     matplotlib.use('TkAgg')
@@ -164,7 +165,7 @@ def train(**kwargs):
             if "final_info" in infos:
                 final_info = infos["final_info"]
                 done_mask = infos["_final_info"]
-                for k in real_next_obs:
+                for k in infos["final_observation"]:
                     real_next_obs[k][done_mask] = infos["final_observation"][k][done_mask]
 
                 episodic_return = final_info['episode']['r'][done_mask].cpu().numpy().mean()
@@ -398,12 +399,13 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
     ## ENVIRONMENTS SETUP
-    print('... environments setup', end='\r')
+    game = 'manipulation'
+    print(f'... environments setup for {game} game', end='\r')
 
     print('... building training environment', end='\r')
     eval_env_args = {
         'run_name': run_name,
-        'game': 'manipulation',
+        'game': game,
         'checkpoint_dir': os.path.join(os.getcwd(), 'test_runs'),
         'partial_reset': args.partial_reset,
         'noise_frequency': args.eval_noise_freq,
@@ -425,7 +427,7 @@ if __name__ == "__main__":
 
     train_env_args = {
         'run_name': run_name,
-        'game': 'manipulation',
+        'game': game,
         'partial_reset': args.partial_reset,
         'noise_frequency': args.train_noise_freq,
         'noise_types': args.train_noise_types.split('+'),
@@ -455,8 +457,12 @@ if __name__ == "__main__":
     max_action = float(envs.single_action_space.high[0])
 
     #actor = Actor(envs).to(device)
+    #TODO: MODIFY the state shape
+    with open(f'{os.path.dirname(os.path.realpath(__file__))}/configuration.yaml', "r") as file:
+        config = yaml.safe_load(file)[str(game)]
+    obs_shape = [tuple(config['crop_shape'][m]) for m in args.modes]
     actor = Actor(
-        state_space=[(*args.crop_size, envs.single_observation_space_mm[i].shape[-1] ) for i in range(len(envs.obs_modes))],
+        obs_shape=obs_shape,
         action_space=envs.single_action_space,
         modes=args.modes
     ).to(device)
@@ -491,9 +497,10 @@ if __name__ == "__main__":
     ## REPLAY BUFFER setup
     print('... replay buffer setup', end='\r')
     envs.single_observation_space_mm.dtype = np.float32
+    store_shape = [envs.store_shape[envs.obs_modes.index(m)] for m in args.modes]
     rb = ReplayBuffer(
         state_shape=state_dim,
-        obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
+        obs_shape=store_shape,
         act_shape=envs.single_action_space.shape,
         num_envs=args.num_envs,
         buffer_size=args.buffer_size,

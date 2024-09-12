@@ -64,7 +64,6 @@ class TransitionRegressor(nn.Module):
 
 Z_DIM = 256
 frames=2
-from process import image_preprocess
 
 
 class MultiHeadCNN(nn.Module):
@@ -108,15 +107,15 @@ class MultiHeadMLP(nn.Module):
 class ActorMultimodal(nn.Module):
     def __init__(self,
                  #env
-                 state_space,
+                 obs_shape,
                  action_space,
                  modes
         ):
         super().__init__()
 
         self.encoders = nn.ModuleList([
-                CNN(frames, Z_DIM) if m == 'rgb' or m == 'depth' or m == 'segmentation' else MLP(s.shape[0], Z_DIM) for
-                s, m in zip(state_space, modes)
+                CNN(frames, Z_DIM) if m in ['rgb', 'depth', 'segmentation'] else MLP(s[0], Z_DIM)
+                for s, m in zip(obs_shape, modes)
             ]
         )
 

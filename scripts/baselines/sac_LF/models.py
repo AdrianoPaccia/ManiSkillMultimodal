@@ -119,10 +119,10 @@ class ActorMultimodal(nn.Module):
             raise ValueError(f'fusion_strategy {fusion_strategy} is not one of the available ones ({available_fusions})')
         self.fusion_strategy = fusion_strategy
 
-
+        obs_spaces = [env.single_observation_space_mm[env.obs_modes.index(m)] for m in modes]
         self.encoders = nn.ModuleList([
-                CNN(frames, z1_dim) if m == 'rgb' or m == 'depth' or m == 'segmentation' else MLP(s.shape[0], z1_dim) for
-                s, m in zip(env.single_observation_space_mm, self.modes)
+                CNN(frames, Z_DIM) if m in ['rgb', 'depth', 'segmentation'] else MLP(s.shape[0], Z_DIM) for
+                s, m in zip(obs_spaces, modes)
             ]
         )
 

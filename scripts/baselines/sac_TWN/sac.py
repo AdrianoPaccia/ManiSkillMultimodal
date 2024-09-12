@@ -20,7 +20,8 @@ from utils import Args, get_distance
 from utils import ReplayBufferMultimodal as ReplayBuffer
 from environments_multimodal.build import build_training_env, build_eval_env
 
-from process import image_preprocess, process_obs_dict
+from scripts.baselines.process import process_obs_dict
+
 try:
     import matplotlib
     matplotlib.use('TkAgg')
