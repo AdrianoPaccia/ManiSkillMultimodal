@@ -6,6 +6,6 @@ manipulation:
 
   store_shape:
     state: [35]
-    rgb: [128,128]
-    depth: [128,128]
-    segmentation: [128,128]
+    rgb: [2, 128,128]
+    depth: [2, 128,128]
+    segmentation: [2, 128,128]

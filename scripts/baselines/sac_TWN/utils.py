@@ -189,7 +189,7 @@ class ReplayBufferMultimodal:
         self.storage_device = storage_device
         self.sample_device = sample_device
 
-        obs_shape = [(buffer_size, num_envs) + (frames, *s) for s in obs_shape]
+        obs_shape = [(buffer_size, num_envs) + s for s in obs_shape]
 
         self.states = torch.zeros((buffer_size, num_envs) + state_shape).to(storage_device)
         self.next_states = torch.zeros((buffer_size, num_envs) + state_shape).to(storage_device)
