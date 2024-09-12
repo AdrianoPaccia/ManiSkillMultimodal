@@ -189,6 +189,7 @@ def train(**kwargs):
         ## UPDATING AGENT (ALGO LOGIC: training.)
         if global_step < args.learning_starts:
             continue
+
         update_time = time.time()
         learning_has_started = True
         for local_update in range(args.grad_steps_per_iteration):
