@@ -1,6 +1,11 @@
 manipulation:
-  available_data: (state, sensor_data)
+  available_data: ('state', 'sensor_data')
   sensor_data:
     data_source: 'base_camera'
     available_obs: ['rgb', 'depth', 'segmentation']
 
+  store_shape:
+    state: [35]
+    rgb: [128,128]
+    depth: [128,128]
+    segmentation: [128,128]

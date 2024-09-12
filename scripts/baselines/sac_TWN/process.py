@@ -30,7 +30,8 @@ def process_obs_dict(obs:dict, old_obs:dict, modes:tuple, device='cpu'):
         torch.cat([
             process(old_obs[mode], mode),
             process(obs[mode], mode)
-        ], dim=1).float().to(device)
+        ], dim=1).float().to(device) if mode in ['rgb', 'depth', 'segmentation']
+        else process(obs[mode], mode).to(device)
         for mode in modes
     ]
     return tuple(obs_stack)

@@ -69,13 +69,14 @@ from process import image_preprocess
 
 
 class ActorMultimodal(nn.Module):
-    def __init__(self, env):
+    def __init__(self, env, modes):
         super().__init__()
 
-        modes = env.obs_modes
+        #modes = env.obs_modes
+        obs_spaces = [env.single_observation_space_mm[env.obs_modes.index(m)] for m in modes]
         self.encoders = nn.ModuleList([
-                CNN(frames, Z_DIM) if m == 'rgb' or m == 'depth' or m == 'segmentation' else MLP(s.shape[0], Z_DIM) for
-                s, m in zip(env.single_observation_space_mm, modes)
+                CNN(frames, Z_DIM) if m in ['rgb', 'depth', 'segmentation'] else MLP(s.shape[0], Z_DIM) for
+                s, m in zip(obs_spaces, modes)
             ]
         )
         self.tf_funtion = MLP(Z_DIM + env.single_action_space.shape[0], Z_DIM)

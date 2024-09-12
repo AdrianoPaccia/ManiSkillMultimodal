@@ -22,26 +22,30 @@ class EnvMultimodalWrapper:
         self.obs_modes = list(env.single_observation_space.spaces['sensor_data'][self.data_source].keys())
 
         self.noise_frequency = kwargs['noise_frequency']
-
+        state_shape = self.get_state().shape
         self.observation_space_mm = spaces.Tuple(tuple(
+            [spaces.Box(low=-np.inf, high=np.inf, shape=state_shape)] +
             [env.observation_space.spaces['sensor_data'][self.data_source][mode] for mode in self.obs_modes]
             )
         )
-
         self.single_observation_space_mm = spaces.Tuple(tuple(
+            [spaces.Box(low=-np.inf, high=np.inf, shape=state_shape[1:])] +
             [env.single_observation_space.spaces['sensor_data'][self.data_source][mode] for mode in self.obs_modes]
             )
         )
+        self.obs_modes = ['state'] + self.obs_modes
+        self.store_shape = [tuple(kwargs['store_shape'][m]) for m in self.obs_modes]
 
         self.action_space = env.action_space
         self.single_action_space = env.single_action_space
-        self.single_state_shape = self.get_state().shape[-1:]
+        self.single_state_shape = state_shape[1:]
         self.noise_generators = noise_generators
 
 
     def reset_mm(self,seed=0):
         obs, info = self.env.reset(seed=seed)
-        return self._filter_obs(obs), info
+        obs_ = {'state': self.get_state(),**self._filter_obs(obs)}
+        return obs_, info
 
     def step_mm(self,a):
         obs, reward, terminated, truncated, info = self.env.step(a)
@@ -52,7 +56,8 @@ class EnvMultimodalWrapper:
         if 'real_next_obs' in info:
             info['real_next_obs'] = self._filter_obs(info['real_next_obs'])
 
-        return self._filter_obs(obs), reward, terminated, truncated, info
+        obs_ = {'state': self.get_state(),**self._filter_obs(obs)}
+        return obs_, reward, terminated, truncated, info
 
     def render_mm(self):
         return self.env.render()
@@ -60,7 +65,7 @@ class EnvMultimodalWrapper:
     def _filter_obs(self, obs):
         obs_ = obs['sensor_data'][self.data_source]
         if random.random() < self.noise_frequency:
-            mode_to_noise = random.choice(self.obs_modes)
+            mode_to_noise = random.choice(list(obs_.keys()))
             obs_[mode_to_noise] = self.noise_generators[mode_to_noise].apply_random_noise(obs_[mode_to_noise])
         return obs_
 
@@ -71,9 +76,13 @@ class EnvMultimodalWrapper:
         extra_dict = obs_dict['extra']
         obj_pose = state_dict['cube'][:,:7]
         goal_pos = state_dict['goal_region'][:, :3]
-
         return {**agent_dict, **extra_dict, 'obj_pos':obj_pose, 'goal_pos':goal_pos}
 
+    def _flat_state_dict(self, x):
+        return torch.cat([v for v in x.values()], dim=1).to(self.env.device)
+
     def get_state(self):
-        return torch.cat([v for v in self._get_state_dict().values()], dim=1).to(self.env.device)
+        state_dict = self._get_state_dict()
+        return self._flat_state_dict(state_dict).to(self.env.device)
+
 

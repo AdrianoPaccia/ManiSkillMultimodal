@@ -159,7 +159,7 @@ def train(**kwargs):
             if "final_info" in infos:
                 final_info = infos["final_info"]
                 done_mask = infos["_final_info"]
-                for k in real_next_obs:
+                for k in infos["final_observation"]:
                     real_next_obs[k][done_mask] = infos["final_observation"][k][done_mask]
 
                 episodic_return = final_info['episode']['r'][done_mask].cpu().numpy().mean()
@@ -392,6 +392,7 @@ if __name__ == "__main__":
         capture_video=args.capture_video,
         **train_env_args
     )
+
     print('... directories setup', end='\r')
 
     args.modes = sorted(args.modes.split("+"))
@@ -405,7 +406,7 @@ if __name__ == "__main__":
 
     max_action = float(envs.single_action_space.high[0])
 
-    actor = Actor(envs).to(device)
+    actor = Actor(envs, args.modes).to(device)
     state_dim = envs.single_state_shape
     act_dim = envs.single_action_space.shape[0]
     main_mode='state'
@@ -437,9 +438,10 @@ if __name__ == "__main__":
     ## REPLAY BUFFER setup
     print('... replay buffer setup', end='\r')
     envs.single_observation_space_mm.dtype = np.float32
+    store_shape = [envs.store_shape[envs.obs_modes.index(m)] for m in args.modes]
     rb = ReplayBuffer(
         state_shape=state_dim,
-        obs_shape=[envs.single_observation_space.spaces['sensor_data'][envs.data_source][mode].shape[:2] for mode in args.modes],
+        obs_shape=store_shape,
         act_shape=envs.single_action_space.shape,
         num_envs=args.num_envs,
         buffer_size=args.buffer_size,
