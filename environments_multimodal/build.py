@@ -1,9 +1,9 @@
 import gymnasium as gym
-from mani_skill.utils.wrappers.flatten import FlattenActionSpaceWrapper
-from mani_skill.vector.wrappers.gymnasium import ManiSkillVectorEnv
+from ManiSkillMultimodal.mani_skill.utils.wrappers.flatten import FlattenActionSpaceWrapper
+from ManiSkillMultimodal.mani_skill.vector.wrappers.gymnasium import ManiSkillVectorEnv
 import os
-from environments_multimodal.wrappers import EnvMultimodalWrapper
-from environments_multimodal.noise.noise import ImageNoise, DepthNoise, SegmentNoise, ConfNoise
+from ManiSkillMultimodal.environments_multimodal.wrappers import EnvMultimodalWrapper
+from ManiSkillMultimodal.environments_multimodal.noise.noise import ImageNoise, DepthNoise, SegmentNoise, ConfNoise
 import yaml
 
 

@@ -1,6 +1,6 @@
 from gymnasium import spaces
 import numpy as np
-from environments_multimodal.noise.noise import ImageNoise
+from ManiSkillMultimodal.environments_multimodal.noise.noise import ImageNoise
 import random
 import torch
 
