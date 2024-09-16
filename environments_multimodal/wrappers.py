@@ -7,7 +7,7 @@ import torch
 class EnvMultimodalWrapper:
     def __init__(self,
                  env,
-                 noise_generators=[ImageNoise(game='manipulation', noise_types=['nonoise'])],
+                 noise_generators=[ImageNoise(game='push_cube', noise_types=['nonoise'])],
                  **kwargs
         ):
         for item in dir(env):
@@ -34,7 +34,6 @@ class EnvMultimodalWrapper:
             )
         )
         self.obs_modes = ['state'] + self.obs_modes
-        self.store_shape = [tuple(kwargs['store_shape'][m]) for m in self.obs_modes]
 
         self.action_space = env.action_space
         self.single_action_space = env.single_action_space

@@ -1,4 +1,4 @@
-manipulation:
+push_cube:
   available_data: ('state', 'sensor_data')
   sensor_data:
     data_source: 'base_camera'
