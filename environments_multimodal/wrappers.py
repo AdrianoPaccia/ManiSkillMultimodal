@@ -51,6 +51,7 @@ class EnvMultimodalWrapper:
 
         if 'final_observation' in info:
             info['final_observation'] = self._filter_obs(info['final_observation'])
+            info['final_info']['real_next_obs'] = self._filter_obs(info['final_info']['real_next_obs'])
 
         if 'real_next_obs' in info:
             info['real_next_obs'] = self._filter_obs(info['real_next_obs'])
