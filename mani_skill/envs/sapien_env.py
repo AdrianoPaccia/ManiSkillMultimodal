@@ -504,7 +504,8 @@ class BaseEnv(gym.Env):
         """Get observations about the agent's state. By default it is proprioceptive observations which include qpos and qvel.
         Controller state is also included although most default controllers do not have any state."""
         return self.agent.get_proprioception()
-
+    def pippo(self):
+        return self._get_obs_agent()
     def _get_obs_extra(self, info: Dict):
         """Get task-relevant extra observations. Usually defined on a task by task basis"""
         return dict()

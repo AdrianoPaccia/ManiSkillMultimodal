@@ -40,7 +40,7 @@ def build_training_env(
     noise_generators = build_noise_generators(
         game=kwargs['game'],
         types=kwargs['noise_types'],
-        modes=list(envs.single_observation_space.spaces['sensor_data'][kwargs['sensor_data']['data_source']])
+        modes=kwargs['sensor_data']['available_modes']
     )
     envs = EnvMultimodalWrapper(
         envs,
@@ -56,7 +56,7 @@ def build_eval_env(
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
-        device:str="gpu",
+        device:str="cuda",
         capture_video:bool=True,
         **kwargs
     ):
@@ -93,7 +93,7 @@ def build_eval_env(
     noise_generators = build_noise_generators(
         game=kwargs['game'],
         types=kwargs['noise_types'],
-        modes=list(envs.single_observation_space.spaces['sensor_data'][kwargs['sensor_data']['data_source']])
+        modes=kwargs['sensor_data']['available_modes']
     )
 
     envs = EnvMultimodalWrapper(
@@ -107,13 +107,13 @@ def build_eval_env(
 def build_noise_generators(game, types, modes):
     res = {}
     for m in modes:
-        if m=='rgb':
+        if m == 'rgb':
             ng = ImageNoise(game,types)
-        elif m=='depth':
+        elif m == 'depth':
             ng = DepthNoise(game, types)
-        elif m=='segmentation':
+        elif m == 'segmentation':
             ng = SegmentNoise(game, types)
-        elif m=='state':
+        elif m == 'state':
             ng = ConfNoise(game, types)
         else:
             raise ValueError(f'Mode {m} is not valid!')

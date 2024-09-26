@@ -340,8 +340,8 @@ class ConfNoise:
         return x_
 
     def apply_random_noise(self, x):
-        noise_type = random.choice(list(self.config.keys()))
-        return self.apply_noise(noise_type, x), noise_type
+        noise_type = random.choice(list(self.noise_types))
+        return self.apply_noise(x,noise_type)
 
     def apply_all_noises(self,x):
         xs_ = []

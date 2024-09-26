@@ -2,10 +2,25 @@ push_cube:
   available_data: ('state', 'sensor_data')
   sensor_data:
     data_source: 'base_camera'
-    available_obs: ['rgb', 'depth', 'segmentation']
+    available_modes: ['rgb', 'depth', 'segmentation', 'state']
 
   store_shape:
     state: [35]
     rgb: [2, 128,128]
     depth: [2, 128,128]
     segmentation: [2, 128,128]
+
+
+hopper:
+  available_data: ('state', 'sensor_data')
+  state:
+    available_modes: ['state']
+  sensor_data:
+    data_source: 'cam0'
+    available_modes: ['rgb', 'depth', 'segmentation','state']
+
+  store_shape:
+    state: [ 15 ]
+    rgb: [ 2, 128,128 ]
+    depth: [ 2, 128,128 ]
+    segmentation: [ 2, 128,128 ]
