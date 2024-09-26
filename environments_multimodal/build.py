@@ -57,7 +57,7 @@ def build_eval_env(
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
         device:str="cuda",
-        capture_video:bool=True,
+        capture_video:bool=False,
         **kwargs
     ):
     """

@@ -354,7 +354,7 @@ class ConfNoise:
         mu, std = self.config['gaussian_noise']['mu'],self.config['gaussian_noise']['std'],
         if x.dtype == np.ndarray:
             noise = np.random.normal(mu, std, size=x.shape)
-        elif x.dtype == torch.tensor:
+        else:
             noise = torch.normal(mu, std, size=x.shape)
         return x + noise
 
