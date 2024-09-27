@@ -13,6 +13,7 @@ def build_training_env(
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
+        reward_mode="normalized_dense",
         device:str="gpu",
         **kwargs
     ):
@@ -28,7 +29,8 @@ def build_training_env(
         **kwarg: [run_name, partial_reset:bool]
     Returns: training environment
     """
-    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=device, render_backend=device)
+    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode,# reward_mode=reward_mode,
+                      sim_backend=device, render_backend=device)
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
@@ -56,6 +58,7 @@ def build_eval_env(
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
+        reward_mode="normalized_dense",
         device:str="cuda",
         capture_video:bool=False,
         **kwargs
@@ -74,7 +77,8 @@ def build_eval_env(
     Returns: testing environment
 
     """
-    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode, sim_backend=device, render_backend=device)
+    env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode,# reward_mode=reward_mode,
+                      sim_backend=device, render_backend=device)
     envs = gym.make(id, num_envs=num_envs, **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
