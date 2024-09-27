@@ -30,6 +30,7 @@ class EnvMultimodalWrapper:
 
         self.noise_frequency = kwargs['noise_frequency']
         state_shape = self.get_state().shape
+        self.state_space = spaces.Box(shape=state_shape, low=-np.inf, high=np.inf)
         self.observation_space_mm = spaces.Tuple(tuple(
             [spaces.Box(low=-np.inf, high=np.inf, shape=state_shape)] +
             [env.observation_space.spaces['sensor_data'][self.data_source][mode] for mode in self.obs_modes]
