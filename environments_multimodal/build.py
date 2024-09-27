@@ -9,7 +9,6 @@ import yaml
 
 def build_training_env(
         id:str,
-        num_envs:int=1,
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
@@ -31,10 +30,10 @@ def build_training_env(
     """
     env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode,# reward_mode=reward_mode,
                       sim_backend=device, render_backend=device)
-    envs = gym.make(id, num_envs=num_envs, **env_kwargs)
+    envs = gym.make(id, num_envs=kwargs['num_envs'], **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
-    envs = ManiSkillVectorEnv(envs, num_envs, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
+    envs = ManiSkillVectorEnv(envs, num_envs=kwargs['num_envs'], ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
     game = kwargs['game']
     with open(f'{os.path.dirname(os.path.realpath(__file__))}/configuration.yaml', "r") as file:
         kwargs = {**kwargs, **yaml.safe_load(file)[str(game)]}
@@ -54,7 +53,6 @@ def build_training_env(
 
 def build_eval_env(
         id:str,
-        num_envs:int=1,
         obs_mode:str="state",
         control_mode="pd_joint_delta_pos",
         render_mode="rgb_array",
@@ -79,16 +77,16 @@ def build_eval_env(
     """
     env_kwargs = dict(obs_mode=obs_mode, control_mode=control_mode, render_mode=render_mode,# reward_mode=reward_mode,
                       sim_backend=device, render_backend=device)
-    envs = gym.make(id, num_envs=num_envs, **env_kwargs)
+    envs = gym.make(id, num_envs=kwargs['num_eval_envs'], **env_kwargs)
     if isinstance(envs.action_space, gym.spaces.Dict):
         envs = FlattenActionSpaceWrapper(envs)
     if capture_video and not render_mode is None:
-        from mani_skill.utils.wrappers.record import RecordEpisode
+        from ManiSkillMultimodal.mani_skill.utils.wrappers.record import RecordEpisode
         print(f"Saving eval videos to {kwargs['checkpoint_dir']}")
         envs = RecordEpisode(envs, output_dir=f"runs/{kwargs['run_name']}/train_videos", save_trajectory=True, trajectory_name="trajectory",
                                   max_steps_per_video=kwargs['eval_steps'], video_fps=30)
 
-    envs = ManiSkillVectorEnv(envs, num_envs, ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
+    envs = ManiSkillVectorEnv(envs, num_envs=kwargs['num_envs'], ignore_terminations=not kwargs['partial_reset'], **env_kwargs)
 
     game = kwargs['game']
     with open(f'{os.path.dirname(os.path.realpath(__file__))}/configuration.yaml', "r") as file:

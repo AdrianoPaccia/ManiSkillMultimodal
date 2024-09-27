@@ -356,7 +356,7 @@ if __name__ == "__main__":
             failures = []
             for _ in range(args.num_eval_steps):
                 with torch.no_grad():
-                    eval_obs, _, eval_terminations, eval_truncations, eval_infos = eval_envs.step(actor.get_eval_action(eval_obs))
+                    eval_obs, eval_reward, eval_terminations, eval_truncations, eval_infos = eval_envs.step(actor.get_eval_action(eval_obs))
                     if "final_info" in eval_infos:
                         mask = eval_infos["_final_info"]
                         eps_lens.append(eval_infos["final_info"]["elapsed_steps"][mask].cpu().numpy())
